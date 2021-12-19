@@ -36,19 +36,19 @@ namespace KutuphaneCore
             };
             if (ogrTC.Enabled)
             {
-                if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciID))
-                    MessageBox.Show("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.");
+                if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciTC))
+                    MessageBox.Show("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.", "Başarısız", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 else
                 {
                     Tables.Ogr.Add(ogrenci);
-                    MessageBox.Show("İşlem başarılı.");
+                    MessageBox.Show("İşlem başarılı.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
-            else if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciID))
+            else if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciTC))
             {
                 Tables.Ogr.Update(ogrenci);
-                MessageBox.Show("İşlem başarılı.");
+                MessageBox.Show("İşlem başarılı.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else MessageBox.Show("Güncellenek öğrenci bulunamadı.", "İşlem başarısız", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }

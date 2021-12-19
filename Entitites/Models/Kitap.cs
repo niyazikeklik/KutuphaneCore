@@ -13,8 +13,7 @@ namespace Entitites
     public class Kitap
     {
         [Key]
-        public int BarkodNo { get; set; }
-
+        public string BarkodNo { get; set; }
         public string KitapAd { get; set; }
 
         public string KitapYazar { get; set; }

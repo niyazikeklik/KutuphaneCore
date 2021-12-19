@@ -163,7 +163,7 @@
             // 
             this.OgrButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OgrButton.Highlight = true;
-            this.OgrButton.Image = global::View.Properties.Resources.ogrEkle;
+
             this.OgrButton.Location = new System.Drawing.Point(75, 244);
             this.OgrButton.Name = "OgrButton";
             this.OgrButton.Size = new System.Drawing.Size(110, 32);

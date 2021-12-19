@@ -63,9 +63,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _103409_text_add_book_icon {
+        internal static System.Drawing.Bitmap _1814089_account_user_person_profile_avatar_icon {
             get {
-                object obj = ResourceManager.GetObject("103409_text_add_book_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("1814089_account_user_person_profile_avatar_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _103412_text_book_remove_icon {
+        internal static System.Drawing.Bitmap _3099383_student_man_icon {
             get {
-                object obj = ResourceManager.GetObject("103412_text_book_remove_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("3099383_student_man_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _103415_text_book_settings_icon {
+        internal static System.Drawing.Bitmap _3099383_student_man_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("103415_text_book_settings_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("3099383_student_man_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _1329089_arrows_circle_refresh_replace_round_icon {
+        internal static System.Drawing.Bitmap _3099383_student_man_icon1 {
             get {
-                object obj = ResourceManager.GetObject("1329089_arrows_circle_refresh_replace_round_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("3099383_student_man_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _3592826_employee_human_member_office_remove_icon {
+        internal static System.Drawing.Bitmap _3099385_woman_student_icon {
             get {
-                object obj = ResourceManager.GetObject("3592826_employee_human_member_office_remove_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("3099385_woman_student_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586102_configuration_options_preferences_settings_tools_icon {
+        internal static System.Drawing.Bitmap _3099385_woman_student_icon__1_ {
             get {
-                object obj = ResourceManager.GetObject("6586102_configuration_options_preferences_settings_tools_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("3099385_woman_student_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586114_book_education_school_study_icon {
+        internal static System.Drawing.Bitmap _5269101_book_education_library_notebook_read_icon {
             get {
-                object obj = ResourceManager.GetObject("6586114_book_education_school_study_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("5269101_book_education_library_notebook_read_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,16 +136,6 @@ namespace View.Properties {
         internal static System.Drawing.Bitmap _6586115_bar_chart_diagram_graph_report_icon {
             get {
                 object obj = ResourceManager.GetObject("6586115_bar_chart_diagram_graph_report_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap _6586118_account_add_avatar_person_profile_icon {
-            get {
-                object obj = ResourceManager.GetObject("6586118_account_add_avatar_person_profile_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +163,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586131_find_glass_magnifier_search_seo_icon1 {
+        internal static System.Drawing.Bitmap _8675047_ic_fluent_person_arrow_right_icon {
             get {
-                object obj = ResourceManager.GetObject("6586131_find_glass_magnifier_search_seo_icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("8675047_ic_fluent_person_arrow_right_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +173,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586134_person_profile_remove_user_icon {
+        internal static System.Drawing.Bitmap _8675050_ic_fluent_notebook_question_mark_icon {
             get {
-                object obj = ResourceManager.GetObject("6586134_person_profile_remove_user_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("8675050_ic_fluent_notebook_question_mark_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +183,59 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap ogrEkle {
+        internal static System.Drawing.Bitmap _8675075_ic_fluent_notebook_regular_icon {
             get {
-                object obj = ResourceManager.GetObject("ogrEkle", resourceCulture);
+                object obj = ResourceManager.GetObject("8675075_ic_fluent_notebook_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675099_ic_fluent_person_delete_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8675099_ic_fluent_person_delete_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675120_ic_fluent_notebook_add_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8675120_ic_fluent_notebook_add_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675208_ic_fluent_person_add_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8675208_ic_fluent_person_add_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675222_ic_fluent_person_edit_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8675222_ic_fluent_person_edit_regular_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8675228_ic_fluent_notebook_sync_regular_icon {
+            get {
+                object obj = ResourceManager.GetObject("8675228_ic_fluent_notebook_sync_regular_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

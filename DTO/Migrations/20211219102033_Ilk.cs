@@ -11,8 +11,7 @@ namespace DTO.Migrations
                 name: "Kitaps",
                 columns: table => new
                 {
-                    BarkodNo = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    BarkodNo = table.Column<string>(type: "TEXT", nullable: false),
                     KitapAd = table.Column<string>(type: "TEXT", nullable: true),
                     KitapYazar = table.Column<string>(type: "TEXT", nullable: true),
                     SayfaSayısı = table.Column<int>(type: "INTEGER", nullable: false),
@@ -29,16 +28,14 @@ namespace DTO.Migrations
                 name: "Ogrencis",
                 columns: table => new
                 {
-                    OgrenciID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    OgrenciTC = table.Column<string>(type: "TEXT", nullable: false),
                     IsimSoyisim = table.Column<string>(type: "TEXT", nullable: true),
-                    OgrenciTC = table.Column<string>(type: "TEXT", nullable: true),
                     TelefonNo = table.Column<string>(type: "TEXT", nullable: true),
                     DogumTarihi = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Ogrencis", x => x.OgrenciID);
+                    table.PrimaryKey("PK_Ogrencis", x => x.OgrenciTC);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,8 +44,8 @@ namespace DTO.Migrations
                 {
                     IslemId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    OgrenciID = table.Column<int>(type: "INTEGER", nullable: false),
-                    KitapBarkodNo = table.Column<int>(type: "INTEGER", nullable: false),
+                    OgrenciID = table.Column<string>(type: "TEXT", nullable: false),
+                    KitapBarkodNo = table.Column<string>(type: "TEXT", nullable: false),
                     IslemUcret = table.Column<double>(type: "REAL", nullable: false),
                     AlimTarihi = table.Column<DateTime>(type: "TEXT", nullable: false),
                     SonTeslimTarihi = table.Column<DateTime>(type: "TEXT", nullable: false),
@@ -67,7 +64,7 @@ namespace DTO.Migrations
                         name: "FK_KutuphaneIslems_Ogrencis_OgrenciID",
                         column: x => x.OgrenciID,
                         principalTable: "Ogrencis",
-                        principalColumn: "OgrenciID",
+                        principalColumn: "OgrenciTC",
                         onDelete: ReferentialAction.Cascade);
                 });
 

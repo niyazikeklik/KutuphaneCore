@@ -55,16 +55,16 @@
             this.öğrenciİşlemlerToolStripMenuItem.Image = global::View.Properties.Resources._6586125_account_avatar_person_profile_user_icon;
             this.öğrenciİşlemlerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.öğrenciİşlemlerToolStripMenuItem.Name = "öğrenciİşlemlerToolStripMenuItem";
-            this.öğrenciİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(121, 28);
-            this.öğrenciİşlemlerToolStripMenuItem.Text = "Öğrenci İşlemler";
+            this.öğrenciİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(77, 28);
+            this.öğrenciİşlemlerToolStripMenuItem.Text = "Öğrenci";
             this.öğrenciİşlemlerToolStripMenuItem.Click += new System.EventHandler(this.öğrenciİşlemlerToolStripMenuItem_Click);
             // 
             // kitapİşlemlerToolStripMenuItem
             // 
-            this.kitapİşlemlerToolStripMenuItem.Image = global::View.Properties.Resources._6586114_book_education_school_study_icon;
+            this.kitapİşlemlerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kitapİşlemlerToolStripMenuItem.Image")));
             this.kitapİşlemlerToolStripMenuItem.Name = "kitapİşlemlerToolStripMenuItem";
-            this.kitapİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(106, 28);
-            this.kitapİşlemlerToolStripMenuItem.Text = "Kitap İşlemler";
+            this.kitapİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.kitapİşlemlerToolStripMenuItem.Text = "Kitap";
             this.kitapİşlemlerToolStripMenuItem.Click += new System.EventHandler(this.kitapİşlemlerToolStripMenuItem_Click);
             // 
             // grafikToolStripMenuItem

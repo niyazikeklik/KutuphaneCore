@@ -90,17 +90,18 @@ namespace Business
 
                 return borc;
             }
-            else MessageBox.Show("Kitap zaten iade edildi.");
+            else MessageBox.Show("Kitap zaten iade edildi.","İade edili kitap", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             return -1;
         }
-        public static KutuphaneIslem TeslimAl(int seciliKitapID, int ogrenciID)
+        public static KutuphaneIslem TeslimAl(string seciliKitapID, string ogrenciID)
         {
+            int[] rastgele = { 2, 1, 14, -2, -1 };
 
             var suAn = DateTime.Now;
             var x = new KutuphaneIslem()
             {
                 AlimTarihi = suAn,
-                SonTeslimTarihi = suAn.AddDays(2),
+                SonTeslimTarihi = suAn.AddDays(rastgele[new Random().Next(0,4)]),
                 IadeTarihi = null,
                 KitapBarkodNo = seciliKitapID,
                 OgrenciID = ogrenciID,

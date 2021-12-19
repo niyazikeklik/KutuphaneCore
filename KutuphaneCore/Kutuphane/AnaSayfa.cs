@@ -32,7 +32,7 @@ namespace KutuphaneCore
             form.FormBorderStyle = FormBorderStyle.None;
             panel1.Controls.Add(form);
             form.Show();
-            this.Size = new Size(form.Width, form.Height + 75);
+            this.Size = new Size(form.Width + 20, form.Height + 65);
             this.CenterToParent();
         }
 

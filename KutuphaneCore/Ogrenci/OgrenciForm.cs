@@ -16,10 +16,14 @@ namespace View.Ogrenci
 
             InitializeComponent();
         }
-
-        private void OgrenciForm_Load(object sender, EventArgs e)
+        void GridYenile()
         {
             data_Ogrenci.DataSource = Tables.Ogr.GetList();
+            data_Ogrenci.Columns[data_Ogrenci.Columns.Count - 1].Visible = false;
+        }
+        private void OgrenciForm_Load(object sender, EventArgs e)
+        {
+            GridYenile();
         }
         private void OgrEkle_Click_1(object sender, EventArgs e)
         {
@@ -27,10 +31,9 @@ namespace View.Ogrenci
             form.ogrTC.Enabled = true;
             form.OgrButton.Text = "Öğrenciyi Ekle";
             form.ShowDialog();
-            data_Ogrenci.DataSource = Tables.Ogr.GetList();
+            GridYenile();
         }
-
-        private void btn_OgrGuncelle_Click(object sender, EventArgs e)
+        private void btn_OgrGuncelle_Click_1(object sender, EventArgs e)
         {
             var row = data_Ogrenci.SelectedRows[0];
 
@@ -43,14 +46,30 @@ namespace View.Ogrenci
 
             form.OgrButton.Text = "Öğrenciyi Güncelle";
             form.ShowDialog();
-            data_Ogrenci.DataSource = Tables.Ogr.GetList();
+            GridYenile();
+         
         }
 
-        private void OgrSil_Click_1(object sender, EventArgs e)
+        private void btn_OgrGit_Click(object sender, EventArgs e)
+        {
+            var ogrenciNo = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
+            OgernciProfil form = new OgernciProfil(ogrenciNo);
+            form.ShowDialog();
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            if (rdBtn_ismeGore.Checked)
+                data_Ogrenci.Ara(1, txtAra.Text);
+            else if (rdBtn_TC.Checked)
+                data_Ogrenci.Ara(0, txtAra.Text);
+        }
+
+        private void btn_OgrSil_Click_1(object sender, EventArgs e)
         {
             if (data_Ogrenci.SelectedRows.Count == 1)
             {
-                int secilenOgrenciID = (int)data_Ogrenci.SelectedRows[0].Cells[0].Value;
+                string secilenOgrenciID = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
                 var zimmetliKitaplar = Tables.Ogr.GetZimmetliKitapsNo(secilenOgrenciID);
                 if (zimmetliKitaplar.Count != 0)
                 {
@@ -62,24 +81,9 @@ namespace View.Ogrenci
                     }
                 }
                 else Tables.Ogr.Remove(secilenOgrenciID);
-                data_Ogrenci.DataSource = Tables.Ogr.GetList();
+                GridYenile();
             }
             else MessageBox.Show("Lütfen bir öğrenci seçiniz!");
-        }
-
-        private void btn_OgrenciyeGit_Click(object sender, EventArgs e)
-        {
-            var ogrenciNo = (int)data_Ogrenci.SelectedRows[0].Cells[0].Value;
-            OgrenciProfil form = new OgrenciProfil(ogrenciNo);
-            form.ShowDialog();
-        }
-
-        private void ogrTC_TextChanged(object sender, EventArgs e)
-        {
-            if (rdBtn_ismeGore.Checked)
-                data_Ogrenci.Ara(1, txtAra.Text);
-            else if (rdBtn_TC.Checked)
-                data_Ogrenci.Ara(0, txtAra.Text);
         }
     }
 }

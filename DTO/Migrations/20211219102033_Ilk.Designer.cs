@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DTO.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211219095205_Ilk")]
+    [Migration("20211219102033_Ilk")]
     partial class Ilk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,9 +20,8 @@ namespace DTO.Migrations
 
             modelBuilder.Entity("Entitites.Kitap", b =>
                 {
-                    b.Property<int>("BarkodNo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("BarkodNo")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("BasimTarihi")
                         .HasColumnType("TEXT");
@@ -62,11 +61,13 @@ namespace DTO.Migrations
                     b.Property<double>("IslemUcret")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("KitapBarkodNo")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("KitapBarkodNo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("OgrenciID")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("OgrenciID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("SonTeslimTarihi")
                         .HasColumnType("TEXT");
@@ -82,9 +83,8 @@ namespace DTO.Migrations
 
             modelBuilder.Entity("Entitites.Models.Ogrenci", b =>
                 {
-                    b.Property<int>("OgrenciID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("OgrenciTC")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DogumTarihi")
                         .HasColumnType("TEXT");
@@ -92,13 +92,10 @@ namespace DTO.Migrations
                     b.Property<string>("IsimSoyisim")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("OgrenciTC")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("TelefonNo")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("OgrenciID");
+                    b.HasKey("OgrenciTC");
 
                     b.ToTable("Ogrencis");
                 });

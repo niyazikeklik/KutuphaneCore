@@ -12,9 +12,8 @@ namespace Entitites.Models
     {
        
         [Key]
-        public int OgrenciID { get; set; }
-        public string IsimSoyisim { get; set; }
         public string OgrenciTC { get; set; }
+        public string IsimSoyisim { get; set; }
         public string TelefonNo { get; set; }
         public DateTime DogumTarihi { get; set; }
         public ICollection<KutuphaneIslem> kutuphaneIslems { get; set; }

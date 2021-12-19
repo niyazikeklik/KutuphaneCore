@@ -1,6 +1,7 @@
 ﻿using DTO.Abstract;
 
 using Entitites;
+using Entitites.Models;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -28,11 +29,16 @@ namespace DTO.Concrete
         {
             return _dbSet.Where(x => !x.Stok).ToList();
         }
-        public void StokUpdate(int ID)
+        public void StokUpdate(string ID)
         {
             var kitap = GetById(ID);
             kitap.Stok = !kitap.Stok;
             Update(kitap);
+        }
+
+        public Kitap GetKitapWithIslemlerById(string id)
+        {
+            return GetListWithIslems().FirstOrDefault(x => x.BarkodNo == id);
         }
     }
 }

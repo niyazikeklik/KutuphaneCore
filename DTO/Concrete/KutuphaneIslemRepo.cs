@@ -25,7 +25,7 @@ namespace DTO.Concrete
         {
             return _dbSet.Where(x => x.IadeTarihi != null);
         }
-        public KutuphaneIslem GetIslemsByOgrenciNoAndKitapNo(int ogrID, int kitapID)
+        public KutuphaneIslem GetIslemsByOgrenciNoAndKitapNo(string ogrID, string kitapID)
         {
             return _dbSet.Where(x => (kitapID == x.KitapBarkodNo) && (x.OgrenciID == ogrID)).First();
         }

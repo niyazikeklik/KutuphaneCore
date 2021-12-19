@@ -17,11 +17,6 @@ namespace DTO.Abstract
             _context = context;
             _dbSet = context.Set<T>();
         }
-        public bool IsExistRecord(int ID)
-        {
-            var result = GetById(ID) == null ? false : true;
-            return result;
-        }
         public bool IsExistRecord(string ID)
         {
             var result = GetById(ID) == null ? false : true;
@@ -32,39 +27,29 @@ namespace DTO.Abstract
             _dbSet.Add(entity);
             _context.SaveChanges();
         }
-        public void AddRange(IEnumerable<T> list)
+        public T GetById(string ID)
         {
-            _dbSet.AddRange(list);
-            _context.SaveChanges();
-
+            return _dbSet.Find(ID);
         }
         public T GetById(int ID)
         {
             return _dbSet.Find(ID);
         }
-        public T GetById(string ID)
-        {
-            return _dbSet.Find(ID);
-        }
-        public IEnumerable<T> GetList()
+        public List<T> GetList()
         {
             return _dbSet.ToList();
         }
-        public IEnumerable<T> GetListWithIslems()
+        public List<T> GetListWithIslems()
         {
             return _dbSet.Include("kutuphaneIslems").ToList();
         }
 
-        public void Remove(int ID)
+        public void Remove(string ID)
         {
             _dbSet.Remove(GetById(ID));
             _context.SaveChanges();
         }
-        public void RemoveRange(IEnumerable<T> list)
-        {
-            _dbSet.RemoveRange(list);
-            _context.SaveChanges();
-        }
+
 
         public void Update(T obje)
         {

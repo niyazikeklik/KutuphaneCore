@@ -1,6 +1,6 @@
 ﻿namespace KutuphaneCore
 {
-    partial class OgrenciProfil
+    partial class OgernciProfil
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,38 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgernciProfil));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.teslimAl = new MetroFramework.Controls.MetroButton();
-            this.iadeEt = new MetroFramework.Controls.MetroButton();
             this.GridBulunanKitaplar = new System.Windows.Forms.DataGridView();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.iadeEt = new MetroFramework.Controls.MetroButton();
             this.data_Ogrenci = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ogrBorc = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ogrOkul = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.ogrTc = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ogrIsim = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBorc = new MetroFramework.Controls.MetroLabel();
+            this.lblTel = new MetroFramework.Controls.MetroLabel();
+            this.lblYas = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lblIsim = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lblTC = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridBulunanKitaplar)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_Ogrenci)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -57,72 +69,124 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1309, 933);
+            this.panel2.Size = new System.Drawing.Size(1205, 629);
             this.panel2.TabIndex = 1;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.teslimAl);
-            this.panel4.Controls.Add(this.iadeEt);
-            this.panel4.Controls.Add(this.GridBulunanKitaplar);
-            this.panel4.Controls.Add(this.data_Ogrenci);
-            this.panel4.Controls.Add(this.groupBox1);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1309, 933);
+            this.panel4.Size = new System.Drawing.Size(1205, 629);
             this.panel4.TabIndex = 1;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.teslimAl);
+            this.panel5.Controls.Add(this.GridBulunanKitaplar);
+            this.panel5.Controls.Add(this.metroLabel5);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(255, 315);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(950, 314);
+            this.panel5.TabIndex = 24;
             // 
             // teslimAl
             // 
+            this.teslimAl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.teslimAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.teslimAl.Highlight = true;
-            this.teslimAl.Location = new System.Drawing.Point(1074, 610);
+            this.teslimAl.Location = new System.Drawing.Point(832, 268);
             this.teslimAl.Name = "teslimAl";
             this.teslimAl.Size = new System.Drawing.Size(115, 37);
             this.teslimAl.Style = MetroFramework.MetroColorStyle.Blue;
             this.teslimAl.StyleManager = null;
-            this.teslimAl.TabIndex = 21;
+            this.teslimAl.TabIndex = 23;
             this.teslimAl.Text = "Teslim Al";
             this.teslimAl.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.teslimAl.Click += new System.EventHandler(this.teslimAl_Click);
-            // 
-            // iadeEt
-            // 
-            this.iadeEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iadeEt.Highlight = true;
-            this.iadeEt.Location = new System.Drawing.Point(1074, 290);
-            this.iadeEt.Name = "iadeEt";
-            this.iadeEt.Size = new System.Drawing.Size(115, 37);
-            this.iadeEt.Style = MetroFramework.MetroColorStyle.Blue;
-            this.iadeEt.StyleManager = null;
-            this.iadeEt.TabIndex = 20;
-            this.iadeEt.Text = "İade Et";
-            this.iadeEt.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.iadeEt.Click += new System.EventHandler(this.iadeEt_Click);
+            this.teslimAl.Click += new System.EventHandler(this.teslimAl_Click_1);
             // 
             // GridBulunanKitaplar
             // 
             this.GridBulunanKitaplar.AllowUserToResizeColumns = false;
             this.GridBulunanKitaplar.AllowUserToResizeRows = false;
             this.GridBulunanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridBulunanKitaplar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.GridBulunanKitaplar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridBulunanKitaplar.ColumnHeadersHeight = 30;
-            this.GridBulunanKitaplar.Location = new System.Drawing.Point(261, 342);
+            this.GridBulunanKitaplar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GridBulunanKitaplar.Location = new System.Drawing.Point(0, 21);
             this.GridBulunanKitaplar.MultiSelect = false;
             this.GridBulunanKitaplar.Name = "GridBulunanKitaplar";
             this.GridBulunanKitaplar.RowHeadersVisible = false;
             this.GridBulunanKitaplar.RowTemplate.Height = 30;
             this.GridBulunanKitaplar.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.GridBulunanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridBulunanKitaplar.Size = new System.Drawing.Size(928, 262);
-            this.GridBulunanKitaplar.TabIndex = 19;
+            this.GridBulunanKitaplar.Size = new System.Drawing.Size(950, 241);
+            this.GridBulunanKitaplar.TabIndex = 22;
+            this.GridBulunanKitaplar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellClick);
+            this.GridBulunanKitaplar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellContentClick);
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.CustomBackground = false;
+            this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.ForeColor = System.Drawing.Color.White;
+            this.metroLabel5.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel5.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(950, 21);
+            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel5.StyleManager = null;
+            this.metroLabel5.TabIndex = 35;
+            this.metroLabel5.Text = "Alınabilir Kitaplar";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel5.UseStyleColors = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.iadeEt);
+            this.panel3.Controls.Add(this.data_Ogrenci);
+            this.panel3.Controls.Add(this.metroLabel3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(255, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(950, 315);
+            this.panel3.TabIndex = 23;
+            // 
+            // iadeEt
+            // 
+            this.iadeEt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.iadeEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iadeEt.Highlight = true;
+            this.iadeEt.Location = new System.Drawing.Point(832, 268);
+            this.iadeEt.Name = "iadeEt";
+            this.iadeEt.Size = new System.Drawing.Size(115, 37);
+            this.iadeEt.Style = MetroFramework.MetroColorStyle.Blue;
+            this.iadeEt.StyleManager = null;
+            this.iadeEt.TabIndex = 22;
+            this.iadeEt.Text = "İade Et";
+            this.iadeEt.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.iadeEt.Click += new System.EventHandler(this.iadeEt_Click_1);
             // 
             // data_Ogrenci
             // 
             this.data_Ogrenci.AllowUserToResizeColumns = false;
             this.data_Ogrenci.AllowUserToResizeRows = false;
             this.data_Ogrenci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_Ogrenci.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.data_Ogrenci.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data_Ogrenci.ColumnHeadersHeight = 30;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -132,125 +196,308 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Ogrenci.DefaultCellStyle = dataGridViewCellStyle1;
-            this.data_Ogrenci.Location = new System.Drawing.Point(261, 22);
+            this.data_Ogrenci.Dock = System.Windows.Forms.DockStyle.Top;
+            this.data_Ogrenci.Location = new System.Drawing.Point(0, 21);
             this.data_Ogrenci.MultiSelect = false;
             this.data_Ogrenci.Name = "data_Ogrenci";
             this.data_Ogrenci.RowHeadersVisible = false;
             this.data_Ogrenci.RowTemplate.Height = 50;
             this.data_Ogrenci.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Ogrenci.Size = new System.Drawing.Size(928, 262);
-            this.data_Ogrenci.TabIndex = 18;
-            this.data_Ogrenci.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Ogrenci_CellContentClick);
+            this.data_Ogrenci.Size = new System.Drawing.Size(950, 241);
+            this.data_Ogrenci.TabIndex = 21;
             // 
-            // groupBox1
+            // metroLabel3
             // 
-            this.groupBox1.Controls.Add(this.ogrBorc);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.ogrOkul);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.ogrTc);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.ogrIsim);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(232, 272);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Öğrenci Bilgileri";
+            this.metroLabel3.CustomBackground = false;
+            this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.ForeColor = System.Drawing.Color.White;
+            this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel3.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(950, 21);
+            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel3.StyleManager = null;
+            this.metroLabel3.TabIndex = 34;
+            this.metroLabel3.Text = "Öğrencinin İşlemleri";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel3.UseStyleColors = false;
             // 
-            // ogrBorc
+            // panel1
             // 
-            this.ogrBorc.AutoSize = true;
-            this.ogrBorc.Location = new System.Drawing.Point(79, 242);
-            this.ogrBorc.Name = "ogrBorc";
-            this.ogrBorc.Size = new System.Drawing.Size(44, 15);
-            this.ogrBorc.TabIndex = 1;
-            this.ogrBorc.Text = "label11";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.metroLabel7);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lblBorc);
+            this.panel1.Controls.Add(this.lblTel);
+            this.panel1.Controls.Add(this.lblYas);
+            this.panel1.Controls.Add(this.metroLabel8);
+            this.panel1.Controls.Add(this.metroLabel6);
+            this.panel1.Controls.Add(this.metroLabel4);
+            this.panel1.Controls.Add(this.lblIsim);
+            this.panel1.Controls.Add(this.metroLabel2);
+            this.panel1.Controls.Add(this.lblTC);
+            this.panel1.Controls.Add(this.metroLabel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(255, 629);
+            this.panel1.TabIndex = 22;
             // 
-            // label13
+            // metroLabel7
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(52, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 21);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Toplam Borç";
+            this.metroLabel7.CustomBackground = false;
+            this.metroLabel7.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel7.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.ForeColor = System.Drawing.Color.White;
+            this.metroLabel7.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel7.Location = new System.Drawing.Point(73, 52);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(128, 21);
+            this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel7.StyleManager = null;
+            this.metroLabel7.TabIndex = 36;
+            this.metroLabel7.Text = "Öğrenci";
+            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel7.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel7.UseStyleColors = false;
             // 
-            // ogrOkul
+            // pictureBox1
             // 
-            this.ogrOkul.AutoSize = true;
-            this.ogrOkul.Location = new System.Drawing.Point(79, 188);
-            this.ogrOkul.Name = "ogrOkul";
-            this.ogrOkul.Size = new System.Drawing.Size(44, 15);
-            this.ogrOkul.TabIndex = 1;
-            this.ogrOkul.Text = "label11";
+            this.pictureBox1.Image = global::View.Properties.Resources._3099383_student_man_icon__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(73, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
             // 
-            // label10
+            // lblBorc
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(77, 155);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 21);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Okul";
+            this.lblBorc.CustomBackground = false;
+            this.lblBorc.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblBorc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBorc.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblBorc.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblBorc.ForeColor = System.Drawing.Color.White;
+            this.lblBorc.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblBorc.Location = new System.Drawing.Point(37, 481);
+            this.lblBorc.Name = "lblBorc";
+            this.lblBorc.Size = new System.Drawing.Size(191, 21);
+            this.lblBorc.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblBorc.StyleManager = null;
+            this.lblBorc.TabIndex = 24;
+            this.lblBorc.Text = "....";
+            this.lblBorc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBorc.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblBorc.UseStyleColors = false;
             // 
-            // ogrTc
+            // lblTel
             // 
-            this.ogrTc.AutoSize = true;
-            this.ogrTc.Location = new System.Drawing.Point(79, 128);
-            this.ogrTc.Name = "ogrTc";
-            this.ogrTc.Size = new System.Drawing.Size(44, 15);
-            this.ogrTc.TabIndex = 1;
-            this.ogrTc.Text = "label11";
+            this.lblTel.CustomBackground = false;
+            this.lblTel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblTel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTel.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblTel.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblTel.ForeColor = System.Drawing.Color.White;
+            this.lblTel.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblTel.Location = new System.Drawing.Point(37, 423);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(191, 21);
+            this.lblTel.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblTel.StyleManager = null;
+            this.lblTel.TabIndex = 25;
+            this.lblTel.Text = "....";
+            this.lblTel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTel.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblTel.UseStyleColors = false;
             // 
-            // label6
+            // lblYas
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(60, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 21);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Öğrenci TC";
+            this.lblYas.CustomBackground = false;
+            this.lblYas.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblYas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblYas.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblYas.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblYas.ForeColor = System.Drawing.Color.White;
+            this.lblYas.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblYas.Location = new System.Drawing.Point(37, 365);
+            this.lblYas.Name = "lblYas";
+            this.lblYas.Size = new System.Drawing.Size(191, 21);
+            this.lblYas.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblYas.StyleManager = null;
+            this.lblYas.TabIndex = 26;
+            this.lblYas.Text = "....";
+            this.lblYas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblYas.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblYas.UseStyleColors = false;
             // 
-            // ogrIsim
+            // metroLabel8
             // 
-            this.ogrIsim.AutoSize = true;
-            this.ogrIsim.Location = new System.Drawing.Point(79, 75);
-            this.ogrIsim.Name = "ogrIsim";
-            this.ogrIsim.Size = new System.Drawing.Size(44, 15);
-            this.ogrIsim.TabIndex = 1;
-            this.ogrIsim.Text = "label11";
+            this.metroLabel8.CustomBackground = false;
+            this.metroLabel8.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel8.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel8.ForeColor = System.Drawing.Color.White;
+            this.metroLabel8.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel8.Location = new System.Drawing.Point(31, 460);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel8.StyleManager = null;
+            this.metroLabel8.TabIndex = 27;
+            this.metroLabel8.Text = "Güncel Total Borç";
+            this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel8.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel8.UseStyleColors = false;
             // 
-            // label5
+            // metroLabel6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(54, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "İsim Soyisim";
+            this.metroLabel6.CustomBackground = false;
+            this.metroLabel6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.ForeColor = System.Drawing.Color.White;
+            this.metroLabel6.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel6.Location = new System.Drawing.Point(31, 402);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel6.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel6.StyleManager = null;
+            this.metroLabel6.TabIndex = 28;
+            this.metroLabel6.Text = "Telefon Numarası";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel6.UseStyleColors = false;
             // 
-            // OgrenciProfil
+            // metroLabel4
+            // 
+            this.metroLabel4.CustomBackground = false;
+            this.metroLabel4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.ForeColor = System.Drawing.Color.White;
+            this.metroLabel4.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel4.Location = new System.Drawing.Point(31, 344);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel4.StyleManager = null;
+            this.metroLabel4.TabIndex = 29;
+            this.metroLabel4.Text = "Öğrenci Yaşı";
+            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel4.UseStyleColors = false;
+            // 
+            // lblIsim
+            // 
+            this.lblIsim.CustomBackground = false;
+            this.lblIsim.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblIsim.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIsim.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblIsim.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblIsim.ForeColor = System.Drawing.Color.White;
+            this.lblIsim.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblIsim.Location = new System.Drawing.Point(37, 307);
+            this.lblIsim.Name = "lblIsim";
+            this.lblIsim.Size = new System.Drawing.Size(191, 21);
+            this.lblIsim.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblIsim.StyleManager = null;
+            this.lblIsim.TabIndex = 30;
+            this.lblIsim.Text = "....";
+            this.lblIsim.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIsim.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblIsim.UseStyleColors = false;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.CustomBackground = false;
+            this.metroLabel2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.ForeColor = System.Drawing.Color.White;
+            this.metroLabel2.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel2.Location = new System.Drawing.Point(31, 286);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel2.StyleManager = null;
+            this.metroLabel2.TabIndex = 31;
+            this.metroLabel2.Text = "İsim Soyisim";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel2.UseStyleColors = false;
+            // 
+            // lblTC
+            // 
+            this.lblTC.CustomBackground = false;
+            this.lblTC.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblTC.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTC.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.lblTC.FontWeight = MetroFramework.MetroLabelWeight.Light;
+            this.lblTC.ForeColor = System.Drawing.Color.White;
+            this.lblTC.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.lblTC.Location = new System.Drawing.Point(37, 249);
+            this.lblTC.Name = "lblTC";
+            this.lblTC.Size = new System.Drawing.Size(191, 21);
+            this.lblTC.Style = MetroFramework.MetroColorStyle.Blue;
+            this.lblTC.StyleManager = null;
+            this.lblTC.TabIndex = 32;
+            this.lblTC.Text = "....";
+            this.lblTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTC.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.lblTC.UseStyleColors = false;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.CustomBackground = false;
+            this.metroLabel1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.metroLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.ForeColor = System.Drawing.Color.White;
+            this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel1.Location = new System.Drawing.Point(31, 228);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel1.StyleManager = null;
+            this.metroLabel1.TabIndex = 33;
+            this.metroLabel1.Text = "Öğrenci TC Kimlik Numarası";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel1.UseStyleColors = false;
+            // 
+            // OgernciProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1309, 933);
+            this.ClientSize = new System.Drawing.Size(1205, 629);
             this.Controls.Add(this.panel2);
-            this.Name = "OgrenciProfil";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "OgernciProfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ogrenci";
             this.Load += new System.EventHandler(this.OgrenciProfil_Load);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridBulunanKitaplar)).EndInit();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data_Ogrenci)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,18 +505,26 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label ogrBorc;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label ogrOkul;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label ogrTc;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label ogrIsim;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.DataGridView data_Ogrenci;
-        public System.Windows.Forms.DataGridView GridBulunanKitaplar;
+        private System.Windows.Forms.Panel panel5;
         private MetroFramework.Controls.MetroButton teslimAl;
+        public System.Windows.Forms.DataGridView GridBulunanKitaplar;
+        private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroButton iadeEt;
+        public System.Windows.Forms.DataGridView data_Ogrenci;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroLabel lblBorc;
+        private MetroFramework.Controls.MetroLabel lblTel;
+        private MetroFramework.Controls.MetroLabel lblYas;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel lblIsim;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel lblTC;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }

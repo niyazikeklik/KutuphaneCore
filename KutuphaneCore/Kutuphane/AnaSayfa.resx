@@ -61,6 +61,16 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="kitapİşlemlerToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADYSURBVEhLY0AGXRkxjV0Z0T+6M2P+k46jj03MjeaDGoUJ
+        QAZ3ZUa/7M6I6QXSHaTi7szYIKhRmADsAqDBUC51AcjwrsyYLiiXugBq+F0g7QsVgoOJubnsQK/H9GTG
+        pOHCQF9HQJVjAkjEgIIm+u+UrFAeqDAY9GRE+8HlcWCQw6DKMQGywvbMKEGoMBh0ZcaGIstjw4PHcBAG
+        pv3g+vp6Jqoa3p0VYw6MwAtQ/lxgJslCkceCiTecDDxqOFY8ajhWPGo4VjxwhpNfOUMwAZdHN1BiAarh
+        DAwAaE0EhLgDd9kAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAAkFwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAlw

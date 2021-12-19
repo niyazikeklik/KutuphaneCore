@@ -30,21 +30,45 @@ namespace View.Kitap
         {
             InitializeComponent();
         }
-        private void KitapForm_Load(object sender, EventArgs e)
+        void GridYenile()
         {
             data_TumKitap.DataSource = Tables.Kitap.GetList();
+            data_TumKitap.Columns[data_TumKitap.Columns.Count - 1].Visible = false;
         }
+        private void KitapForm_Load(object sender, EventArgs e)
+        {
 
-        private void btn_KitapEkle_Click(object sender, EventArgs e)
+            GridYenile();
+        }
+        private void btn_KtpEkle_Click(object sender, EventArgs e)
         {
             KitapIslem form = new KitapIslem();
             form.ktpBarkod.Enabled = true;
             form.ktpButon.Text = "Kitap Ekle";
             form.ShowDialog();
-            data_TumKitap.DataSource = Tables.Kitap.GetList();
+            GridYenile();
         }
 
-        private void btn_KitapGuncelle_Click(object sender, EventArgs e)
+        private void btn_KtpSil_Click(object sender, EventArgs e)
+        {
+            if (data_TumKitap.SelectedRows.Count == 1)
+            {
+                string secilenBarkod = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
+                Tables.Kitap.Remove(secilenBarkod);
+                GridYenile();
+            }
+            else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
+
+        private void txtAra_TextChanged_1(object sender, EventArgs e)
+        {
+            if (rdBtn_ismeGore.Checked)
+                data_TumKitap.Ara(1, txtAra.Text);
+            else if (rdBtn_TC.Checked)
+                data_TumKitap.Ara(0, txtAra.Text);
+        }
+
+        private void btn_KtpGuncelle_Click(object sender, EventArgs e)
         {
             var row = data_TumKitap.SelectedRows[0];
             KitapIslem form = new KitapIslem();
@@ -59,27 +83,15 @@ namespace View.Kitap
             form.ktpTur.SelectedIndex = (int)kategori;
             form.ktpButon.Text = "Kitap Güncelle";
             form.ShowDialog();
-            data_TumKitap.DataSource = Tables.Kitap.GetList();
+            GridYenile();
         }
 
-        private void btn_KitapSil_Click(object sender, EventArgs e)
+        private void Btn_KitapGit_Click(object sender, EventArgs e)
         {
-            if (data_TumKitap.SelectedRows.Count == 1)
-            {
-                int secilenBarkod = (int)data_TumKitap.SelectedRows[0].Cells[0].Value;
-                Tables.Kitap.Remove(secilenBarkod);
-                MessageBox.Show("Seçilen Kitap Silindi!");
-                data_TumKitap.DataSource = Tables.Kitap.GetList();
-            }
-            else MessageBox.Show("Lütfen bir kitap seçiniz!");
-        }
+            var id = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
+            KitapProfil form = new KitapProfil(id);
+            form.ShowDialog();
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
-        {
-            if (rdBtn_ismeGore.Checked)
-                data_TumKitap.Ara(1, txtAra.Text);
-            else if (rdBtn_TC.Checked)
-                data_TumKitap.Ara(0, txtAra.Text);
         }
     }
 }

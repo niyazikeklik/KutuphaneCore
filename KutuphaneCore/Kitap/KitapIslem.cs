@@ -33,7 +33,7 @@ namespace KutuphaneCore
         {
             Kitap kitap = new()
             {
-                BarkodNo = int.Parse(this.ktpBarkod.Text),
+                BarkodNo = this.ktpBarkod.Text,
                 KitapAd = ktpAd.Text,
                 KitapTuru = (KitapKategori)ktpTur.SelectedIndex,
                 BasimTarihi = (DateTime)ktpBasım.Value,
@@ -43,19 +43,19 @@ namespace KutuphaneCore
             if (ktpBarkod.Enabled) //ktpBarkod enabled ise ekleme işlemi yapılacak demektir.
             {
                 if (Tables.Kitap.IsExistRecord(kitap.BarkodNo)) // Girilen barkod numarası zaten veritabanında var ise ekleme yapılmaz.
-                    MessageBox.Show("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.");
+                    MessageBox.Show("Aynı BarkodNo ile kayıtlı başka bir kayıt bulunmakta.", "Benzer kayıt", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 else
                 {
                     //Girilen bilgiler ile oluşturulan kitap nesnesinin veritabanına eklenme işlemi.
                     Tables.Kitap.Add(kitap);
-                    MessageBox.Show("Öğrenci başarılı bir şekilde kaydedildi.");
+                    MessageBox.Show("Öğrenci başarılı bir şekilde kaydedildi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
                 //Girilen barkod numarası üzerinden ilgili kitabın güncellenme işlemi.
                 Tables.Kitap.Update(kitap);
-                MessageBox.Show("Öğrenci başarılı bir şekilde güncellendi.");
+                MessageBox.Show("Öğrenci başarılı bir şekilde güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
