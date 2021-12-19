@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entitites.Models
+{
+    public class OgrenciIslemBilgi
+    {
+        public int IslemID { get; set; }
+        public string KitapAdi { get; set; }
+        public DateTime AlimTarihi { get; set; }
+        public DateTime SonTeslimTarihi { get; set; }
+        public DateTime? TeslimTarihi { get; set; }
+        public double IsemUcreti { get; set; }
+        public string Aciklama { get; set; }
+    }
+}

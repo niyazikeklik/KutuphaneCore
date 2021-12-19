@@ -9,22 +9,18 @@ namespace DTO.Concrete
     public class Tablolar
     {
         /*
-         * Bu class yapısı SINGLETON tasarım deseni kullanılarak yapılmıştır.
-         * Amaç program çalışma süresi boyunca sürekli oluşturulan nesnelerin,
-         * tek bir sefer oluşturulması ve ortak bir nesne üzerinden erişilebilmesidir.
-         * Bu sayede başka bir form'da veya katmanda yapılan veritabanı değişiklikleri
-         * her yerden görülebilir olacaktır. Çünkü değişiklikler her zaman aynı nesne 
-         * üzerinden yapılacaktır.
+         * Bu class yapısı SINGLETON tasarım deseninden esinlenerek yapılmıştır.
+         * SINGLETON yapısında normalde class örneği yeniden oluşturulmadan her zaman aynı nesne döndürülür.
+         * Yalnız bu durum bizim işimizi göremeyecektir.
+         * Çünkü;
+         * DatabaseContext nesnesi sürekli yenilenmeli ve veritabanındaki değişiklikleri içine almalıdır.
+         * Bundan dolayı SINGLETON tasarım deseni değiştirilerek kullanılmıştır.
          */
-        private static Tablolar tables;
         public static Tablolar Tables
         {
-            //    Bu prop, eğer nesneleri bir kere oluşturduysa her başvuruda aynı nesneyi dönme görevini get methodu üzerinde gerçekleştirir.
             get
             {
-                if (tables == null)
-                    tables = new Tablolar();
-                return tables;
+                return new Tablolar();
             }
         }
         public OgrenciRepo Ogr { get; set; }

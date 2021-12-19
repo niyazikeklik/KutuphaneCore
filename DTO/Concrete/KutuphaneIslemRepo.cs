@@ -21,15 +21,13 @@ namespace DTO.Concrete
         {
             return _dbSet.Where(x => x.IadeTarihi == null);
         }
-
         public IEnumerable<KutuphaneIslem> GetKapaliIslems()
         {
             return _dbSet.Where(x => x.IadeTarihi != null);
         }
-
         public KutuphaneIslem GetIslemsByOgrenciNoAndKitapNo(int ogrID, int kitapID)
         {
-            return _dbSet.Where(x => (kitapID == x.KitapBarkodNo) && (x.OgrenciNo == ogrID)).First();
+            return _dbSet.Where(x => (kitapID == x.KitapBarkodNo) && (x.OgrenciID == ogrID)).First();
         }
     }
 }

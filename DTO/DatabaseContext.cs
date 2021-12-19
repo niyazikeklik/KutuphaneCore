@@ -13,7 +13,10 @@ namespace DTO
     public class DatabaseContext : DbContext
     {
         public string connectionString = @"Data Source=database.db;";
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite(connectionString);
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
+            optionsBuilder.UseSqlite(connectionString);
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
 
         public DbSet<Ogrenci> Ogrencis { get; set; }
         public DbSet<Kitap> Kitaps { get; set; }

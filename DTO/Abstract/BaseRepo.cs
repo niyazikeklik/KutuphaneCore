@@ -17,7 +17,16 @@ namespace DTO.Abstract
             _context = context;
             _dbSet = context.Set<T>();
         }
-
+        public bool IsExistRecord(int ID)
+        {
+            var result = GetById(ID) == null ? false : true;
+            return result;
+        }
+        public bool IsExistRecord(string ID)
+        {
+            var result = GetById(ID) == null ? false : true;
+            return result;
+        }
         public void Add(T entity)
         {
             _dbSet.Add(entity);
@@ -30,6 +39,10 @@ namespace DTO.Abstract
 
         }
         public T GetById(int ID)
+        {
+            return _dbSet.Find(ID);
+        }
+        public T GetById(string ID)
         {
             return _dbSet.Find(ID);
         }

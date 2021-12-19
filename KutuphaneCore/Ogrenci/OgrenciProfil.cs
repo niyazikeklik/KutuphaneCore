@@ -14,6 +14,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,55 +27,76 @@ namespace KutuphaneCore
         Ogrenci ogr;
         public OgrenciProfil(int ogrID)
         {
+            this.ogr = Tables.Ogr.GetOgrenciWithIslemlerById(ogrID);
             InitializeComponent();
         }
         public void GridsYenile()
         {
-           
+            List<OgrenciIslemBilgi> list = new List<OgrenciIslemBilgi>();
+            foreach (var item in Tables.Ogr.GetOgrenciWithIslemlerById(ogr.OgrenciID).kutuphaneIslems)
+            {
+                list.Add(new OgrenciIslemBilgi()
+                {
+                    IslemID = item.IslemId,
+                    KitapAdi = Tables.Kitap.GetById(item.KitapBarkodNo).KitapAd,
+                    AlimTarihi = item.AlimTarihi,
+                    SonTeslimTarihi = item.SonTeslimTarihi,
+                    TeslimTarihi = item.IadeTarihi,
+                    IsemUcreti = item.BorcHesapla(),
+                    Aciklama = item.CreateAciklama()
+                });
+            }
+            data_Ogrenci.DataSource = list;
+            GridBulunanKitaplar.DataSource = Tables.Kitap.GetAlinabilir();
+            data_Ogrenci.ClearSelection();
+            GridBulunanKitaplar.ClearSelection();
+            data_Ogrenci.Boya();
+
         }
         public void OgrenciBilgileriIsle()
         {
             ogrIsim.Text = ogr.IsimSoyisim.ToString();
-            ogrTc.Text = ogr.OgrenciTC.ToString();
-            ogrBorc.Text = ogr.ogrenciBorc.ToString();
+            ogrTc.Text = ogr.OgrenciID.ToString();
         }
         private void OgrenciProfil_Load(object sender, EventArgs e)
         {
             OgrenciBilgileriIsle();
             GridsYenile();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void teslimAl_Click(object sender, EventArgs e)
         {
+            var seciliKitapID = (int)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
+            var result = Islemler.TeslimAl(seciliKitapID, ogr.OgrenciID);
+            var kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
 
-            var secilenrow = GridBulunanKitaplar.SelectedRows[0];
-            var secilenBarkodNo = (int)secilenrow.Cells[0].Value;
+            MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            var islem = Tables.Islem.GetIslemsByOgrenciNoAndKitapNo(ogr.OgrenciTC, secilenBarkodNo);
-            double result = Islemler.IadeEt(islem);
-
-            if (MessageBox.Show($"İade tamamlandı.Öğrencinin işlem borcu: {result} TL'dir.\n\n Ödeme alındı mı?", "İşlem Başarılı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                ogr.ogrenciBorc -= result;
-                Tables.Ogr.Update(ogr);
-                OgrenciBilgileriIsle();
-            }
-         
             GridsYenile();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void iadeEt_Click(object sender, EventArgs e)
         {
-            var seciliKitapID = (int)GridAlinabilirKitaplar.SelectedRows[0].Cells[0].Value;
-            var result = Islemler.TeslimAl(seciliKitapID, ogr.OgrenciTC);
-            var kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
 
-            MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.","İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var secilenrow = data_Ogrenci.SelectedRows[0];
+            var secilenBarkodNo = (int)secilenrow.Cells[0].Value;
 
-            GridsYenile();
+            var islem = Tables.Islem.GetById(secilenBarkodNo);
+            double result = Islemler.IadeEt(islem);
+            if (result != -1)
+            {
+                MessageBox.Show($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
+
+                OgrenciBilgileriIsle();
+                GridsYenile();
+            }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void data_Ogrenci_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

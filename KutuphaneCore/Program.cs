@@ -23,7 +23,7 @@ namespace KutuphaneCore
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KutuphaneIslemForm());
+            Application.Run(new AnaSayfa());
         }
     }
 }

@@ -42,7 +42,7 @@ namespace KutuphaneCore
             };
             if (ktpBarkod.Enabled) //ktpBarkod enabled ise ekleme işlemi yapılacak demektir.
             {
-                if (Tables.Kitap.GetList().Any(x => x.BarkodNo == kitap.BarkodNo)) // Girilen barkod numarası zaten veritabanında var ise ekleme yapılmaz.
+                if (Tables.Kitap.IsExistRecord(kitap.BarkodNo)) // Girilen barkod numarası zaten veritabanında var ise ekleme yapılmaz.
                     MessageBox.Show("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.");
                 else
                 {

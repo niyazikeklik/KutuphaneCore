@@ -12,10 +12,10 @@ namespace Entitites.Models
     {
        
         [Key]
-        public int OgrenciTC { get; set; }
+        public int OgrenciID { get; set; }
         public string IsimSoyisim { get; set; }
+        public string OgrenciTC { get; set; }
         public string TelefonNo { get; set; }
-        public double ogrenciBorc { get; set; }
         public DateTime DogumTarihi { get; set; }
         public ICollection<KutuphaneIslem> kutuphaneIslems { get; set; }
 

@@ -17,11 +17,14 @@ namespace Entitites.Models
         public int IslemId { get; set; }
         [Required]
         [ForeignKey(name: "Ogrenci")]
-        public int OgrenciNo { get; set; }
+        public int OgrenciID { get; set; }
         [Required]
         [ForeignKey(name: "Kitap")]
         public int KitapBarkodNo { get; set; }
+
+        public double IslemUcret { get; set; }
         public DateTime AlimTarihi { get; set; }
+        public DateTime SonTeslimTarihi { get; set; }
         public DateTime? IadeTarihi { get; set; }
         public virtual Ogrenci Ogrenci { get; set; }
         public virtual Kitap Kitap { get; set; }

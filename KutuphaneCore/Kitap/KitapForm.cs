@@ -20,6 +20,8 @@ using System.Windows.Forms;
 
 using static Entitites.Models.Enums;
 using static DTO.Concrete.Tablolar;
+using Business;
+
 namespace View.Kitap
 {
     public partial class KitapForm : Form
@@ -30,21 +32,21 @@ namespace View.Kitap
         }
         private void KitapForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Tables.Kitap.GetList();
+            data_TumKitap.DataSource = Tables.Kitap.GetList();
         }
 
-        private void OgrEkle_Click_1(object sender, EventArgs e)
+        private void btn_KitapEkle_Click(object sender, EventArgs e)
         {
             KitapIslem form = new KitapIslem();
             form.ktpBarkod.Enabled = true;
             form.ktpButon.Text = "Kitap Ekle";
             form.ShowDialog();
-            dataGridView1.DataSource = Tables.Kitap.GetList();
+            data_TumKitap.DataSource = Tables.Kitap.GetList();
         }
 
-        private void OgrGuncelle_Click_1(object sender, EventArgs e)
+        private void btn_KitapGuncelle_Click(object sender, EventArgs e)
         {
-            var row = dataGridView1.SelectedRows[0];
+            var row = data_TumKitap.SelectedRows[0];
             KitapIslem form = new KitapIslem();
             form.ktpTur.DataSource = Enum.GetValues(typeof(KitapKategori));
             form.ktpBarkod.Enabled = false;
@@ -57,19 +59,27 @@ namespace View.Kitap
             form.ktpTur.SelectedIndex = (int)kategori;
             form.ktpButon.Text = "Kitap Güncelle";
             form.ShowDialog();
-            dataGridView1.DataSource = Tables.Kitap.GetList();
+            data_TumKitap.DataSource = Tables.Kitap.GetList();
         }
 
-        private void OgrSil_Click_1(object sender, EventArgs e)
+        private void btn_KitapSil_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
+            if (data_TumKitap.SelectedRows.Count == 1)
             {
-                int secilenBarkod = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+                int secilenBarkod = (int)data_TumKitap.SelectedRows[0].Cells[0].Value;
                 Tables.Kitap.Remove(secilenBarkod);
                 MessageBox.Show("Seçilen Kitap Silindi!");
-                dataGridView1.DataSource = Tables.Kitap.GetList();
+                data_TumKitap.DataSource = Tables.Kitap.GetList();
             }
             else MessageBox.Show("Lütfen bir kitap seçiniz!");
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            if (rdBtn_ismeGore.Checked)
+                data_TumKitap.Ara(1, txtAra.Text);
+            else if (rdBtn_TC.Checked)
+                data_TumKitap.Ara(0, txtAra.Text);
         }
     }
 }

@@ -28,109 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.ogrTC = new System.Windows.Forms.TextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.ogrAd = new System.Windows.Forms.TextBox();
-            this.OgrTelNo = new System.Windows.Forms.TextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.OgrBirt = new System.Windows.Forms.DateTimePicker();
-            this.OgrButton = new System.Windows.Forms.Button();
+            this.sqliteCommand1 = new Microsoft.Data.Sqlite.SqliteCommand();
+            this.OgrTeNo = new System.Windows.Forms.TextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.OgrButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Öğrenci TC";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Ad Soyad";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(150, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Dogum Tarihi";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(150, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 15);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Telefon Numarası";
             // 
             // ogrTC
             // 
+            this.ogrTC.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ogrTC.Location = new System.Drawing.Point(30, 49);
-            this.ogrTC.MaxLength = 9;
+            this.ogrTC.MaxLength = 11;
             this.ogrTC.Name = "ogrTC";
-            this.ogrTC.PlaceholderText = "Ogrenci TC";
-            this.ogrTC.Size = new System.Drawing.Size(100, 23);
-            this.ogrTC.TabIndex = 1;
+            this.ogrTC.PlaceholderText = "000";
+            this.ogrTC.Size = new System.Drawing.Size(155, 27);
+            this.ogrTC.TabIndex = 0;
+            this.ogrTC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.CustomBackground = false;
+            this.metroLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel1.Location = new System.Drawing.Point(30, 25);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(155, 21);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel1.StyleManager = null;
+            this.metroLabel1.TabIndex = 11;
+            this.metroLabel1.Text = "Öğrenci TC No";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel1.UseStyleColors = false;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.CustomBackground = false;
+            this.metroLabel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel2.Location = new System.Drawing.Point(30, 79);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(155, 21);
+            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel2.StyleManager = null;
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "İsim Soyisim";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel2.UseStyleColors = false;
             // 
             // ogrAd
             // 
-            this.ogrAd.Location = new System.Drawing.Point(30, 108);
+            this.ogrAd.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ogrAd.Location = new System.Drawing.Point(30, 103);
+            this.ogrAd.MaxLength = 30;
             this.ogrAd.Name = "ogrAd";
             this.ogrAd.PlaceholderText = "İsim Soyisim";
-            this.ogrAd.Size = new System.Drawing.Size(100, 23);
+            this.ogrAd.Size = new System.Drawing.Size(155, 27);
             this.ogrAd.TabIndex = 1;
+            this.ogrAd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // OgrTelNo
+            // metroLabel3
             // 
-            this.OgrTelNo.Location = new System.Drawing.Point(149, 108);
-            this.OgrTelNo.Name = "OgrTelNo";
-            this.OgrTelNo.PlaceholderText = "Telefon Numarası";
-            this.OgrTelNo.Size = new System.Drawing.Size(201, 23);
-            this.OgrTelNo.TabIndex = 1;
+            this.metroLabel3.CustomBackground = false;
+            this.metroLabel3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel3.Location = new System.Drawing.Point(30, 187);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(155, 21);
+            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel3.StyleManager = null;
+            this.metroLabel3.TabIndex = 12;
+            this.metroLabel3.Text = "Doğum Tarihi";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel3.UseStyleColors = false;
             // 
             // OgrBirt
             // 
-            this.OgrBirt.Location = new System.Drawing.Point(150, 49);
+            this.OgrBirt.Location = new System.Drawing.Point(30, 211);
             this.OgrBirt.Name = "OgrBirt";
-            this.OgrBirt.Size = new System.Drawing.Size(200, 23);
-            this.OgrBirt.TabIndex = 2;
+            this.OgrBirt.Size = new System.Drawing.Size(155, 23);
+            this.OgrBirt.TabIndex = 3;
+            // 
+            // sqliteCommand1
+            // 
+            this.sqliteCommand1.CommandTimeout = 30;
+            this.sqliteCommand1.Connection = null;
+            this.sqliteCommand1.Transaction = null;
+            this.sqliteCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // OgrTeNo
+            // 
+            this.OgrTeNo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OgrTeNo.Location = new System.Drawing.Point(30, 157);
+            this.OgrTeNo.MaxLength = 10;
+            this.OgrTeNo.Name = "OgrTeNo";
+            this.OgrTeNo.PlaceholderText = "534 000 00 00";
+            this.OgrTeNo.Size = new System.Drawing.Size(155, 27);
+            this.OgrTeNo.TabIndex = 2;
+            this.OgrTeNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.CustomBackground = false;
+            this.metroLabel4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Medium;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
+            this.metroLabel4.Location = new System.Drawing.Point(30, 133);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(155, 21);
+            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroLabel4.StyleManager = null;
+            this.metroLabel4.TabIndex = 12;
+            this.metroLabel4.Text = "Telefon No";
+            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroLabel4.UseStyleColors = false;
             // 
             // OgrButton
             // 
-            this.OgrButton.Location = new System.Drawing.Point(30, 149);
+            this.OgrButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OgrButton.Highlight = true;
+            this.OgrButton.Image = global::View.Properties.Resources.ogrEkle;
+            this.OgrButton.Location = new System.Drawing.Point(75, 244);
             this.OgrButton.Name = "OgrButton";
-            this.OgrButton.Size = new System.Drawing.Size(320, 41);
-            this.OgrButton.TabIndex = 3;
+            this.OgrButton.Size = new System.Drawing.Size(110, 32);
+            this.OgrButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.OgrButton.StyleManager = null;
+            this.OgrButton.TabIndex = 4;
             this.OgrButton.Text = "İşlemi Yap";
-            this.OgrButton.UseVisualStyleBackColor = true;
-            this.OgrButton.Click += new System.EventHandler(this.OgrButton_Click);
+            this.OgrButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.OgrButton.Click += new System.EventHandler(this.OgrEkle_Click);
             // 
             // OgrenciIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 208);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(212, 288);
             this.Controls.Add(this.OgrButton);
             this.Controls.Add(this.OgrBirt);
-            this.Controls.Add(this.OgrTelNo);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.OgrTeNo);
             this.Controls.Add(this.ogrAd);
             this.Controls.Add(this.ogrTC);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "OgrenciIslem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ogrenci Ekle";
@@ -141,15 +200,16 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox ogrTC;
-        public System.Windows.Forms.Button OgrButton;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
         public System.Windows.Forms.TextBox ogrAd;
-        public System.Windows.Forms.TextBox OgrTelNo;
+        public System.Windows.Forms.TextBox textBox2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
+        public System.Windows.Forms.TextBox OgrTeNo;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
         public System.Windows.Forms.DateTimePicker OgrBirt;
+        public MetroFramework.Controls.MetroButton OgrButton;
     }
 }

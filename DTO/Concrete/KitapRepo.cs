@@ -1,6 +1,9 @@
 ﻿using DTO.Abstract;
+
 using Entitites;
+
 using Microsoft.EntityFrameworkCore;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,13 +19,20 @@ namespace DTO.Concrete
 
         }
 
-        public List<Kitap> GetAlinabilirKitap()
+        public List<Kitap> GetAlinabilir()
         {
             return _dbSet.Where(x => x.Stok).ToList();
         }
 
-        public List<Kitap> GetIadeEdilmemis() {
+        public List<Kitap> GetZimmetli()
+        {
             return _dbSet.Where(x => !x.Stok).ToList();
+        }
+        public void StokUpdate(int ID)
+        {
+            var kitap = GetById(ID);
+            kitap.Stok = !kitap.Stok;
+            Update(kitap);
         }
     }
 }
