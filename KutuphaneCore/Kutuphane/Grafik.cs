@@ -50,5 +50,23 @@ namespace View.Kutuphane
             zedGraphControl1.Refresh();
 
         }
+
+        private void OgrButton_Click(object sender, EventArgs e)
+        {
+            zedGraphControl1.GraphPane.Title.Text = TxtTitles.Text;
+            zedGraphControl1.Refresh();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            zedGraphControl1.GraphPane.YAxis.Title.Text = TxtTitles.Text;
+            zedGraphControl1.Refresh();
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            zedGraphControl1.GraphPane.XAxis.Title.Text = TxtTitles.Text;
+            zedGraphControl1.Refresh();
+        }
     }
 }

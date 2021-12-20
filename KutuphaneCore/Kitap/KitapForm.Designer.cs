@@ -79,7 +79,7 @@
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel1.Location = new System.Drawing.Point(0, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(553, 21);
+            this.metroLabel1.Size = new System.Drawing.Size(532, 21);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 18;
@@ -97,7 +97,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(155, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(553, 53);
+            this.panel7.Size = new System.Drawing.Size(532, 53);
             this.panel7.TabIndex = 25;
             // 
             // rdBtn_TC
@@ -106,7 +106,7 @@
             this.rdBtn_TC.CustomBackground = false;
             this.rdBtn_TC.FontSize = MetroFramework.MetroLinkSize.Small;
             this.rdBtn_TC.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.rdBtn_TC.Location = new System.Drawing.Point(454, 32);
+            this.rdBtn_TC.Location = new System.Drawing.Point(417, 32);
             this.rdBtn_TC.Name = "rdBtn_TC";
             this.rdBtn_TC.Size = new System.Drawing.Size(96, 15);
             this.rdBtn_TC.Style = MetroFramework.MetroColorStyle.Blue;
@@ -120,7 +120,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::View.Properties.Resources._6586131_find_glass_magnifier_search_seo_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(295, 21);
+            this.pictureBox5.Location = new System.Drawing.Point(258, 21);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,7 @@
             // txtAra
             // 
             this.txtAra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAra.Location = new System.Drawing.Point(323, 20);
+            this.txtAra.Location = new System.Drawing.Point(286, 20);
             this.txtAra.MaxLength = 11;
             this.txtAra.Name = "txtAra";
             this.txtAra.PlaceholderText = "Arama";
@@ -146,7 +146,7 @@
             this.rdBtn_ismeGore.CustomBackground = false;
             this.rdBtn_ismeGore.FontSize = MetroFramework.MetroLinkSize.Small;
             this.rdBtn_ismeGore.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.rdBtn_ismeGore.Location = new System.Drawing.Point(454, 17);
+            this.rdBtn_ismeGore.Location = new System.Drawing.Point(417, 17);
             this.rdBtn_ismeGore.Name = "rdBtn_ismeGore";
             this.rdBtn_ismeGore.Size = new System.Drawing.Size(76, 15);
             this.rdBtn_ismeGore.Style = MetroFramework.MetroColorStyle.Blue;
@@ -212,7 +212,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(155, 53);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(553, 327);
+            this.panel8.Size = new System.Drawing.Size(532, 328);
             this.panel8.TabIndex = 26;
             // 
             // data_TumKitap
@@ -231,7 +231,7 @@
             this.data_TumKitap.RowTemplate.Height = 30;
             this.data_TumKitap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.data_TumKitap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_TumKitap.Size = new System.Drawing.Size(553, 306);
+            this.data_TumKitap.Size = new System.Drawing.Size(532, 307);
             this.data_TumKitap.TabIndex = 17;
             // 
             // panel1
@@ -245,7 +245,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 380);
+            this.panel1.Size = new System.Drawing.Size(155, 381);
             this.panel1.TabIndex = 24;
             // 
             // panel6
@@ -379,10 +379,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(708, 380);
+            this.ClientSize = new System.Drawing.Size(687, 381);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KitapForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -50,6 +50,7 @@
             this.ogrTC.Size = new System.Drawing.Size(155, 27);
             this.ogrTC.TabIndex = 0;
             this.ogrTC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ogrTC.TextChanged += new System.EventHandler(this.ogrTC_TextChanged);
             // 
             // metroLabel1
             // 
@@ -163,7 +164,6 @@
             // 
             this.OgrButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OgrButton.Highlight = true;
-
             this.OgrButton.Location = new System.Drawing.Point(75, 244);
             this.OgrButton.Name = "OgrButton";
             this.OgrButton.Size = new System.Drawing.Size(110, 32);

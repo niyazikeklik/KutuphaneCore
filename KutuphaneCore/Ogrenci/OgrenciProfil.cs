@@ -60,24 +60,26 @@ namespace KutuphaneCore
             data_Ogrenci.ClearSelection();
             GridBulunanKitaplar.ClearSelection();
             data_Ogrenci.Boya();
+            OgrenciBilgileriIsle();
 
         }
         public void OgrenciBilgileriIsle()
         {
             double ToplamBorc = 0;
-            foreach (var item in ogr.kutuphaneIslems)
-             ToplamBorc += item.BorcHesapla();
-            
+            foreach (var item in Tables.Ogr.GetKapanmamisIslem(ogr.OgrenciTC))
+                ToplamBorc += item.BorcHesapla();
+
             lblTC.Text = ogr.OgrenciTC;
             lblIsim.Text = ogr.IsimSoyisim;
             lblBorc.Text = ToplamBorc.ToString();
             lblTel.Text = ogr.TelefonNo.ToString();
-            lblYas.Text = Math.Round((DateTime.Now - ogr.DogumTarihi).TotalDays / 365, 0,MidpointRounding.ToZero).ToString();
+            lblYas.Text = Math.Round((DateTime.Now - ogr.DogumTarihi).TotalDays / 365, 0, MidpointRounding.ToZero).ToString();
         }
         private void OgrenciProfil_Load(object sender, EventArgs e)
         {
-            OgrenciBilgileriIsle();
+
             GridsYenile();
+
         }
 
         private void iadeEt_Click_1(object sender, EventArgs e)
@@ -91,7 +93,6 @@ namespace KutuphaneCore
             {
                 MessageBox.Show($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
 
-                OgrenciBilgileriIsle();
                 GridsYenile();
             }
         }
@@ -109,7 +110,7 @@ namespace KutuphaneCore
                 GridsYenile();
             }
             else MessageBox.Show("Bir kitap seçiniz.");
-        
+
         }
 
         private void GridBulunanKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e)

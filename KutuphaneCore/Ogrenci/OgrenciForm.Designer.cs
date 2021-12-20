@@ -113,13 +113,13 @@
             this.data_Ogrenci.RowTemplate.Height = 30;
             this.data_Ogrenci.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Ogrenci.Size = new System.Drawing.Size(502, 307);
+            this.data_Ogrenci.Size = new System.Drawing.Size(532, 307);
             this.data_Ogrenci.TabIndex = 17;
             // 
             // txtAra
             // 
             this.txtAra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAra.Location = new System.Drawing.Point(283, 15);
+            this.txtAra.Location = new System.Drawing.Point(311, 20);
             this.txtAra.MaxLength = 11;
             this.txtAra.Name = "txtAra";
             this.txtAra.PlaceholderText = "Arama";
@@ -135,7 +135,7 @@
             this.rdBtn_ismeGore.CustomBackground = false;
             this.rdBtn_ismeGore.FontSize = MetroFramework.MetroLinkSize.Small;
             this.rdBtn_ismeGore.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.rdBtn_ismeGore.Location = new System.Drawing.Point(409, 12);
+            this.rdBtn_ismeGore.Location = new System.Drawing.Point(442, 15);
             this.rdBtn_ismeGore.Name = "rdBtn_ismeGore";
             this.rdBtn_ismeGore.Size = new System.Drawing.Size(76, 15);
             this.rdBtn_ismeGore.Style = MetroFramework.MetroColorStyle.Blue;
@@ -153,7 +153,7 @@
             this.rdBtn_TC.CustomBackground = false;
             this.rdBtn_TC.FontSize = MetroFramework.MetroLinkSize.Small;
             this.rdBtn_TC.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.rdBtn_TC.Location = new System.Drawing.Point(409, 27);
+            this.rdBtn_TC.Location = new System.Drawing.Point(442, 32);
             this.rdBtn_TC.Name = "rdBtn_TC";
             this.rdBtn_TC.Size = new System.Drawing.Size(78, 15);
             this.rdBtn_TC.Style = MetroFramework.MetroColorStyle.Blue;
@@ -167,7 +167,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::View.Properties.Resources._6586131_find_glass_magnifier_search_seo_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(255, 16);
+            this.pictureBox5.Location = new System.Drawing.Point(281, 23);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -341,7 +341,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(155, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(502, 53);
+            this.panel7.Size = new System.Drawing.Size(532, 53);
             this.panel7.TabIndex = 22;
             // 
             // panel8
@@ -351,7 +351,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(155, 53);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(502, 328);
+            this.panel8.Size = new System.Drawing.Size(532, 328);
             this.panel8.TabIndex = 23;
             // 
             // metroLabel1
@@ -364,7 +364,7 @@
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel1.Location = new System.Drawing.Point(0, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(502, 21);
+            this.metroLabel1.Size = new System.Drawing.Size(532, 21);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 18;
@@ -378,7 +378,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(657, 381);
+            this.ClientSize = new System.Drawing.Size(687, 381);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);

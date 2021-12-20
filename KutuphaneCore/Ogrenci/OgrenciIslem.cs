@@ -55,7 +55,21 @@ namespace KutuphaneCore
 
         private void OgrenciIslem_Load(object sender, EventArgs e)
         {
+
             ogrTC.Focus();
+        }
+
+        private void ogrTC_TextChanged(object sender, EventArgs e)
+        {
+            int sonKarakterIndis = ogrTC.Text.Count() - 1;
+            //Son karakter rakam mı diye kontrol ettirilir.
+            if (sonKarakterIndis >= 0 && !char.IsNumber(ogrTC.Text[sonKarakterIndis]))
+            {
+
+                MessageBox.Show("TC No rakam olmalıdır!", "Yanlış girdi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Son karakter rakam değilse ekrana uyarı mesajı veriyorum ve son karakteri siliyorum.
+                ogrTC.Text = ogrTC.Text.Remove(sonKarakterIndis);
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Business
         public static string CreateAciklama(this KutuphaneIslem item)
         {
             if (item.IadeTarihi == null && item.SonTeslimTarihi < DateTime.Now)
-                return "Kitabın teslim süresi geçmiştir. Güncel ceza " + item.BorcHesapla();
+                return "Kitabın teslim süresi geçmiştir. Güncel ceza " + item.BorcHesapla() + "TL'dir.";
             else if (item.IadeTarihi != null)
                 return "Kitap teslim alınmıştır.";
             else
@@ -48,7 +48,6 @@ namespace Business
                     row.DefaultCellStyle.BackColor = Color.Red;
                     row.DefaultCellStyle.ForeColor = Color.White;
                 }
-
                 else if (kalanGun <= 2)
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
@@ -85,7 +84,6 @@ namespace Business
                 islem.IadeTarihi = DateTime.Now;
                 islem.IslemUcret = borc;
                 Tables.Islem.Update(islem);
-
                 Tables.Kitap.StokUpdate(islem.KitapBarkodNo);
 
                 return borc;

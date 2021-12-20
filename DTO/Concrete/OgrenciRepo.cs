@@ -51,5 +51,10 @@ namespace DTO.Concrete
             return x != null;
         }
 
+        public List<KutuphaneIslem> GetKapanmamisIslem(string ID)
+        {
+            return GetOgrenciWithIslemlerById(ID).kutuphaneIslems.Where(x => x.IadeTarihi == null).ToList();
+        }
+
     }
 }
