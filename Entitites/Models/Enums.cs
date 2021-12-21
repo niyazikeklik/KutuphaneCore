@@ -8,6 +8,7 @@ namespace Entitites.Models
 {
     public class Enums
     {
+        //Kitap kategorileri enum tipinde tutulur.
         public enum KitapKategori
         {
             Macera = 0,

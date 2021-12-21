@@ -12,11 +12,13 @@ namespace Entitites.Models
 
     public class KutuphaneIslem
     {
-        [Key]
+        [Key] //IslemId'nin primarykey olacağını söylüyorum.
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //İslemId'nin ıdentity olarak artacağını söylüyorum
         public int IslemId { get; set; }
-        [Required]
+        [Required]// Bu bilginin gerekli olduğunu eğer boş geçilir ise hata vermesi gerektiğini söylüyorum
         [ForeignKey(name: "Ogrenci")]
+        //ÖğrenciID sütunun Öğrenci tablosunun PrimaryKey'i olduğunu yani bu tabloda ForeignKey olması gerektiğini söylüyorum
         public string OgrenciID { get; set; }
         [Required]
         [ForeignKey(name: "Kitap")]

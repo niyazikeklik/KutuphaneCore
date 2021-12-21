@@ -4,7 +4,7 @@ using KutuphaneCore;
 
 using System;
 using System.Windows.Forms;
-
+using Entitites.Models;
 using static DTO.Concrete.Tablolar;
 
 namespace View.Ogrenci
@@ -18,7 +18,9 @@ namespace View.Ogrenci
         }
         void GridYenile()
         {
+            //Öğrenciler tablosunun datagrid üzerine basılması.
             data_Ogrenci.DataSource = Tables.Ogr.GetList();
+            //Son sütun olan işlemler sütununun gizlenmesi.
             data_Ogrenci.Columns[data_Ogrenci.Columns.Count - 1].Visible = false;
         }
         private void OgrenciForm_Load(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace View.Ogrenci
         }
         private void OgrEkle_Click_1(object sender, EventArgs e)
         {
+            //Öğrenci ekleme formunun ayarlanması ve gösterilmesi.
             OgrenciIslem form = new OgrenciIslem();
             form.ogrTC.Enabled = true;
             form.OgrButton.Text = "Öğrenciyi Ekle";
@@ -35,23 +38,25 @@ namespace View.Ogrenci
         }
         private void btn_OgrGuncelle_Click_1(object sender, EventArgs e)
         {
+            //Öğrenci güncelleme formunun seçilen satırdaki bilgilere göre ayarlanması ve gösterilmesi.
             var row = data_Ogrenci.SelectedRows[0];
-
+            var secilenOgrID = (string)row.Cells[0].Value;
+           Entitites.Models.Ogrenci SecilenOgrenci = Tables.Ogr.GetById(secilenOgrID);
             OgrenciIslem form = new OgrenciIslem();
             form.ogrTC.Enabled = false;
-            form.ogrTC.Text = row.Cells[0].Value.ToString();
-            form.ogrAd.Text = row.Cells[1].Value.ToString();
-            form.OgrTeNo.Text = row.Cells[2].Value.ToString();
-            form.OgrBirt.Value = (DateTime)row.Cells[3].Value;
-
+            form.ogrTC.Text = SecilenOgrenci.OgrenciTC;
+            form.ogrAd.Text = SecilenOgrenci.IsimSoyisim;
+            form.OgrTeNo.Text = SecilenOgrenci.TelefonNo;
+            form.OgrBirt.Value = SecilenOgrenci.DogumTarihi;
             form.OgrButton.Text = "Öğrenciyi Güncelle";
             form.ShowDialog();
             GridYenile();
-         
+
         }
 
         private void btn_OgrGit_Click(object sender, EventArgs e)
         {
+            //Seçilen öğrenci ıd üzerinden OgrenciProfil formunun açılması.
             var ogrenciNo = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
             OgernciProfil form = new OgernciProfil(ogrenciNo);
             form.ShowDialog();
@@ -59,6 +64,7 @@ namespace View.Ogrenci
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
+            //txtAra textbox'ına data girildikçe seçili radiobutona göre arama işlemi.
             if (rdBtn_ismeGore.Checked)
                 data_Ogrenci.Ara(1, txtAra.Text);
             else if (rdBtn_TC.Checked)
@@ -67,19 +73,24 @@ namespace View.Ogrenci
 
         private void btn_OgrSil_Click_1(object sender, EventArgs e)
         {
+            //Seçili öğrenci var ise 
             if (data_Ogrenci.SelectedRows.Count == 1)
             {
+               
                 string secilenOgrenciID = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
-                var zimmetliKitaplar = Tables.Ogr.GetZimmetliKitapsNo(secilenOgrenciID);
-                if (zimmetliKitaplar.Count != 0)
+                //Seçeili öğrencinin üzerinde zimmetli kitap var ise
+                if (Tables.Ogr.ZimmetliKitapVarMi(secilenOgrenciID))
                 {
                     if (MessageBox.Show("Silinmek istenen öğrencinin üzerinde kitap bulunmaktadır yine de silmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        foreach (var item in zimmetliKitaplar)
+                        //öğrenciye zimmetli olduğu kitapların stok bilgis güncellenir ve ardından öğrenci silinir
+                        var list = Tables.Ogr.GetZimmetliKitapsNo(secilenOgrenciID);
+                        foreach (var item in list)
                             Tables.Kitap.StokUpdate(item);
                         Tables.Ogr.Remove(secilenOgrenciID);
                     }
                 }
+                //Zimmetli kitap yoksa direkt öğrenci silinir.
                 else Tables.Ogr.Remove(secilenOgrenciID);
                 GridYenile();
             }

@@ -31,20 +31,20 @@ namespace View.Kutuphane
             double[] y =  {countAlinabilir };
             double[] y1 = {countZimmetli };
             double[] y2 = {countTum};
-            // clear old curves
+            // Eski veriler temizlenir.
             zedGraphControl1.GraphPane.CurveList.Clear();
 
-            // plot the data as bars
+            // Grafiğe yeni bar ekleme işlemleri
             zedGraphControl1.GraphPane.AddBar("Alınabilir", x, y, Color.Green);
             zedGraphControl1.GraphPane.AddBar("Zimmetli", x, y1, Color.Red);
             zedGraphControl1.GraphPane.AddBar("Hepsi", x, y2, Color.Yellow);
 
-            // style the plot
+            //Grafiğin başlıklarını ayarlama kısmı
             zedGraphControl1.GraphPane.Title.Text = "Başlık Buraya";
             zedGraphControl1.GraphPane.XAxis.Title.Text = "Durum";
             zedGraphControl1.GraphPane.YAxis.Title.Text = "Kitap Sayısı";
 
-            // auto-axis and update the display
+            // aOluşturulan ayaların grafik üzeinde güncellenmesi.
             zedGraphControl1.GraphPane.XAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
             zedGraphControl1.GraphPane.YAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
             zedGraphControl1.Refresh();
@@ -53,18 +53,21 @@ namespace View.Kutuphane
 
         private void OgrButton_Click(object sender, EventArgs e)
         {
+            //Girilen değerin grafik başlığına işlenmesi
             zedGraphControl1.GraphPane.Title.Text = TxtTitles.Text;
             zedGraphControl1.Refresh();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            //Girilen değerin Y Ekseni başlığına işlenmesi
             zedGraphControl1.GraphPane.YAxis.Title.Text = TxtTitles.Text;
             zedGraphControl1.Refresh();
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            //Girilen değerin X Ekseni başlığına işlenmesi
             zedGraphControl1.GraphPane.XAxis.Title.Text = TxtTitles.Text;
             zedGraphControl1.Refresh();
         }

@@ -333,7 +333,6 @@
             this.data_Kitap.Size = new System.Drawing.Size(958, 575);
             this.data_Kitap.TabIndex = 21;
             this.data_Kitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Ogrenci_CellClick);
-            this.data_Kitap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Kitap_CellContentClick);
             // 
             // metroLabel3
             // 

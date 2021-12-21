@@ -11,23 +11,15 @@ using System.Threading.Tasks;
 
 namespace DTO.Concrete
 {
+    //KutuphaneIslem türünde bir BaseRepo oluşturur.
+    /*
+      Sadece KutuphaneIslem tablosu için geçerli olan veritabanı sorgularını içerir.
+   */
     public class KutuphaneIslemRepo : BaseRepo<KutuphaneIslem>
     {
         public KutuphaneIslemRepo(DatabaseContext context) : base(context)
         {
 
-        }
-        public IEnumerable<KutuphaneIslem> GetAktifIslems()
-        {
-            return _dbSet.Where(x => x.IadeTarihi == null);
-        }
-        public IEnumerable<KutuphaneIslem> GetKapaliIslems()
-        {
-            return _dbSet.Where(x => x.IadeTarihi != null);
-        }
-        public KutuphaneIslem GetIslemsByOgrenciNoAndKitapNo(string ogrID, string kitapID)
-        {
-            return _dbSet.Where(x => (kitapID == x.KitapBarkodNo) && (x.OgrenciID == ogrID)).First();
         }
     }
 }

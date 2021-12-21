@@ -25,13 +25,16 @@ namespace KutuphaneCore
         }
         private void FormGom(Form form)
         {
+            //Form üzerindeki panel içerisine parametre olarak gelen formu gömme işlemi.
             panel1.Controls.Clear();
             form.BackColor = Color.White;
             form.TopLevel = false;
             form.WindowState = FormWindowState.Normal;
+            //Form border'ları gizleme.
             form.FormBorderStyle = FormBorderStyle.None;
             panel1.Controls.Add(form);
             form.Show();
+            //Parametre form'un boyutlarında sayfayı açma.
             this.Size = new Size(form.Width + 20, form.Height + 65);
             this.CenterToParent();
         }

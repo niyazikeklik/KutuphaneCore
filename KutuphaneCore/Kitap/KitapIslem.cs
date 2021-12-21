@@ -25,12 +25,14 @@ namespace KutuphaneCore
 
         private void KitapIslem_Load(object sender, EventArgs e)
         {
+            //Kitap kategorisi için comboxlara ilgili enum elemanlarını yazıyorum.
             if (ktpTur.Items.Count <= 0)
                 ktpTur.DataSource = Enum.GetValues(typeof(KitapKategori));
         }
 
         private void ktpButon_Click(object sender, EventArgs e)
         {
+
             Kitap kitap = new()
             {
                 BarkodNo = this.ktpBarkod.Text,

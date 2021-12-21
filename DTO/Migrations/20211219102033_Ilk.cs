@@ -5,6 +5,7 @@ namespace DTO.Migrations
 {
     public partial class Ilk : Migration
     {
+        //Veritabanında ilgili tabloları oluşturma kodu.
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(

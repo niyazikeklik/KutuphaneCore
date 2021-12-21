@@ -9,10 +9,10 @@ using static Entitites.Models.Enums;
 
 namespace Entitites
 {
-  
+  //Kitap class'ı
     public class Kitap
     {
-        [Key]
+        [Key] //Key anahtar kelimesi, EntityFramework'e bu sütunun primary key olacağını söylemk için gereklidir.
         public string BarkodNo { get; set; }
         public string KitapAd { get; set; }
 
@@ -25,7 +25,7 @@ namespace Entitites
         public KitapKategori KitapTuru { get; set; }
 
         public bool Stok { get; set; } = true;
-
+        //ICollection sınıfı üzerinden Kitap nesnesinin birden fazla işlemi olabilececeğini söylüyorum. Bu aslında veritabanı ilişkimin kod karşılığıdır. KutuphaneIslem tablosu ile Kitap tablosu arasında bire çok ilişki olduğunu söyler.
         public ICollection<KutuphaneIslem> kutuphaneIslems { get; set; }
 
     }
