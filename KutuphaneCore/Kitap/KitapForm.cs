@@ -89,7 +89,7 @@ namespace View.Kitap
             form.ktpYazar.Text = secilenKitap.KitapYazar;
             form.ktpAd.Text = secilenKitap.KitapAd;
             form.ktpSayfa.Text = secilenKitap.SayfaSayısı.ToString();
-            form.ktpBasım.Value = secilenKitap.BasimTarihi;,
+            form.ktpBasım.Value = secilenKitap.BasimTarihi;
             form.ktpTur.SelectedIndex = (int)secilenKitap.KitapTuru;
 
             form.ktpButon.Text = "Kitap Güncelle";
