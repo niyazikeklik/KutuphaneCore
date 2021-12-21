@@ -130,7 +130,6 @@
             this.GridBulunanKitaplar.Size = new System.Drawing.Size(950, 241);
             this.GridBulunanKitaplar.TabIndex = 22;
             this.GridBulunanKitaplar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellClick);
-            this.GridBulunanKitaplar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellContentClick);
             // 
             // metroLabel5
             // 
