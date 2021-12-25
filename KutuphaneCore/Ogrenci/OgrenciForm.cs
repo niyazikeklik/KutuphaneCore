@@ -37,29 +37,37 @@ namespace View.Ogrenci
             GridYenile();
         }
         private void btn_OgrGuncelle_Click_1(object sender, EventArgs e)
-        {
-            //Öğrenci güncelleme formunun seçilen satırdaki bilgilere göre ayarlanması ve gösterilmesi.
-            var row = data_Ogrenci.SelectedRows[0];
-            var secilenOgrID = (string)row.Cells[0].Value;
-           Entitites.Models.Ogrenci SecilenOgrenci = Tables.Ogr.GetById(secilenOgrID);
-            OgrenciIslem form = new OgrenciIslem();
-            form.ogrTC.Enabled = false;
-            form.ogrTC.Text = SecilenOgrenci.OgrenciTC;
-            form.ogrAd.Text = SecilenOgrenci.IsimSoyisim;
-            form.OgrTeNo.Text = SecilenOgrenci.TelefonNo;
-            form.OgrBirt.Value = SecilenOgrenci.DogumTarihi;
-            form.OgrButton.Text = "Öğrenciyi Güncelle";
-            form.ShowDialog();
-            GridYenile();
+        {     //Seçili öğrenci var ise 
+            if (data_Ogrenci.SelectedRows.Count == 1)
+            {
+                //Öğrenci güncelleme formunun seçilen satırdaki bilgilere göre ayarlanması ve gösterilmesi.
+                var row = data_Ogrenci.SelectedRows[0];
+                var secilenOgrID = (string)row.Cells[0].Value;
+                Entitites.Models.Ogrenci SecilenOgrenci = Tables.Ogr.GetById(secilenOgrID);
+                OgrenciIslem form = new OgrenciIslem();
+                form.ogrTC.Enabled = false;
+                form.ogrTC.Text = SecilenOgrenci.OgrenciTC;
+                form.ogrAd.Text = SecilenOgrenci.IsimSoyisim;
+                form.OgrTeNo.Text = SecilenOgrenci.TelefonNo;
+                form.OgrBirt.Value = SecilenOgrenci.DogumTarihi;
+                form.OgrButton.Text = "Öğrenciyi Güncelle";
+                form.ShowDialog();
+                GridYenile();
+            }
+            else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
         }
 
         private void btn_OgrGit_Click(object sender, EventArgs e)
         {
-            //Seçilen öğrenci ıd üzerinden OgrenciProfil formunun açılması.
-            var ogrenciNo = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
-            OgernciProfil form = new OgernciProfil(ogrenciNo);
-            form.ShowDialog();
+            if (data_Ogrenci.SelectedRows.Count == 1)
+            {
+                //Seçilen öğrenci ıd üzerinden OgrenciProfil formunun açılması.
+                var ogrenciNo = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
+                OgernciProfil form = new OgernciProfil(ogrenciNo);
+                form.ShowDialog();
+            }
+            else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
 
         private void txtAra_TextChanged(object sender, EventArgs e)
@@ -76,7 +84,7 @@ namespace View.Ogrenci
             //Seçili öğrenci var ise 
             if (data_Ogrenci.SelectedRows.Count == 1)
             {
-               
+
                 string secilenOgrenciID = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
                 //Seçeili öğrencinin üzerinde zimmetli kitap var ise
                 if (Tables.Ogr.ZimmetliKitapVarMi(secilenOgrenciID))
@@ -94,7 +102,7 @@ namespace View.Ogrenci
                 else Tables.Ogr.Remove(secilenOgrenciID);
                 GridYenile();
             }
-            else MessageBox.Show("Lütfen bir öğrenci seçiniz!");
+            else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
     }
 }

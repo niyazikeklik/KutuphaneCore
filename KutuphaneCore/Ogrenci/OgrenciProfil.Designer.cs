@@ -68,8 +68,9 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1205, 629);
+            this.panel2.Size = new System.Drawing.Size(1377, 839);
             this.panel2.TabIndex = 1;
             // 
             // panel4
@@ -80,8 +81,9 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1205, 629);
+            this.panel4.Size = new System.Drawing.Size(1377, 839);
             this.panel4.TabIndex = 1;
             // 
             // panel5
@@ -91,9 +93,10 @@
             this.panel5.Controls.Add(this.GridBulunanKitaplar);
             this.panel5.Controls.Add(this.metroLabel5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(255, 315);
+            this.panel5.Location = new System.Drawing.Point(291, 420);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(950, 314);
+            this.panel5.Size = new System.Drawing.Size(1086, 419);
             this.panel5.TabIndex = 24;
             // 
             // teslimAl
@@ -101,9 +104,10 @@
             this.teslimAl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.teslimAl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.teslimAl.Highlight = true;
-            this.teslimAl.Location = new System.Drawing.Point(832, 268);
+            this.teslimAl.Location = new System.Drawing.Point(951, 357);
+            this.teslimAl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.teslimAl.Name = "teslimAl";
-            this.teslimAl.Size = new System.Drawing.Size(115, 37);
+            this.teslimAl.Size = new System.Drawing.Size(131, 49);
             this.teslimAl.Style = MetroFramework.MetroColorStyle.Blue;
             this.teslimAl.StyleManager = null;
             this.teslimAl.TabIndex = 23;
@@ -120,14 +124,16 @@
             this.GridBulunanKitaplar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridBulunanKitaplar.ColumnHeadersHeight = 30;
             this.GridBulunanKitaplar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GridBulunanKitaplar.Location = new System.Drawing.Point(0, 21);
+            this.GridBulunanKitaplar.Location = new System.Drawing.Point(0, 28);
+            this.GridBulunanKitaplar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GridBulunanKitaplar.MultiSelect = false;
             this.GridBulunanKitaplar.Name = "GridBulunanKitaplar";
             this.GridBulunanKitaplar.RowHeadersVisible = false;
-            this.GridBulunanKitaplar.RowTemplate.Height = 30;
+            this.GridBulunanKitaplar.RowHeadersWidth = 51;
+            this.GridBulunanKitaplar.RowTemplate.Height = 75;
             this.GridBulunanKitaplar.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.GridBulunanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridBulunanKitaplar.Size = new System.Drawing.Size(950, 241);
+            this.GridBulunanKitaplar.Size = new System.Drawing.Size(1086, 321);
             this.GridBulunanKitaplar.TabIndex = 22;
             this.GridBulunanKitaplar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellClick);
             // 
@@ -143,7 +149,7 @@
             this.metroLabel5.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel5.Location = new System.Drawing.Point(0, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(950, 21);
+            this.metroLabel5.Size = new System.Drawing.Size(1086, 28);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel5.StyleManager = null;
             this.metroLabel5.TabIndex = 35;
@@ -159,9 +165,10 @@
             this.panel3.Controls.Add(this.data_Ogrenci);
             this.panel3.Controls.Add(this.metroLabel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(255, 0);
+            this.panel3.Location = new System.Drawing.Point(291, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(950, 315);
+            this.panel3.Size = new System.Drawing.Size(1086, 420);
             this.panel3.TabIndex = 23;
             // 
             // iadeEt
@@ -169,9 +176,10 @@
             this.iadeEt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iadeEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iadeEt.Highlight = true;
-            this.iadeEt.Location = new System.Drawing.Point(832, 268);
+            this.iadeEt.Location = new System.Drawing.Point(951, 357);
+            this.iadeEt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iadeEt.Name = "iadeEt";
-            this.iadeEt.Size = new System.Drawing.Size(115, 37);
+            this.iadeEt.Size = new System.Drawing.Size(131, 49);
             this.iadeEt.Style = MetroFramework.MetroColorStyle.Blue;
             this.iadeEt.StyleManager = null;
             this.iadeEt.TabIndex = 22;
@@ -196,14 +204,16 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Ogrenci.DefaultCellStyle = dataGridViewCellStyle1;
             this.data_Ogrenci.Dock = System.Windows.Forms.DockStyle.Top;
-            this.data_Ogrenci.Location = new System.Drawing.Point(0, 21);
+            this.data_Ogrenci.Location = new System.Drawing.Point(0, 28);
+            this.data_Ogrenci.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.data_Ogrenci.MultiSelect = false;
             this.data_Ogrenci.Name = "data_Ogrenci";
             this.data_Ogrenci.RowHeadersVisible = false;
-            this.data_Ogrenci.RowTemplate.Height = 50;
+            this.data_Ogrenci.RowHeadersWidth = 51;
+            this.data_Ogrenci.RowTemplate.Height = 75;
             this.data_Ogrenci.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Ogrenci.Size = new System.Drawing.Size(950, 241);
+            this.data_Ogrenci.Size = new System.Drawing.Size(1086, 321);
             this.data_Ogrenci.TabIndex = 21;
             // 
             // metroLabel3
@@ -218,7 +228,7 @@
             this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel3.Location = new System.Drawing.Point(0, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(950, 21);
+            this.metroLabel3.Size = new System.Drawing.Size(1086, 28);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel3.StyleManager = null;
             this.metroLabel3.TabIndex = 34;
@@ -244,8 +254,9 @@
             this.panel1.Controls.Add(this.metroLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 629);
+            this.panel1.Size = new System.Drawing.Size(291, 839);
             this.panel1.TabIndex = 22;
             // 
             // metroLabel7
@@ -257,9 +268,9 @@
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel7.ForeColor = System.Drawing.Color.White;
             this.metroLabel7.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel7.Location = new System.Drawing.Point(73, 52);
+            this.metroLabel7.Location = new System.Drawing.Point(83, 69);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(128, 21);
+            this.metroLabel7.Size = new System.Drawing.Size(146, 28);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel7.StyleManager = null;
             this.metroLabel7.TabIndex = 36;
@@ -271,9 +282,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::View.Properties.Resources._3099383_student_man_icon__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(73, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(83, 101);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(146, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -287,9 +299,9 @@
             this.lblBorc.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblBorc.ForeColor = System.Drawing.Color.White;
             this.lblBorc.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblBorc.Location = new System.Drawing.Point(37, 481);
+            this.lblBorc.Location = new System.Drawing.Point(42, 641);
             this.lblBorc.Name = "lblBorc";
-            this.lblBorc.Size = new System.Drawing.Size(191, 21);
+            this.lblBorc.Size = new System.Drawing.Size(218, 28);
             this.lblBorc.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblBorc.StyleManager = null;
             this.lblBorc.TabIndex = 24;
@@ -307,9 +319,9 @@
             this.lblTel.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblTel.ForeColor = System.Drawing.Color.White;
             this.lblTel.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblTel.Location = new System.Drawing.Point(37, 423);
+            this.lblTel.Location = new System.Drawing.Point(42, 564);
             this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(191, 21);
+            this.lblTel.Size = new System.Drawing.Size(218, 28);
             this.lblTel.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblTel.StyleManager = null;
             this.lblTel.TabIndex = 25;
@@ -327,9 +339,9 @@
             this.lblYas.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblYas.ForeColor = System.Drawing.Color.White;
             this.lblYas.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblYas.Location = new System.Drawing.Point(37, 365);
+            this.lblYas.Location = new System.Drawing.Point(42, 487);
             this.lblYas.Name = "lblYas";
-            this.lblYas.Size = new System.Drawing.Size(191, 21);
+            this.lblYas.Size = new System.Drawing.Size(218, 28);
             this.lblYas.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblYas.StyleManager = null;
             this.lblYas.TabIndex = 26;
@@ -347,9 +359,9 @@
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel8.ForeColor = System.Drawing.Color.White;
             this.metroLabel8.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel8.Location = new System.Drawing.Point(31, 460);
+            this.metroLabel8.Location = new System.Drawing.Point(35, 613);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel8.Size = new System.Drawing.Size(232, 28);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel8.StyleManager = null;
             this.metroLabel8.TabIndex = 27;
@@ -367,9 +379,9 @@
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel6.ForeColor = System.Drawing.Color.White;
             this.metroLabel6.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel6.Location = new System.Drawing.Point(31, 402);
+            this.metroLabel6.Location = new System.Drawing.Point(35, 536);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel6.Size = new System.Drawing.Size(232, 28);
             this.metroLabel6.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel6.StyleManager = null;
             this.metroLabel6.TabIndex = 28;
@@ -387,9 +399,9 @@
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.ForeColor = System.Drawing.Color.White;
             this.metroLabel4.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel4.Location = new System.Drawing.Point(31, 344);
+            this.metroLabel4.Location = new System.Drawing.Point(35, 459);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel4.Size = new System.Drawing.Size(232, 28);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel4.StyleManager = null;
             this.metroLabel4.TabIndex = 29;
@@ -407,9 +419,9 @@
             this.lblIsim.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblIsim.ForeColor = System.Drawing.Color.White;
             this.lblIsim.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblIsim.Location = new System.Drawing.Point(37, 307);
+            this.lblIsim.Location = new System.Drawing.Point(42, 409);
             this.lblIsim.Name = "lblIsim";
-            this.lblIsim.Size = new System.Drawing.Size(191, 21);
+            this.lblIsim.Size = new System.Drawing.Size(218, 28);
             this.lblIsim.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblIsim.StyleManager = null;
             this.lblIsim.TabIndex = 30;
@@ -427,9 +439,9 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.ForeColor = System.Drawing.Color.White;
             this.metroLabel2.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel2.Location = new System.Drawing.Point(31, 286);
+            this.metroLabel2.Location = new System.Drawing.Point(35, 381);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel2.Size = new System.Drawing.Size(232, 28);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel2.StyleManager = null;
             this.metroLabel2.TabIndex = 31;
@@ -447,9 +459,9 @@
             this.lblTC.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblTC.ForeColor = System.Drawing.Color.White;
             this.lblTC.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblTC.Location = new System.Drawing.Point(37, 249);
+            this.lblTC.Location = new System.Drawing.Point(42, 332);
             this.lblTC.Name = "lblTC";
-            this.lblTC.Size = new System.Drawing.Size(191, 21);
+            this.lblTC.Size = new System.Drawing.Size(218, 28);
             this.lblTC.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblTC.StyleManager = null;
             this.lblTC.TabIndex = 32;
@@ -467,9 +479,9 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.ForeColor = System.Drawing.Color.White;
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel1.Location = new System.Drawing.Point(31, 228);
+            this.metroLabel1.Location = new System.Drawing.Point(35, 304);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel1.Size = new System.Drawing.Size(232, 28);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 33;
@@ -480,11 +492,12 @@
             // 
             // OgernciProfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1205, 629);
+            this.ClientSize = new System.Drawing.Size(1377, 839);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OgernciProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ogrenci";

@@ -71,9 +71,9 @@
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel7.ForeColor = System.Drawing.Color.White;
             this.metroLabel7.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel7.Location = new System.Drawing.Point(73, 52);
+            this.metroLabel7.Location = new System.Drawing.Point(83, 69);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(128, 21);
+            this.metroLabel7.Size = new System.Drawing.Size(146, 28);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel7.StyleManager = null;
             this.metroLabel7.TabIndex = 36;
@@ -85,9 +85,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(73, 76);
+            this.pictureBox1.Location = new System.Drawing.Point(83, 101);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.Size = new System.Drawing.Size(146, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -101,9 +102,9 @@
             this.lblTur.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblTur.ForeColor = System.Drawing.Color.White;
             this.lblTur.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblTur.Location = new System.Drawing.Point(37, 481);
+            this.lblTur.Location = new System.Drawing.Point(42, 641);
             this.lblTur.Name = "lblTur";
-            this.lblTur.Size = new System.Drawing.Size(191, 21);
+            this.lblTur.Size = new System.Drawing.Size(218, 28);
             this.lblTur.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblTur.StyleManager = null;
             this.lblTur.TabIndex = 24;
@@ -121,9 +122,9 @@
             this.lblSayfa.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblSayfa.ForeColor = System.Drawing.Color.White;
             this.lblSayfa.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblSayfa.Location = new System.Drawing.Point(37, 423);
+            this.lblSayfa.Location = new System.Drawing.Point(42, 564);
             this.lblSayfa.Name = "lblSayfa";
-            this.lblSayfa.Size = new System.Drawing.Size(191, 21);
+            this.lblSayfa.Size = new System.Drawing.Size(218, 28);
             this.lblSayfa.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblSayfa.StyleManager = null;
             this.lblSayfa.TabIndex = 25;
@@ -141,9 +142,9 @@
             this.lblBasim.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblBasim.ForeColor = System.Drawing.Color.White;
             this.lblBasim.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblBasim.Location = new System.Drawing.Point(37, 365);
+            this.lblBasim.Location = new System.Drawing.Point(42, 487);
             this.lblBasim.Name = "lblBasim";
-            this.lblBasim.Size = new System.Drawing.Size(191, 21);
+            this.lblBasim.Size = new System.Drawing.Size(218, 28);
             this.lblBasim.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblBasim.StyleManager = null;
             this.lblBasim.TabIndex = 26;
@@ -161,9 +162,9 @@
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel8.ForeColor = System.Drawing.Color.White;
             this.metroLabel8.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel8.Location = new System.Drawing.Point(31, 460);
+            this.metroLabel8.Location = new System.Drawing.Point(35, 613);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel8.Size = new System.Drawing.Size(232, 28);
             this.metroLabel8.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel8.StyleManager = null;
             this.metroLabel8.TabIndex = 27;
@@ -181,9 +182,9 @@
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel6.ForeColor = System.Drawing.Color.White;
             this.metroLabel6.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel6.Location = new System.Drawing.Point(31, 402);
+            this.metroLabel6.Location = new System.Drawing.Point(35, 536);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel6.Size = new System.Drawing.Size(232, 28);
             this.metroLabel6.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel6.StyleManager = null;
             this.metroLabel6.TabIndex = 28;
@@ -201,9 +202,9 @@
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel4.ForeColor = System.Drawing.Color.White;
             this.metroLabel4.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel4.Location = new System.Drawing.Point(31, 344);
+            this.metroLabel4.Location = new System.Drawing.Point(35, 459);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel4.Size = new System.Drawing.Size(232, 28);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel4.StyleManager = null;
             this.metroLabel4.TabIndex = 29;
@@ -221,9 +222,9 @@
             this.lblYazar.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblYazar.ForeColor = System.Drawing.Color.White;
             this.lblYazar.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblYazar.Location = new System.Drawing.Point(37, 307);
+            this.lblYazar.Location = new System.Drawing.Point(42, 409);
             this.lblYazar.Name = "lblYazar";
-            this.lblYazar.Size = new System.Drawing.Size(191, 21);
+            this.lblYazar.Size = new System.Drawing.Size(218, 28);
             this.lblYazar.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblYazar.StyleManager = null;
             this.lblYazar.TabIndex = 30;
@@ -241,9 +242,9 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.ForeColor = System.Drawing.Color.White;
             this.metroLabel2.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel2.Location = new System.Drawing.Point(31, 286);
+            this.metroLabel2.Location = new System.Drawing.Point(35, 381);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel2.Size = new System.Drawing.Size(232, 28);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel2.StyleManager = null;
             this.metroLabel2.TabIndex = 31;
@@ -261,9 +262,9 @@
             this.lblIsım.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblIsım.ForeColor = System.Drawing.Color.White;
             this.lblIsım.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblIsım.Location = new System.Drawing.Point(37, 249);
+            this.lblIsım.Location = new System.Drawing.Point(42, 332);
             this.lblIsım.Name = "lblIsım";
-            this.lblIsım.Size = new System.Drawing.Size(191, 21);
+            this.lblIsım.Size = new System.Drawing.Size(218, 28);
             this.lblIsım.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblIsım.StyleManager = null;
             this.lblIsım.TabIndex = 32;
@@ -281,9 +282,9 @@
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.ForeColor = System.Drawing.Color.White;
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel1.Location = new System.Drawing.Point(31, 228);
+            this.metroLabel1.Location = new System.Drawing.Point(35, 304);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel1.Size = new System.Drawing.Size(232, 28);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 33;
@@ -297,9 +298,10 @@
             this.iadeEt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iadeEt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iadeEt.Highlight = true;
-            this.iadeEt.Location = new System.Drawing.Point(1590, 764);
+            this.iadeEt.Location = new System.Drawing.Point(1817, 1019);
+            this.iadeEt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.iadeEt.Name = "iadeEt";
-            this.iadeEt.Size = new System.Drawing.Size(115, 37);
+            this.iadeEt.Size = new System.Drawing.Size(131, 49);
             this.iadeEt.Style = MetroFramework.MetroColorStyle.Blue;
             this.iadeEt.StyleManager = null;
             this.iadeEt.TabIndex = 22;
@@ -323,14 +325,16 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Kitap.DefaultCellStyle = dataGridViewCellStyle1;
             this.data_Kitap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.data_Kitap.Location = new System.Drawing.Point(0, 21);
+            this.data_Kitap.Location = new System.Drawing.Point(0, 28);
+            this.data_Kitap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.data_Kitap.MultiSelect = false;
             this.data_Kitap.Name = "data_Kitap";
             this.data_Kitap.RowHeadersVisible = false;
-            this.data_Kitap.RowTemplate.Height = 50;
+            this.data_Kitap.RowHeadersWidth = 51;
+            this.data_Kitap.RowTemplate.Height = 75;
             this.data_Kitap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Kitap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Kitap.Size = new System.Drawing.Size(958, 575);
+            this.data_Kitap.Size = new System.Drawing.Size(1095, 767);
             this.data_Kitap.TabIndex = 21;
             this.data_Kitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Ogrenci_CellClick);
             // 
@@ -346,7 +350,7 @@
             this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel3.Location = new System.Drawing.Point(0, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(958, 21);
+            this.metroLabel3.Size = new System.Drawing.Size(1095, 28);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel3.StyleManager = null;
             this.metroLabel3.TabIndex = 34;
@@ -362,9 +366,10 @@
             this.panel3.Controls.Add(this.data_Kitap);
             this.panel3.Controls.Add(this.metroLabel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(255, 0);
+            this.panel3.Location = new System.Drawing.Point(291, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(958, 596);
+            this.panel3.Size = new System.Drawing.Size(1095, 795);
             this.panel3.TabIndex = 23;
             // 
             // panel4
@@ -374,8 +379,9 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1213, 596);
+            this.panel4.Size = new System.Drawing.Size(1386, 795);
             this.panel4.TabIndex = 1;
             // 
             // panel1
@@ -398,16 +404,18 @@
             this.panel1.Controls.Add(this.metroLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 596);
+            this.panel1.Size = new System.Drawing.Size(291, 795);
             this.panel1.TabIndex = 22;
             // 
             // btn
             // 
             this.btn.Controls.Add(this.btn_OgrGit);
-            this.btn.Location = new System.Drawing.Point(67, 562);
+            this.btn.Location = new System.Drawing.Point(77, 749);
+            this.btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(134, 22);
+            this.btn.Size = new System.Drawing.Size(153, 29);
             this.btn.TabIndex = 39;
             // 
             // btn_OgrGit
@@ -416,8 +424,9 @@
             this.btn_OgrGit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_OgrGit.Highlight = true;
             this.btn_OgrGit.Location = new System.Drawing.Point(0, 0);
+            this.btn_OgrGit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_OgrGit.Name = "btn_OgrGit";
-            this.btn_OgrGit.Size = new System.Drawing.Size(134, 22);
+            this.btn_OgrGit.Size = new System.Drawing.Size(153, 29);
             this.btn_OgrGit.Style = MetroFramework.MetroColorStyle.Blue;
             this.btn_OgrGit.StyleManager = null;
             this.btn_OgrGit.TabIndex = 9;
@@ -435,9 +444,9 @@
             this.lblStok.FontWeight = MetroFramework.MetroLabelWeight.Light;
             this.lblStok.ForeColor = System.Drawing.Color.White;
             this.lblStok.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.lblStok.Location = new System.Drawing.Point(12, 538);
+            this.lblStok.Location = new System.Drawing.Point(14, 717);
             this.lblStok.Name = "lblStok";
-            this.lblStok.Size = new System.Drawing.Size(243, 21);
+            this.lblStok.Size = new System.Drawing.Size(278, 28);
             this.lblStok.Style = MetroFramework.MetroColorStyle.Blue;
             this.lblStok.StyleManager = null;
             this.lblStok.TabIndex = 37;
@@ -455,9 +464,9 @@
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel9.ForeColor = System.Drawing.Color.White;
             this.metroLabel9.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
-            this.metroLabel9.Location = new System.Drawing.Point(31, 517);
+            this.metroLabel9.Location = new System.Drawing.Point(35, 689);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(203, 21);
+            this.metroLabel9.Size = new System.Drawing.Size(232, 28);
             this.metroLabel9.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel9.StyleManager = null;
             this.metroLabel9.TabIndex = 38;
@@ -471,16 +480,18 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1213, 596);
+            this.panel2.Size = new System.Drawing.Size(1386, 795);
             this.panel2.TabIndex = 2;
             // 
             // KitapProfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 596);
+            this.ClientSize = new System.Drawing.Size(1386, 795);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "KitapProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KitapProfil";

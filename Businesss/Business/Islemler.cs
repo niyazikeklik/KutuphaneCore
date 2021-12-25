@@ -132,16 +132,16 @@ namespace Business
         public static KutuphaneIslem TeslimAl(string seciliKitapID, string ogrenciID)
         {
             //TEST İÇİN!!! int[] rastgele = { 2, 1, 14, -2, -1 };
-
+            var SuAn = DateTime.Now;
             //Yeni bir işlem yaratılır.
             //İadeTarihi null olarak verilir.
             //SonTeslimTarihi o an'dan 15 gün sonrası olarak verilir.
-            var suAn = DateTime.Now;
+            //Veritabanı ilişkileri sayesinde bu işlem öğrenci üzerinde gözükür
             var x = new KutuphaneIslem()
             {
-                AlimTarihi = suAn,
+                AlimTarihi = SuAn,
                 //TEST İÇİN!!! SonTeslimTarihi = suAn.AddDays(rastgele[new Random().Next(0,4)]),
-                SonTeslimTarihi = suAn.AddDays(15),
+                SonTeslimTarihi = SuAn.AddDays(15),
                 IadeTarihi = null,
                 KitapBarkodNo = seciliKitapID,
                 OgrenciID = ogrenciID,

@@ -74,9 +74,10 @@
             this.OgrEkle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OgrEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OgrEkle.Highlight = true;
-            this.OgrEkle.Location = new System.Drawing.Point(48, 0);
+            this.OgrEkle.Location = new System.Drawing.Point(55, 0);
+            this.OgrEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OgrEkle.Name = "OgrEkle";
-            this.OgrEkle.Size = new System.Drawing.Size(107, 48);
+            this.OgrEkle.Size = new System.Drawing.Size(122, 64);
             this.OgrEkle.Style = MetroFramework.MetroColorStyle.White;
             this.OgrEkle.StyleManager = null;
             this.OgrEkle.TabIndex = 9;
@@ -91,8 +92,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::View.Properties.Resources._8675208_ic_fluent_person_add_regular_icon;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -106,24 +108,27 @@
             this.data_Ogrenci.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data_Ogrenci.ColumnHeadersHeight = 30;
             this.data_Ogrenci.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.data_Ogrenci.Location = new System.Drawing.Point(0, 21);
+            this.data_Ogrenci.Location = new System.Drawing.Point(0, 28);
+            this.data_Ogrenci.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.data_Ogrenci.MultiSelect = false;
             this.data_Ogrenci.Name = "data_Ogrenci";
             this.data_Ogrenci.RowHeadersVisible = false;
-            this.data_Ogrenci.RowTemplate.Height = 30;
+            this.data_Ogrenci.RowHeadersWidth = 51;
+            this.data_Ogrenci.RowTemplate.Height = 75;
             this.data_Ogrenci.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Ogrenci.Size = new System.Drawing.Size(532, 307);
+            this.data_Ogrenci.Size = new System.Drawing.Size(608, 409);
             this.data_Ogrenci.TabIndex = 17;
             // 
             // txtAra
             // 
             this.txtAra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAra.Location = new System.Drawing.Point(311, 20);
+            this.txtAra.Location = new System.Drawing.Point(355, 27);
+            this.txtAra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAra.MaxLength = 11;
             this.txtAra.Name = "txtAra";
             this.txtAra.PlaceholderText = "Arama";
-            this.txtAra.Size = new System.Drawing.Size(125, 27);
+            this.txtAra.Size = new System.Drawing.Size(142, 32);
             this.txtAra.TabIndex = 18;
             this.txtAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
@@ -133,11 +138,12 @@
             this.rdBtn_ismeGore.AutoSize = true;
             this.rdBtn_ismeGore.Checked = true;
             this.rdBtn_ismeGore.CustomBackground = false;
-            this.rdBtn_ismeGore.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.rdBtn_ismeGore.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.rdBtn_ismeGore.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.rdBtn_ismeGore.Location = new System.Drawing.Point(442, 15);
+            this.rdBtn_ismeGore.Location = new System.Drawing.Point(505, 15);
+            this.rdBtn_ismeGore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdBtn_ismeGore.Name = "rdBtn_ismeGore";
-            this.rdBtn_ismeGore.Size = new System.Drawing.Size(76, 15);
+            this.rdBtn_ismeGore.Size = new System.Drawing.Size(92, 20);
             this.rdBtn_ismeGore.Style = MetroFramework.MetroColorStyle.Blue;
             this.rdBtn_ismeGore.StyleManager = null;
             this.rdBtn_ismeGore.TabIndex = 20;
@@ -151,11 +157,12 @@
             // 
             this.rdBtn_TC.AutoSize = true;
             this.rdBtn_TC.CustomBackground = false;
-            this.rdBtn_TC.FontSize = MetroFramework.MetroLinkSize.Small;
+            this.rdBtn_TC.FontSize = MetroFramework.MetroLinkSize.Medium;
             this.rdBtn_TC.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-            this.rdBtn_TC.Location = new System.Drawing.Point(442, 32);
+            this.rdBtn_TC.Location = new System.Drawing.Point(505, 43);
+            this.rdBtn_TC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdBtn_TC.Name = "rdBtn_TC";
-            this.rdBtn_TC.Size = new System.Drawing.Size(78, 15);
+            this.rdBtn_TC.Size = new System.Drawing.Size(94, 20);
             this.rdBtn_TC.Style = MetroFramework.MetroColorStyle.Blue;
             this.rdBtn_TC.StyleManager = null;
             this.rdBtn_TC.TabIndex = 20;
@@ -167,9 +174,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::View.Properties.Resources._6586131_find_glass_magnifier_search_seo_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(281, 23);
+            this.pictureBox5.Location = new System.Drawing.Point(321, 31);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.Size = new System.Drawing.Size(27, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
@@ -184,8 +192,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(155, 381);
+            this.panel1.Size = new System.Drawing.Size(177, 508);
             this.panel1.TabIndex = 21;
             // 
             // panel6
@@ -193,9 +202,10 @@
             this.panel6.Controls.Add(this.btn_OgrGit);
             this.panel6.Controls.Add(this.pictureBox8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 327);
+            this.panel6.Location = new System.Drawing.Point(0, 436);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(155, 48);
+            this.panel6.Size = new System.Drawing.Size(177, 64);
             this.panel6.TabIndex = 4;
             // 
             // btn_OgrGit
@@ -203,9 +213,10 @@
             this.btn_OgrGit.BackColor = System.Drawing.Color.White;
             this.btn_OgrGit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_OgrGit.Highlight = true;
-            this.btn_OgrGit.Location = new System.Drawing.Point(48, 0);
+            this.btn_OgrGit.Location = new System.Drawing.Point(55, 0);
+            this.btn_OgrGit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_OgrGit.Name = "btn_OgrGit";
-            this.btn_OgrGit.Size = new System.Drawing.Size(107, 48);
+            this.btn_OgrGit.Size = new System.Drawing.Size(122, 64);
             this.btn_OgrGit.Style = MetroFramework.MetroColorStyle.White;
             this.btn_OgrGit.StyleManager = null;
             this.btn_OgrGit.TabIndex = 9;
@@ -220,8 +231,9 @@
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox8.Image = global::View.Properties.Resources._8675047_ic_fluent_person_arrow_right_icon;
             this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox8.Size = new System.Drawing.Size(55, 64);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 11;
             this.pictureBox8.TabStop = false;
@@ -231,9 +243,10 @@
             this.panel5.Controls.Add(this.btn_OgrGuncelle);
             this.panel5.Controls.Add(this.pictureBox7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 279);
+            this.panel5.Location = new System.Drawing.Point(0, 372);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(155, 48);
+            this.panel5.Size = new System.Drawing.Size(177, 64);
             this.panel5.TabIndex = 3;
             // 
             // btn_OgrGuncelle
@@ -241,9 +254,10 @@
             this.btn_OgrGuncelle.BackColor = System.Drawing.Color.White;
             this.btn_OgrGuncelle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_OgrGuncelle.Highlight = true;
-            this.btn_OgrGuncelle.Location = new System.Drawing.Point(48, 0);
+            this.btn_OgrGuncelle.Location = new System.Drawing.Point(55, 0);
+            this.btn_OgrGuncelle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_OgrGuncelle.Name = "btn_OgrGuncelle";
-            this.btn_OgrGuncelle.Size = new System.Drawing.Size(107, 48);
+            this.btn_OgrGuncelle.Size = new System.Drawing.Size(122, 64);
             this.btn_OgrGuncelle.Style = MetroFramework.MetroColorStyle.White;
             this.btn_OgrGuncelle.StyleManager = null;
             this.btn_OgrGuncelle.TabIndex = 9;
@@ -258,8 +272,9 @@
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox7.Image = global::View.Properties.Resources._8675222_ic_fluent_person_edit_regular_icon;
             this.pictureBox7.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox7.Size = new System.Drawing.Size(55, 64);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 11;
             this.pictureBox7.TabStop = false;
@@ -269,9 +284,10 @@
             this.panel4.Controls.Add(this.btn_OgrSil);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 231);
+            this.panel4.Location = new System.Drawing.Point(0, 308);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(155, 48);
+            this.panel4.Size = new System.Drawing.Size(177, 64);
             this.panel4.TabIndex = 2;
             // 
             // btn_OgrSil
@@ -279,9 +295,10 @@
             this.btn_OgrSil.BackColor = System.Drawing.Color.White;
             this.btn_OgrSil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_OgrSil.Highlight = true;
-            this.btn_OgrSil.Location = new System.Drawing.Point(48, 0);
+            this.btn_OgrSil.Location = new System.Drawing.Point(55, 0);
+            this.btn_OgrSil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_OgrSil.Name = "btn_OgrSil";
-            this.btn_OgrSil.Size = new System.Drawing.Size(107, 48);
+            this.btn_OgrSil.Size = new System.Drawing.Size(122, 64);
             this.btn_OgrSil.Style = MetroFramework.MetroColorStyle.White;
             this.btn_OgrSil.StyleManager = null;
             this.btn_OgrSil.TabIndex = 9;
@@ -296,8 +313,9 @@
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox6.Image = global::View.Properties.Resources._8675099_ic_fluent_person_delete_regular_icon;
             this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox6.Size = new System.Drawing.Size(55, 64);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -307,9 +325,10 @@
             this.panel3.Controls.Add(this.OgrEkle);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 183);
+            this.panel3.Location = new System.Drawing.Point(0, 244);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(155, 48);
+            this.panel3.Size = new System.Drawing.Size(177, 64);
             this.panel3.TabIndex = 1;
             // 
             // panel2
@@ -317,8 +336,9 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 183);
+            this.panel2.Size = new System.Drawing.Size(177, 244);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox2
@@ -326,8 +346,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::View.Properties.Resources._3099383_student_man_icon__1_;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 183);
+            this.pictureBox2.Size = new System.Drawing.Size(177, 244);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -339,9 +360,10 @@
             this.panel7.Controls.Add(this.txtAra);
             this.panel7.Controls.Add(this.rdBtn_ismeGore);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(155, 0);
+            this.panel7.Location = new System.Drawing.Point(177, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(532, 53);
+            this.panel7.Size = new System.Drawing.Size(608, 71);
             this.panel7.TabIndex = 22;
             // 
             // panel8
@@ -349,9 +371,10 @@
             this.panel8.Controls.Add(this.data_Ogrenci);
             this.panel8.Controls.Add(this.metroLabel1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(155, 53);
+            this.panel8.Location = new System.Drawing.Point(177, 71);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(532, 328);
+            this.panel8.Size = new System.Drawing.Size(608, 437);
             this.panel8.TabIndex = 23;
             // 
             // metroLabel1
@@ -364,7 +387,7 @@
             this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel1.Location = new System.Drawing.Point(0, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(532, 21);
+            this.metroLabel1.Size = new System.Drawing.Size(608, 28);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroLabel1.StyleManager = null;
             this.metroLabel1.TabIndex = 18;
@@ -375,14 +398,15 @@
             // 
             // OgrenciForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(687, 381);
+            this.ClientSize = new System.Drawing.Size(785, 508);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OgrenciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OgrenciForm";

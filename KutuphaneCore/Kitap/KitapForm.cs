@@ -77,33 +77,42 @@ namespace View.Kitap
         }
 
         private void btn_KtpGuncelle_Click(object sender, EventArgs e)
-        {
-            //Seçilen satırdaki bilgiler güncellenmek için ilgili kitap kaydı üzerinden KitapIslem formundaki kontrollere işleniyor.
-            var row = data_TumKitap.SelectedRows[0];
-            string secilenBarkod = (string)row.Cells[0].Value;
-            Entitites.Kitap secilenKitap = Tables.Kitap.GetById(secilenBarkod);
-            KitapIslem form = new KitapIslem();
-            form.ktpTur.DataSource = Enum.GetValues(typeof(KitapKategori));
-            form.ktpBarkod.Enabled = false;
-            form.ktpBarkod.Text = secilenKitap.BarkodNo;
-            form.ktpYazar.Text = secilenKitap.KitapYazar;
-            form.ktpAd.Text = secilenKitap.KitapAd;
-            form.ktpSayfa.Text = secilenKitap.SayfaSayısı.ToString();
-            form.ktpBasım.Value = secilenKitap.BasimTarihi;
-            form.ktpTur.SelectedIndex = (int)secilenKitap.KitapTuru;
+        {    //Eğer seçili satır var ise
+            if (data_TumKitap.SelectedRows.Count == 1)
+            {
+                //Seçilen satırdaki bilgiler güncellenmek için ilgili kitap kaydı üzerinden KitapIslem formundaki kontrollere işleniyor.
+                var row = data_TumKitap.SelectedRows[0];
+                string secilenBarkod = (string)row.Cells[0].Value;
+                Entitites.Kitap secilenKitap = Tables.Kitap.GetById(secilenBarkod);
+                KitapIslem form = new KitapIslem();
+                form.ktpTur.DataSource = Enum.GetValues(typeof(KitapKategori));
+                form.ktpBarkod.Enabled = false;
+                form.ktpBarkod.Text = secilenKitap.BarkodNo;
+                form.ktpYazar.Text = secilenKitap.KitapYazar;
+                form.ktpAd.Text = secilenKitap.KitapAd;
+                form.ktpSayfa.Text = secilenKitap.SayfaSayısı.ToString();
+                form.ktpBasım.Value = secilenKitap.BasimTarihi;
+                form.ktpTur.SelectedIndex = (int)secilenKitap.KitapTuru;
 
-            form.ktpButon.Text = "Kitap Güncelle";
-            form.ShowDialog();
-            GridYenile();
+                form.ktpButon.Text = "Kitap Güncelle";
+                form.ShowDialog();
+                GridYenile();
+            }
+            else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
 
         private void Btn_KitapGit_Click(object sender, EventArgs e)
-        {
-            //Seçilen satır barkodno'ya göre ilgili kitabı kitapprofil formuna gönderiyorum.
-            var id = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
-            KitapProfil form = new KitapProfil(id);
-            form.ShowDialog();
+        {//Eğer seçili satır var ise
+            if (data_TumKitap.SelectedRows.Count == 1)
+            {
+                //Seçilen satır barkodno'ya göre ilgili kitabı kitapprofil formuna gönderiyorum.
+                var id = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
+                KitapProfil form = new KitapProfil(id);
+                form.ShowDialog();   
+                
 
+            }
+            else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
         }
     }
 }
