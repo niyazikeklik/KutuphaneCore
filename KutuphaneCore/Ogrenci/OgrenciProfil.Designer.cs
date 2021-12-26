@@ -146,6 +146,7 @@
             this.GridBulunanKitaplar.ShowEditingIcon = false;
             this.GridBulunanKitaplar.Size = new System.Drawing.Size(1086, 391);
             this.GridBulunanKitaplar.TabIndex = 36;
+            this.GridBulunanKitaplar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellClick_1);
             // 
             // teslimAl
             // 

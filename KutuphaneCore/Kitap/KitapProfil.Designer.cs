@@ -388,6 +388,7 @@
             this.data_Kitap.ShowEditingIcon = false;
             this.data_Kitap.Size = new System.Drawing.Size(1095, 767);
             this.data_Kitap.TabIndex = 36;
+            this.data_Kitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Kitap_CellClick);
             // 
             // panel4
             // 

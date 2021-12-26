@@ -133,7 +133,8 @@ namespace KutuphaneCore
             }
         }
 
-        private void GridBulunanKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void GridBulunanKitaplar_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             //Eğer header satırı dışında bir satıra tıklandı ise
             if (e.RowIndex != -1)
@@ -149,11 +150,6 @@ namespace KutuphaneCore
                 }
 
             }
-        }
-
-        private void GridBulunanKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

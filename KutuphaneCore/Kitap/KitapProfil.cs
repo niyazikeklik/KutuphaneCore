@@ -86,7 +86,8 @@ namespace View.Kitap
             GridsYenile();
         }
 
-        private void data_Ogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void data_Kitap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //Eğer header satırına tıklandıysa işlem yapma.
             if (e.RowIndex != -1)
@@ -102,11 +103,6 @@ namespace View.Kitap
                 }
 
             }
-        }
-
-        private void data_Kitap_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
