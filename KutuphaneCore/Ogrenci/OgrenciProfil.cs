@@ -27,14 +27,17 @@ namespace KutuphaneCore
     public partial class OgernciProfil : Form
     {
         Ogrenci ogr;
+        string id;
         public OgernciProfil(string ogrID)
         {
             //parametre olarak gelen öğrenci ıd üzerinden ilgili öğrenci tespiti yapılır.
             this.ogr = Tables.Ogr.GetOgrenciWithIslemlerById(ogrID);
+            this.id = ogrID;
             InitializeComponent();
         }
         public void GridsYenile()
         {
+            this.ogr = Tables.Ogr.GetOgrenciWithIslemlerById(id);
             GridBulunanKitaplar.Columns.Clear();
             List<OgrenciIslemBilgi> list = new List<OgrenciIslemBilgi>();
             //Öğrenciye ait işlemler döndürülür ve kullanıcıya bilgi amaçlı OgrenciIslemBilgi modeli üzerinden yeni bir listeye çevrilir.
@@ -146,9 +149,15 @@ namespace KutuphaneCore
                     var barkrodNo = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
                     KitapProfil form = new KitapProfil(barkrodNo);
                     form.ShowDialog();
+                    GridsYenile();
                 }
 
             }
+        }
+
+        private void GridBulunanKitaplar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

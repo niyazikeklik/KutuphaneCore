@@ -21,14 +21,17 @@ namespace View.Kitap
     {
         Entitites.Kitap ktp;
         Entitites.Models.Ogrenci zimmetliOgrenci;
+        string id;
         public KitapProfil(string id)
         {
             //Parametre olarak gelen id'ye göre ilgili kitabın işlemleriyle beraber çekilmesi.
             ktp = Tables.Kitap.GetKitapWithIslemlerById(id);
+            this.id = id;
             InitializeComponent();
         }
         public void GridsYenile()
         {
+            ktp = Tables.Kitap.GetKitapWithIslemlerById(id);
             data_Kitap.Columns.Clear();
             List<KitapIslemBilgi> list = new List<KitapIslemBilgi>();
             foreach (var item in Tables.Kitap.GetKitapWithIslemlerById(ktp.BarkodNo).kutuphaneIslems) //İlgili kitabın tüm işlemlerinin dönülmesi.
@@ -56,10 +59,12 @@ namespace View.Kitap
             data_Kitap.Columns.Add(btnColumn);
             //Datagrid'de default olarak seçili gelen satırlara unselect işlemi.
             data_Kitap.ClearSelection();
+            BilgiIsle();
 
         }
         private void BilgiIsle()
         {
+          
             //İlgili kitabın bilgilerinin formdaki kontrollere basılması.
             lblBasim.Text = ktp.BasimTarihi.ToShortDateString();
             lblIsım.Text = ktp.KitapAd;
@@ -74,7 +79,7 @@ namespace View.Kitap
         private void KitapProfil_Load(object sender, EventArgs e)
         {
             GridsYenile();
-            BilgiIsle();
+     
         }
 
         private void btn_OgrGit_Click(object sender, EventArgs e)
@@ -82,6 +87,7 @@ namespace View.Kitap
             //Kitabın zimmetli olduğu öğrencinin detaylarını gösterir.
             OgernciProfil form = new OgernciProfil(zimmetliOgrenci.OgrenciTC);
             form.ShowDialog();
+            GridsYenile();
         }
 
         private void data_Ogrenci_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -96,9 +102,15 @@ namespace View.Kitap
                     var islem = Tables.Islem.GetById(islemID);
                     OgernciProfil form = new OgernciProfil(islem.OgrenciID);
                     form.ShowDialog();
+                    GridsYenile();
                 }
                     
             }
+        }
+
+        private void data_Kitap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
