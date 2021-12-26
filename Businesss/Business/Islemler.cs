@@ -151,7 +151,8 @@ namespace Business
         //Bir kitabı ilgili öğrenciye zimmetler.
         public static KutuphaneIslem TeslimAl(string seciliKitapID, string ogrenciID)
         {
-            //TEST İÇİN!!! int[] rastgele = { 2, 1, 14, -2, -1 };
+            //TEST İÇİN!!!
+            int[] rastgele = { 2, 1, 14, -2, -1 };
             var SuAn = DateTime.Now;
             //Yeni bir işlem yaratılır.
             //İadeTarihi null olarak verilir.
@@ -160,8 +161,9 @@ namespace Business
             var x = new KutuphaneIslem()
             {
                 AlimTarihi = SuAn,
-                //TEST İÇİN!!! SonTeslimTarihi = suAn.AddDays(rastgele[new Random().Next(0,4)]),
-                SonTeslimTarihi = SuAn.AddDays(15),
+                //TEST İÇİN!!! 
+                SonTeslimTarihi = SuAn.AddDays(rastgele[new Random().Next(0,4)]),
+              //  SonTeslimTarihi = SuAn.AddDays(15),
                 IadeTarihi = null,
                 KitapBarkodNo = seciliKitapID,
                 OgrenciID = ogrenciID,
