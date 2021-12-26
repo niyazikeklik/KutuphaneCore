@@ -163,6 +163,16 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _728979_info_communication_data_help_information_icon {
+            get {
+                object obj = ResourceManager.GetObject("728979_info_communication_data_help_information_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap _8675047_ic_fluent_person_arrow_right_icon {
             get {
                 object obj = ResourceManager.GetObject("8675047_ic_fluent_person_arrow_right_icon", resourceCulture);

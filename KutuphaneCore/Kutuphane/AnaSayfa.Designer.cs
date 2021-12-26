@@ -33,20 +33,26 @@
             this.öğrenciİşlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kitapİşlemlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yapımcıBilgileriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.öğrenciİşlemlerToolStripMenuItem,
             this.kitapİşlemlerToolStripMenuItem,
-            this.grafikToolStripMenuItem});
+            this.grafikToolStripMenuItem,
+            this.yapımcıBilgileriToolStripMenuItem,
+            this.githubToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MinimumSize = new System.Drawing.Size(0, 32);
+            this.menuStrip1.MinimumSize = new System.Drawing.Size(0, 43);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1337, 32);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1528, 43);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,7 +61,7 @@
             this.öğrenciİşlemlerToolStripMenuItem.Image = global::View.Properties.Resources._6586125_account_avatar_person_profile_user_icon;
             this.öğrenciİşlemlerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.öğrenciİşlemlerToolStripMenuItem.Name = "öğrenciİşlemlerToolStripMenuItem";
-            this.öğrenciİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(77, 28);
+            this.öğrenciİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(95, 37);
             this.öğrenciİşlemlerToolStripMenuItem.Text = "Öğrenci";
             this.öğrenciİşlemlerToolStripMenuItem.Click += new System.EventHandler(this.öğrenciİşlemlerToolStripMenuItem_Click);
             // 
@@ -63,7 +69,7 @@
             // 
             this.kitapİşlemlerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("kitapİşlemlerToolStripMenuItem.Image")));
             this.kitapİşlemlerToolStripMenuItem.Name = "kitapİşlemlerToolStripMenuItem";
-            this.kitapİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.kitapİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(78, 37);
             this.kitapİşlemlerToolStripMenuItem.Text = "Kitap";
             this.kitapİşlemlerToolStripMenuItem.Click += new System.EventHandler(this.kitapİşlemlerToolStripMenuItem_Click);
             // 
@@ -71,28 +77,46 @@
             // 
             this.grafikToolStripMenuItem.Image = global::View.Properties.Resources._6586115_bar_chart_diagram_graph_report_icon;
             this.grafikToolStripMenuItem.Name = "grafikToolStripMenuItem";
-            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(66, 28);
+            this.grafikToolStripMenuItem.Size = new System.Drawing.Size(82, 37);
             this.grafikToolStripMenuItem.Text = "Grafik";
             this.grafikToolStripMenuItem.Click += new System.EventHandler(this.grafikToolStripMenuItem_Click);
+            // 
+            // yapımcıBilgileriToolStripMenuItem
+            // 
+            this.yapımcıBilgileriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yapımcıBilgileriToolStripMenuItem.Image")));
+            this.yapımcıBilgileriToolStripMenuItem.Name = "yapımcıBilgileriToolStripMenuItem";
+            this.yapımcıBilgileriToolStripMenuItem.Size = new System.Drawing.Size(150, 37);
+            this.yapımcıBilgileriToolStripMenuItem.Text = "Yapımcı Bilgileri";
+            this.yapımcıBilgileriToolStripMenuItem.Click += new System.EventHandler(this.yapımcıBilgileriToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 32);
+            this.panel1.Location = new System.Drawing.Point(0, 43);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1337, 447);
+            this.panel1.Size = new System.Drawing.Size(1528, 596);
             this.panel1.TabIndex = 1;
+            // 
+            // githubToolStripMenuItem
+            // 
+            this.githubToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("githubToolStripMenuItem.Image")));
+            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(87, 37);
+            this.githubToolStripMenuItem.Text = "Github";
+            this.githubToolStripMenuItem.Click += new System.EventHandler(this.githubToolStripMenuItem_Click);
             // 
             // AnaSayfa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1337, 479);
+            this.ClientSize = new System.Drawing.Size(1528, 639);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kütüphanee Anasayfa";
@@ -111,5 +135,7 @@
         private System.Windows.Forms.ToolStripMenuItem kitapİşlemlerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafikToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem yapımcıBilgileriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
     }
 }

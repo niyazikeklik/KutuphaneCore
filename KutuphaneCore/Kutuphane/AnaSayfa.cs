@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace KutuphaneCore
             panel1.Controls.Add(form);
             form.Show();
             //Parametre form'un boyutlarında sayfayı açma.
-            this.Size = new Size(form.Width + 20, form.Height + 65);
+            this.Size = new Size(form.Width + 35, form.Height + 80);
             this.CenterToParent();
         }
 
@@ -58,6 +59,31 @@ namespace KutuphaneCore
         private void grafikToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormGom(new Grafik());
+        }
+
+        private void yapımcıBilgileriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string Biglilerim = "İsmim: Niyazi Keklik\nNumaram: 182119010\nNormal Öğretim\n";
+            MessageBox.Show(Biglilerim,"Yapımcı bilgileri", MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void githubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hocam, projenin github linki, bu kutucuğu kapattığınızda yönlendirileceksiniz. Normal şartlarda private bir repo. Projeyi son teslim tarihinden 3 gün sonra public olarak açacağım. Eğer erişemezseniz hala daha private'dır. Bana mailden ulaşırsanız hemen public olarak açabilirim: niyazikeklik@gmail.com \n\nProjedeki her satır kod kendime aittir. İlgili github reposundaki commitleri inceleyerek bunu görebilirsiniz, teşekkür ederim. Saygılarımla.","Proje bilgileri", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = @"https://github.com/niyazikeklik/KutuphaneCore/",
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception)
+            {
+
+               
+            }
+        
         }
     }
 }
