@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OgernciProfil));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.teslimAl = new MetroFramework.Controls.MetroButton();
             this.GridBulunanKitaplar = new System.Windows.Forms.DataGridView();
+            this.teslimAl = new MetroFramework.Controls.MetroButton();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.iadeEt = new MetroFramework.Controls.MetroButton();
             this.data_Ogrenci = new System.Windows.Forms.DataGridView();
+            this.iadeEt = new MetroFramework.Controls.MetroButton();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -89,8 +92,8 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel5.Controls.Add(this.teslimAl);
             this.panel5.Controls.Add(this.GridBulunanKitaplar);
+            this.panel5.Controls.Add(this.teslimAl);
             this.panel5.Controls.Add(this.metroLabel5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(291, 420);
@@ -98,6 +101,51 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1086, 419);
             this.panel5.TabIndex = 24;
+            // 
+            // GridBulunanKitaplar
+            // 
+            this.GridBulunanKitaplar.AllowUserToAddRows = false;
+            this.GridBulunanKitaplar.AllowUserToDeleteRows = false;
+            this.GridBulunanKitaplar.AllowUserToResizeColumns = false;
+            this.GridBulunanKitaplar.AllowUserToResizeRows = false;
+            this.GridBulunanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridBulunanKitaplar.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.GridBulunanKitaplar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.GridBulunanKitaplar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridBulunanKitaplar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.GridBulunanKitaplar.ColumnHeadersHeight = 50;
+            this.GridBulunanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridBulunanKitaplar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.GridBulunanKitaplar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridBulunanKitaplar.EnableHeadersVisualStyles = false;
+            this.GridBulunanKitaplar.GridColor = System.Drawing.SystemColors.Control;
+            this.GridBulunanKitaplar.Location = new System.Drawing.Point(0, 28);
+            this.GridBulunanKitaplar.MultiSelect = false;
+            this.GridBulunanKitaplar.Name = "GridBulunanKitaplar";
+            this.GridBulunanKitaplar.ReadOnly = true;
+            this.GridBulunanKitaplar.RowHeadersVisible = false;
+            this.GridBulunanKitaplar.RowHeadersWidth = 51;
+            this.GridBulunanKitaplar.RowTemplate.Height = 75;
+            this.GridBulunanKitaplar.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridBulunanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridBulunanKitaplar.ShowCellToolTips = false;
+            this.GridBulunanKitaplar.ShowEditingIcon = false;
+            this.GridBulunanKitaplar.Size = new System.Drawing.Size(1086, 391);
+            this.GridBulunanKitaplar.TabIndex = 36;
             // 
             // teslimAl
             // 
@@ -115,38 +163,16 @@
             this.teslimAl.Theme = MetroFramework.MetroThemeStyle.Light;
             this.teslimAl.Click += new System.EventHandler(this.teslimAl_Click_1);
             // 
-            // GridBulunanKitaplar
-            // 
-            this.GridBulunanKitaplar.AllowUserToResizeColumns = false;
-            this.GridBulunanKitaplar.AllowUserToResizeRows = false;
-            this.GridBulunanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridBulunanKitaplar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.GridBulunanKitaplar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridBulunanKitaplar.ColumnHeadersHeight = 30;
-            this.GridBulunanKitaplar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GridBulunanKitaplar.Location = new System.Drawing.Point(0, 28);
-            this.GridBulunanKitaplar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GridBulunanKitaplar.MultiSelect = false;
-            this.GridBulunanKitaplar.Name = "GridBulunanKitaplar";
-            this.GridBulunanKitaplar.RowHeadersVisible = false;
-            this.GridBulunanKitaplar.RowHeadersWidth = 51;
-            this.GridBulunanKitaplar.RowTemplate.Height = 75;
-            this.GridBulunanKitaplar.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridBulunanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridBulunanKitaplar.Size = new System.Drawing.Size(1086, 321);
-            this.GridBulunanKitaplar.TabIndex = 22;
-            this.GridBulunanKitaplar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellClick);
-            this.GridBulunanKitaplar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridBulunanKitaplar_CellContentClick);
-            // 
             // metroLabel5
             // 
+            this.metroLabel5.BackColor = System.Drawing.Color.White;
             this.metroLabel5.CustomBackground = false;
             this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroLabel5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.metroLabel5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.metroLabel5.FontSize = MetroFramework.MetroLabelSize.Medium;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.ForeColor = System.Drawing.Color.White;
+            this.metroLabel5.ForeColor = System.Drawing.Color.Black;
             this.metroLabel5.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel5.Location = new System.Drawing.Point(0, 0);
             this.metroLabel5.Name = "metroLabel5";
@@ -162,8 +188,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel3.Controls.Add(this.iadeEt);
             this.panel3.Controls.Add(this.data_Ogrenci);
+            this.panel3.Controls.Add(this.iadeEt);
             this.panel3.Controls.Add(this.metroLabel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(291, 0);
@@ -171,6 +197,51 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1086, 420);
             this.panel3.TabIndex = 23;
+            // 
+            // data_Ogrenci
+            // 
+            this.data_Ogrenci.AllowUserToAddRows = false;
+            this.data_Ogrenci.AllowUserToDeleteRows = false;
+            this.data_Ogrenci.AllowUserToResizeColumns = false;
+            this.data_Ogrenci.AllowUserToResizeRows = false;
+            this.data_Ogrenci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_Ogrenci.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.data_Ogrenci.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.data_Ogrenci.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_Ogrenci.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.data_Ogrenci.ColumnHeadersHeight = 50;
+            this.data_Ogrenci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_Ogrenci.DefaultCellStyle = dataGridViewCellStyle4;
+            this.data_Ogrenci.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.data_Ogrenci.EnableHeadersVisualStyles = false;
+            this.data_Ogrenci.GridColor = System.Drawing.SystemColors.Control;
+            this.data_Ogrenci.Location = new System.Drawing.Point(0, 28);
+            this.data_Ogrenci.MultiSelect = false;
+            this.data_Ogrenci.Name = "data_Ogrenci";
+            this.data_Ogrenci.ReadOnly = true;
+            this.data_Ogrenci.RowHeadersVisible = false;
+            this.data_Ogrenci.RowHeadersWidth = 51;
+            this.data_Ogrenci.RowTemplate.Height = 75;
+            this.data_Ogrenci.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_Ogrenci.ShowCellToolTips = false;
+            this.data_Ogrenci.ShowEditingIcon = false;
+            this.data_Ogrenci.Size = new System.Drawing.Size(1086, 392);
+            this.data_Ogrenci.TabIndex = 35;
             // 
             // iadeEt
             // 
@@ -188,44 +259,16 @@
             this.iadeEt.Theme = MetroFramework.MetroThemeStyle.Light;
             this.iadeEt.Click += new System.EventHandler(this.iadeEt_Click_1);
             // 
-            // data_Ogrenci
-            // 
-            this.data_Ogrenci.AllowUserToResizeColumns = false;
-            this.data_Ogrenci.AllowUserToResizeRows = false;
-            this.data_Ogrenci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.data_Ogrenci.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.data_Ogrenci.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.data_Ogrenci.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_Ogrenci.DefaultCellStyle = dataGridViewCellStyle1;
-            this.data_Ogrenci.Dock = System.Windows.Forms.DockStyle.Top;
-            this.data_Ogrenci.Location = new System.Drawing.Point(0, 28);
-            this.data_Ogrenci.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.data_Ogrenci.MultiSelect = false;
-            this.data_Ogrenci.Name = "data_Ogrenci";
-            this.data_Ogrenci.RowHeadersVisible = false;
-            this.data_Ogrenci.RowHeadersWidth = 51;
-            this.data_Ogrenci.RowTemplate.Height = 75;
-            this.data_Ogrenci.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Ogrenci.Size = new System.Drawing.Size(1086, 321);
-            this.data_Ogrenci.TabIndex = 21;
-            // 
             // metroLabel3
             // 
+            this.metroLabel3.BackColor = System.Drawing.Color.White;
             this.metroLabel3.CustomBackground = false;
             this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroLabel3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.metroLabel3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Medium;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.ForeColor = System.Drawing.Color.White;
+            this.metroLabel3.ForeColor = System.Drawing.Color.Black;
             this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel3.Location = new System.Drawing.Point(0, 0);
             this.metroLabel3.Name = "metroLabel3";
@@ -520,10 +563,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private MetroFramework.Controls.MetroButton teslimAl;
-        public System.Windows.Forms.DataGridView GridBulunanKitaplar;
         private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroButton iadeEt;
-        public System.Windows.Forms.DataGridView data_Ogrenci;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lblBorc;
@@ -539,5 +580,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel7;
+        public System.Windows.Forms.DataGridView data_Ogrenci;
+        public System.Windows.Forms.DataGridView GridBulunanKitaplar;
     }
 }

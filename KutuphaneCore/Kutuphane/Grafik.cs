@@ -43,7 +43,7 @@ namespace View.Kutuphane
             zedGraphControl1.GraphPane.Title.Text = "Başlık Buraya";
             zedGraphControl1.GraphPane.XAxis.Title.Text = "Durum";
             zedGraphControl1.GraphPane.YAxis.Title.Text = "Kitap Sayısı";
-
+            zedGraphControl1.GraphPane.Border.IsVisible = false;
             // aOluşturulan ayaların grafik üzeinde güncellenmesi.
             zedGraphControl1.GraphPane.XAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
             zedGraphControl1.GraphPane.YAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());

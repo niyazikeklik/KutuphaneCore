@@ -41,8 +41,8 @@
             // zedGraphControl1
             // 
             this.zedGraphControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zedGraphControl1.Location = new System.Drawing.Point(0, 43);
-            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.zedGraphControl1.Location = new System.Drawing.Point(0, 57);
+            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
             this.zedGraphControl1.ScrollMaxX = 0D;
@@ -51,7 +51,7 @@
             this.zedGraphControl1.ScrollMinX = 0D;
             this.zedGraphControl1.ScrollMinY = 0D;
             this.zedGraphControl1.ScrollMinY2 = 0D;
-            this.zedGraphControl1.Size = new System.Drawing.Size(687, 338);
+            this.zedGraphControl1.Size = new System.Drawing.Size(1219, 512);
             this.zedGraphControl1.TabIndex = 0;
             this.zedGraphControl1.UseExtendedPrintDialog = true;
             // 
@@ -63,17 +63,20 @@
             this.panel1.Controls.Add(this.TxtTitles);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 43);
+            this.panel1.Size = new System.Drawing.Size(1219, 57);
             this.panel1.TabIndex = 1;
             // 
             // metroButton2
             // 
+            this.metroButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.metroButton2.Highlight = true;
-            this.metroButton2.Location = new System.Drawing.Point(565, 10);
+            this.metroButton2.Location = new System.Drawing.Point(1081, 13);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(110, 27);
+            this.metroButton2.Size = new System.Drawing.Size(126, 36);
             this.metroButton2.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButton2.StyleManager = null;
             this.metroButton2.TabIndex = 5;
@@ -83,11 +86,13 @@
             // 
             // metroButton1
             // 
+            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.metroButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.metroButton1.Highlight = true;
-            this.metroButton1.Location = new System.Drawing.Point(449, 10);
+            this.metroButton1.Location = new System.Drawing.Point(948, 13);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(110, 27);
+            this.metroButton1.Size = new System.Drawing.Size(126, 36);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroButton1.StyleManager = null;
             this.metroButton1.TabIndex = 5;
@@ -97,11 +102,13 @@
             // 
             // OgrButton
             // 
+            this.OgrButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.OgrButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OgrButton.Highlight = true;
-            this.OgrButton.Location = new System.Drawing.Point(333, 10);
+            this.OgrButton.Location = new System.Drawing.Point(816, 13);
+            this.OgrButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OgrButton.Name = "OgrButton";
-            this.OgrButton.Size = new System.Drawing.Size(110, 27);
+            this.OgrButton.Size = new System.Drawing.Size(126, 36);
             this.OgrButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.OgrButton.StyleManager = null;
             this.OgrButton.TabIndex = 5;
@@ -111,23 +118,26 @@
             // 
             // TxtTitles
             // 
+            this.TxtTitles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtTitles.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtTitles.Location = new System.Drawing.Point(172, 10);
+            this.TxtTitles.Location = new System.Drawing.Point(632, 13);
+            this.TxtTitles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtTitles.MaxLength = 11;
             this.TxtTitles.Name = "TxtTitles";
             this.TxtTitles.PlaceholderText = "Başlık Gir";
-            this.TxtTitles.Size = new System.Drawing.Size(155, 27);
+            this.TxtTitles.Size = new System.Drawing.Size(177, 32);
             this.TxtTitles.TabIndex = 1;
             this.TxtTitles.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Grafik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 381);
+            this.ClientSize = new System.Drawing.Size(1219, 569);
             this.Controls.Add(this.zedGraphControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Grafik";
             this.Text = "Grafik";
             this.Load += new System.EventHandler(this.Grafik_Load);

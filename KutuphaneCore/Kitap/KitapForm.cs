@@ -69,11 +69,7 @@ namespace View.Kitap
 
         private void txtAra_TextChanged_1(object sender, EventArgs e)
         {
-            //Seçilen radiobutona göre gridview'de arama işlemi yapılıyor.
-            if (rdBtn_ismeGore.Checked)
-                data_TumKitap.Ara(1, txtAra.Text);
-            else if (rdBtn_TC.Checked)
-                data_TumKitap.Ara(0, txtAra.Text);
+           
         }
 
         private void btn_KtpGuncelle_Click(object sender, EventArgs e)
@@ -113,6 +109,15 @@ namespace View.Kitap
 
             }
             else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            //Seçilen radiobutona göre gridview'de arama işlemi yapılıyor.
+            if (rdBtn_ismeGore.Checked)
+                data_TumKitap.Ara(1, txtAra.Text);
+            else if (rdBtn_TC.Checked)
+                data_TumKitap.Ara(0, txtAra.Text);
         }
     }
 }

@@ -72,11 +72,7 @@ namespace View.Ogrenci
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
-            //txtAra textbox'ına data girildikçe seçili radiobutona göre arama işlemi.
-            if (rdBtn_ismeGore.Checked)
-                data_Ogrenci.Ara(1, txtAra.Text);
-            else if (rdBtn_TC.Checked)
-                data_Ogrenci.Ara(0, txtAra.Text);
+        
         }
 
         private void btn_OgrSil_Click_1(object sender, EventArgs e)
@@ -103,6 +99,15 @@ namespace View.Ogrenci
                 GridYenile();
             }
             else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+        }
+
+        private void txtAra_TextChanged_1(object sender, EventArgs e)
+        {
+            //txtAra textbox'ına data girildikçe seçili radiobutona göre arama işlemi.
+            if (rdBtn_ismeGore.Checked)
+                data_Ogrenci.Ara(1, txtAra.Text);
+            else if (rdBtn_TC.Checked)
+                data_Ogrenci.Ara(0, txtAra.Text);
         }
     }
 }

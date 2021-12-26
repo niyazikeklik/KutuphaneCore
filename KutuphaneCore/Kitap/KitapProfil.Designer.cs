@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KitapProfil));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTur = new MetroFramework.Controls.MetroLabel();
@@ -43,9 +44,9 @@
             this.lblIsım = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.iadeEt = new MetroFramework.Controls.MetroButton();
-            this.data_Kitap = new System.Windows.Forms.DataGridView();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.data_Kitap = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn = new System.Windows.Forms.Panel();
@@ -54,8 +55,8 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data_Kitap)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Kitap)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.btn.SuspendLayout();
@@ -308,46 +309,16 @@
             this.iadeEt.Text = "İade Et";
             this.iadeEt.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
-            // data_Kitap
-            // 
-            this.data_Kitap.AllowUserToResizeColumns = false;
-            this.data_Kitap.AllowUserToResizeRows = false;
-            this.data_Kitap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.data_Kitap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.data_Kitap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.data_Kitap.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_Kitap.DefaultCellStyle = dataGridViewCellStyle1;
-            this.data_Kitap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.data_Kitap.Location = new System.Drawing.Point(0, 28);
-            this.data_Kitap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.data_Kitap.MultiSelect = false;
-            this.data_Kitap.Name = "data_Kitap";
-            this.data_Kitap.RowHeadersVisible = false;
-            this.data_Kitap.RowHeadersWidth = 51;
-            this.data_Kitap.RowTemplate.Height = 75;
-            this.data_Kitap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_Kitap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data_Kitap.Size = new System.Drawing.Size(1095, 767);
-            this.data_Kitap.TabIndex = 21;
-            this.data_Kitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Ogrenci_CellClick);
-            this.data_Kitap.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Kitap_CellContentClick);
-            // 
             // metroLabel3
             // 
+            this.metroLabel3.BackColor = System.Drawing.Color.White;
             this.metroLabel3.CustomBackground = false;
             this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroLabel3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.metroLabel3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Medium;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.ForeColor = System.Drawing.Color.White;
+            this.metroLabel3.ForeColor = System.Drawing.Color.Black;
             this.metroLabel3.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
             this.metroLabel3.Location = new System.Drawing.Point(0, 0);
             this.metroLabel3.Name = "metroLabel3";
@@ -363,8 +334,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel3.Controls.Add(this.iadeEt);
             this.panel3.Controls.Add(this.data_Kitap);
+            this.panel3.Controls.Add(this.iadeEt);
             this.panel3.Controls.Add(this.metroLabel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(291, 0);
@@ -372,6 +343,51 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1095, 795);
             this.panel3.TabIndex = 23;
+            // 
+            // data_Kitap
+            // 
+            this.data_Kitap.AllowUserToAddRows = false;
+            this.data_Kitap.AllowUserToDeleteRows = false;
+            this.data_Kitap.AllowUserToResizeColumns = false;
+            this.data_Kitap.AllowUserToResizeRows = false;
+            this.data_Kitap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_Kitap.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.data_Kitap.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.data_Kitap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_Kitap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.data_Kitap.ColumnHeadersHeight = 50;
+            this.data_Kitap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data_Kitap.DefaultCellStyle = dataGridViewCellStyle2;
+            this.data_Kitap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.data_Kitap.EnableHeadersVisualStyles = false;
+            this.data_Kitap.GridColor = System.Drawing.SystemColors.Control;
+            this.data_Kitap.Location = new System.Drawing.Point(0, 28);
+            this.data_Kitap.MultiSelect = false;
+            this.data_Kitap.Name = "data_Kitap";
+            this.data_Kitap.ReadOnly = true;
+            this.data_Kitap.RowHeadersVisible = false;
+            this.data_Kitap.RowHeadersWidth = 51;
+            this.data_Kitap.RowTemplate.Height = 75;
+            this.data_Kitap.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_Kitap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_Kitap.ShowCellToolTips = false;
+            this.data_Kitap.ShowEditingIcon = false;
+            this.data_Kitap.Size = new System.Drawing.Size(1095, 767);
+            this.data_Kitap.TabIndex = 36;
             // 
             // panel4
             // 
@@ -498,8 +514,8 @@
             this.Text = "KitapProfil";
             this.Load += new System.EventHandler(this.KitapProfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data_Kitap)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.data_Kitap)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.btn.ResumeLayout(false);
@@ -523,7 +539,6 @@
         private MetroFramework.Controls.MetroLabel lblIsım;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton iadeEt;
-        public System.Windows.Forms.DataGridView data_Kitap;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -533,5 +548,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private System.Windows.Forms.Panel btn;
         private MetroFramework.Controls.MetroButton btn_OgrGit;
+        public System.Windows.Forms.DataGridView data_Kitap;
     }
 }
