@@ -1,15 +1,14 @@
 ﻿using Entitites.Models;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using static Entitites.Models.Enums;
 
 namespace Entitites
 {
-  //Kitap class'ı
+    //Kitap class'ı
     public class Kitap
     {
         [Key] //Key anahtar kelimesi, EntityFramework'e bu sütunun primary key olacağını söylemk için gereklidir.

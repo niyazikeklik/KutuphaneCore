@@ -1,19 +1,10 @@
-﻿using DTO.Concrete;
-using DTO;
-using Entitites.Models;
+﻿using Entitites;
+
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Entitites;
-using static Entitites.Models.Enums;
+
 using static DTO.Concrete.Tablolar;
+using static Entitites.Models.Enums;
 namespace KutuphaneCore
 {
     public partial class KitapIslem : Form
@@ -27,7 +18,9 @@ namespace KutuphaneCore
         {
             //Kitap kategorisi için comboxlara ilgili enum elemanlarını yazıyorum.
             if (ktpTur.Items.Count <= 0)
+            {
                 ktpTur.DataSource = Enum.GetValues(typeof(KitapKategori));
+            }
         }
 
         private void ktpButon_Click(object sender, EventArgs e)
@@ -38,17 +31,18 @@ namespace KutuphaneCore
                 BarkodNo = this.ktpBarkod.Text,
                 KitapAd = ktpAd.Text,
                 KitapTuru = (KitapKategori)ktpTur.SelectedIndex,
-                BasimTarihi = (DateTime)ktpBasım.Value,
+                BasimTarihi = ktpBasım.Value,
                 SayfaSayısı = Convert.ToInt32(ktpSayfa.Value),
                 KitapYazar = ktpYazar.Text
             };
             //ktpBarkod enabled ise ekleme işlemi yapılacak demektir.
-            if (ktpBarkod.Enabled) 
+            if (ktpBarkod.Enabled)
             {
-                if (Tables.Kitap.IsExistRecord(kitap.BarkodNo)) 
+                if (Tables.Kitap.IsExistRecord(kitap.BarkodNo))
+                {
                     // Girilen barkod numarası zaten veritabanında var ise ekleme yapılmaz.
                     MessageBox.Show("Aynı BarkodNo ile kayıtlı başka bir kayıt bulunmakta.", "Benzer kayıt", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
+                }
                 else
                 {
                     //Girilen bilgiler ile oluşturulan kitap nesnesinin veritabanına eklenme işlemi.

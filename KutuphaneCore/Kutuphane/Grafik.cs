@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using static DTO.Concrete.Tablolar;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 
 namespace View.Kutuphane
@@ -24,13 +17,13 @@ namespace View.Kutuphane
 
         private void Grafik_Load(object sender, EventArgs e)
         {
-            double[] x = { 1, 2, 3};
+            double[] x = { 1, 2, 3 };
             var countAlinabilir = Tables.Kitap.GetAlinabilir().Count;
             var countTum = Tables.Kitap.GetList().Count();
             var countZimmetli = Tables.Kitap.GetZimmetli().Count;
-            double[] y =  {countAlinabilir };
-            double[] y1 = {countZimmetli };
-            double[] y2 = {countTum};
+            double[] y = { countAlinabilir };
+            double[] y1 = { countZimmetli };
+            double[] y2 = { countTum };
             // Eski veriler temizlenir.
             zedGraphControl1.GraphPane.CurveList.Clear();
 

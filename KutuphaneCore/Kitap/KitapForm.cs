@@ -1,26 +1,13 @@
-﻿using DTO;
-using DTO.Abstract;
-using DTO.Concrete;
-
-using Entitites.Models;
+﻿
+using Business;
 
 using KutuphaneCore;
 
-using Microsoft.EntityFrameworkCore;
-
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using static Entitites.Models.Enums;
 using static DTO.Concrete.Tablolar;
-using Business;
+using static Entitites.Models.Enums;
 
 namespace View.Kitap
 {
@@ -64,14 +51,11 @@ namespace View.Kitap
                 //Deişikliklerin görünmesi için gridview yeniliyorum.
                 GridYenile();
             }
-            else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
+            {
+                MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
-
-        private void txtAra_TextChanged_1(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btn_KtpGuncelle_Click(object sender, EventArgs e)
         {    //Eğer seçili satır var ise
             if (data_TumKitap.SelectedRows.Count == 1)
@@ -94,7 +78,10 @@ namespace View.Kitap
                 form.ShowDialog();
                 GridYenile();
             }
-            else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
+            {
+                MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void Btn_KitapGit_Click(object sender, EventArgs e)
@@ -104,20 +91,27 @@ namespace View.Kitap
                 //Seçilen satır barkodno'ya göre ilgili kitabı kitapprofil formuna gönderiyorum.
                 var id = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
                 KitapProfil form = new KitapProfil(id);
-                form.ShowDialog();   
-                
+                form.ShowDialog();
+
 
             }
-            else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
+            {
+                MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
             //Seçilen radiobutona göre gridview'de arama işlemi yapılıyor.
             if (rdBtn_ismeGore.Checked)
+            {
                 data_TumKitap.Ara(1, txtAra.Text);
+            }
             else if (rdBtn_TC.Checked)
+            {
                 data_TumKitap.Ara(0, txtAra.Text);
+            }
         }
     }
 }

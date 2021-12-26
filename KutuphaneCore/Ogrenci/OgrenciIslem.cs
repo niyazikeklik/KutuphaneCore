@@ -1,17 +1,8 @@
-﻿using DTO;
-using DTO.Abstract;
-using DTO.Concrete;
-
+﻿
 using Entitites.Models;
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using static DTO.Concrete.Tablolar;
@@ -39,7 +30,9 @@ namespace KutuphaneCore
             {
                 //Eğer girilen öğrencitc ile başka bir kayıt bulunuyorsa uyarı verir.
                 if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciTC))
+                {
                     MessageBox.Show("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.", "Başarısız", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
                 else
                 {
                     //Yeni öğrenci ekleme işlemi
@@ -54,7 +47,10 @@ namespace KutuphaneCore
                 Tables.Ogr.Update(ogrenci);
                 MessageBox.Show("İşlem başarılı.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else MessageBox.Show("Güncellenek öğrenci bulunamadı.", "İşlem başarısız", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                MessageBox.Show("Güncellenek öğrenci bulunamadı.", "İşlem başarısız", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void OgrenciIslem_Load(object sender, EventArgs e)

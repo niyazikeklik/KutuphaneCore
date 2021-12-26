@@ -14,14 +14,19 @@ namespace Business
         {
             //Bir işlemin iade tarihi yoksa ve son teslim tarihi geçmiş ise ceza uygulanır.
             if (item.IadeTarihi == null && item.SonTeslimTarihi < DateTime.Now)
+            {
                 return "Kitabın teslim süresi geçmiştir. Güncel ceza " + item.BorcHesapla() + "TL'dir.";
+            }
             //Bir işlemin iade tarihi varsa, kitap teslim alınmıştır.
             else if (item.IadeTarihi != null)
+            {
                 return "Kitap teslim alınmıştır.";
+            }
             //Yukarıdaki şartar gerçekleşmezse kitabın iade tarihine daha vardır.
             else
+            {
                 return "Kitabın teslim tarihine son " + item.KalanGun() + " gün vardır";
-
+            }
         }
         //Parametre olarak gelen datagridview nesnesinde ilgili sütunda ilgili veriyi arar.
         public static void Ara(this DataGridView grid, int sutunIndis, string aranacak)
@@ -31,7 +36,9 @@ namespace Business
             {
                 //İlgili hücre, aranan veriyi içeriyor ise satır görünür.
                 if (row.Cells[sutunIndis].Value.ToString().ToLower().Contains(aranacak.ToLower()))
+                {
                     row.Visible = true;
+                }
                 //İlgili hücre, aranan veriyi içermiyor ise satır saklanır.
                 else
                 {
@@ -85,10 +92,15 @@ namespace Business
             var gecenGUnSayisi = KalanGun(item);
             //Eğer geçen gün sayısı 0'dan küçük ise öğrenciye ceza uygulanır.
             if (gecenGUnSayisi < 0)
+            {
                 //Round methodu virgülden sonra kaç basamak alacağını söyler
                 //Borç formülü geçen gün sayısı * 1TL'dir.
                 return Math.Round(gecenGUnSayisi * -1, 2);
-            else return 0;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         //İade için kalan günü hesaplar.
@@ -97,10 +109,14 @@ namespace Business
             var result = 0.0;
             //Eğer parametre olan işlemde iade tarihi var ise iade tarihi üzerindne borç hesaplar.
             if (item.IadeTarihi != null)
+            {
                 result = (item.SonTeslimTarihi - item.IadeTarihi.Value).TotalDays;
+            }
             //İade tarihi yoksa o anki tarihten itibaren borç hesaplaması yapar.
             else
+            {
                 result = (item.SonTeslimTarihi - DateTime.Now).TotalDays;
+            }
             //Round methodu virgülden sonra kaç basamak alacağını söyler
             return Math.Round(result, 2);
         }
@@ -124,7 +140,11 @@ namespace Business
                 //İşlem ücreti geri döndürülür.
                 return borc;
             }
-            else MessageBox.Show("Kitap zaten iade edildi.", "İade edili kitap", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
+            {
+                MessageBox.Show("Kitap zaten iade edildi.", "İade edili kitap", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+
             return -1;
         }
 

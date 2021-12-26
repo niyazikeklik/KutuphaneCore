@@ -1,22 +1,9 @@
 ﻿using Business;
 
-using DTO;
-using DTO.Concrete;
-
-using Entitites;
 using Entitites.Models;
-
-using Microsoft.EntityFrameworkCore;
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using View.Kitap;
@@ -27,7 +14,7 @@ namespace KutuphaneCore
     public partial class OgernciProfil : Form
     {
         Ogrenci ogr;
-        string id;
+        readonly string id;
         public OgernciProfil(string ogrID)
         {
             //parametre olarak gelen öğrenci ıd üzerinden ilgili öğrenci tespiti yapılır.
@@ -61,10 +48,12 @@ namespace KutuphaneCore
             GridBulunanKitaplar.Columns[GridBulunanKitaplar.ColumnCount - 1].Visible = false;
 
             //Son sütuna bir buton sütunu eklenir.
-            DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
-            btnColumn.UseColumnTextForButtonValue = true;
-            btnColumn.Text = "Kitaba git";
-            btnColumn.HeaderText = "İlgili Kitap";
+            DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn
+            {
+                UseColumnTextForButtonValue = true,
+                Text = "Kitaba git",
+                HeaderText = "İlgili Kitap"
+            };
             GridBulunanKitaplar.Columns.Add(btnColumn);
 
             data_Ogrenci.ClearSelection();
@@ -78,11 +67,13 @@ namespace KutuphaneCore
         }
         public void OgrenciBilgileriIsle()
         {
-     
+
             //Öğrencinin kapanmamış işlemleri üzerinden güncel borcu hesaplanır.
             double ToplamBorc = 0;
             foreach (var item in Tables.Ogr.GetKapanmamisIslem(ogr.OgrenciTC))
+            {
                 ToplamBorc += item.BorcHesapla();
+            }
 
             //İlgili öğrenci bilgileri ekrandaki kontrollere basılır.
             lblTC.Text = ogr.OgrenciTC;
@@ -90,7 +81,7 @@ namespace KutuphaneCore
             lblBorc.Text = ToplamBorc.ToString();
             lblTel.Text = ogr.TelefonNo.ToString();
             //Öğrencinin yaşı hesaplanır.
-            lblYas.Text = ogr.DogumTarihi.YasHesapla().ToString(); 
+            lblYas.Text = ogr.DogumTarihi.YasHesapla().ToString();
         }
         private void OgrenciProfil_Load(object sender, EventArgs e)
         {
@@ -116,7 +107,10 @@ namespace KutuphaneCore
                     GridsYenile();
                 }
             }
-            else MessageBox.Show("İade etmek istediğniz işlemi seçiniz.", "İşlem seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            else
+            {
+                MessageBox.Show("İade etmek istediğniz işlemi seçiniz.", "İşlem seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void teslimAl_Click_1(object sender, EventArgs e)
@@ -133,8 +127,10 @@ namespace KutuphaneCore
 
                 GridsYenile();
             }
-            else MessageBox.Show("Teslim almak istediğniz kitabı seçiniz.", "Kitap seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
+            else
+            {
+                MessageBox.Show("Teslim almak istediğniz kitabı seçiniz.", "Kitap seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
 
         private void GridBulunanKitaplar_CellClick(object sender, DataGridViewCellEventArgs e)

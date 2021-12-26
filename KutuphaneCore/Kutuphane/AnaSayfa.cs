@@ -1,17 +1,8 @@
-﻿using DTO;
-using DTO.Abstract;
-using DTO.Concrete;
-using Entitites.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using View.Kitap;
 using View.Kutuphane;
 using View.Ogrenci;
@@ -64,12 +55,12 @@ namespace KutuphaneCore
         private void yapımcıBilgileriToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string Biglilerim = "İsmim: Niyazi Keklik\nNumaram: 182119010\nNormal Öğretim\n";
-            MessageBox.Show(Biglilerim,"Yapımcı bilgileri", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show(Biglilerim, "Yapımcı bilgileri", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void githubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hocam, projenin github linki, bu kutucuğu kapattığınızda yönlendirileceksiniz. Normal şartlarda private bir repo. Projeyi son teslim tarihinden 3 gün sonra public olarak açacağım. Eğer erişemezseniz hala daha private'dır. Bana mailden ulaşırsanız hemen public olarak açabilirim: niyazikeklik@gmail.com \n\nProjedeki her satır kod kendime aittir. İlgili github reposundaki commitleri inceleyerek bunu görebilirsiniz, teşekkür ederim. Saygılarımla.","Proje bilgileri", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Hocam, projenin github linki, bu kutucuğu kapattığınızda yönlendirileceksiniz. Normal şartlarda private bir repo. Projeyi son teslim tarihinden 3 gün sonra public olarak açacağım. Eğer erişemezseniz hala daha private'dır. Bana mailden ulaşırsanız hemen public olarak açabilirim: niyazikeklik@gmail.com \n\nProjedeki her satır kod kendime aittir. İlgili github reposundaki commitleri inceleyerek bunu görebilirsiniz, teşekkür ederim. Saygılarımla.", "Proje bilgileri", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
                 System.Diagnostics.Process.Start(new ProcessStartInfo
@@ -81,9 +72,9 @@ namespace KutuphaneCore
             catch (Exception)
             {
 
-               
+
             }
-        
+
         }
     }
 }
