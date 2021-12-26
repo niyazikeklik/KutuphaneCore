@@ -30,7 +30,7 @@ namespace DTO.Concrete
             return _dbSet.Where(x => !x.Stok).ToList();
         }
         //İlgili kitabın stoğu true ise false, false ise true olur.
-        public void StokUpdate(string ID)
+        public void StokToggleUpdate(string ID)
         {
             var kitap = GetById(ID);
             kitap.Stok = !kitap.Stok;

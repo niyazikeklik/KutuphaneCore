@@ -136,7 +136,7 @@ namespace Business
                 //İlgili işlem güncellenir.
                 Tables.Islem.Update(islem);
                 //İşleme ait kitap stoğu güncellenir.
-                Tables.Kitap.StokUpdate(islem.KitapBarkodNo);
+                Tables.Kitap.StokToggleUpdate(islem.KitapBarkodNo);
                 //İşlem ücreti geri döndürülür.
                 return borc;
             }
@@ -152,7 +152,7 @@ namespace Business
         public static KutuphaneIslem TeslimAl(string seciliKitapID, string ogrenciID)
         {
             //TEST İÇİN!!!
-            int[] rastgele = { 2, 1, 14, -2, -1 };
+            //int[] rastgele = { 2, 1, 14, -2, -1 };
             var SuAn = DateTime.Now;
             //Yeni bir işlem yaratılır.
             //İadeTarihi null olarak verilir.
@@ -162,8 +162,8 @@ namespace Business
             {
                 AlimTarihi = SuAn,
                 //TEST İÇİN!!! 
-                SonTeslimTarihi = SuAn.AddDays(rastgele[new Random().Next(0,4)]),
-              //  SonTeslimTarihi = SuAn.AddDays(15),
+                //SonTeslimTarihi = SuAn.AddDays(rastgele[new Random().Next(0,4)]),
+                SonTeslimTarihi = SuAn.AddDays(15),
                 IadeTarihi = null,
                 KitapBarkodNo = seciliKitapID,
                 OgrenciID = ogrenciID,
@@ -171,7 +171,7 @@ namespace Business
             };
             //İşlem eklenir ve ilgili kitap stoktan düşer.
             Tables.Islem.Add(x);
-            Tables.Kitap.StokUpdate(seciliKitapID);
+            Tables.Kitap.StokToggleUpdate(seciliKitapID);
             return x;
         }
     }

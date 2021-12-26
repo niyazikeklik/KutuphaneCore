@@ -96,7 +96,7 @@ namespace View.Ogrenci
                         var list = Tables.Ogr.GetZimmetliKitapsNo(secilenOgrenciID);
                         foreach (var item in list)
                         {
-                            Tables.Kitap.StokUpdate(item);
+                            Tables.Kitap.StokToggleUpdate(item);
                         }
 
                         Tables.Ogr.Remove(secilenOgrenciID);
