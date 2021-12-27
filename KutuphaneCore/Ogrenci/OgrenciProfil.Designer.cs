@@ -187,7 +187,7 @@
             this.iadeEt.TabIndex = 22;
             this.iadeEt.Text = "İade Et";
             this.iadeEt.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.iadeEt.Click += new System.EventHandler(this.iadeEt_Click_1);
+            this.iadeEt.Click += new System.EventHandler(this.İadeEt_Click_1);
             // 
             // metroLabel5
             // 
@@ -305,7 +305,7 @@
             this.teslimAl.TabIndex = 23;
             this.teslimAl.Text = "Teslim Al";
             this.teslimAl.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.teslimAl.Click += new System.EventHandler(this.teslimAl_Click_1);
+            this.teslimAl.Click += new System.EventHandler(this.TeslimAl_Click_1);
             // 
             // metroLabel3
             // 

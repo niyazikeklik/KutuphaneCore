@@ -154,7 +154,7 @@
             this.ktpButon.TabIndex = 5;
             this.ktpButon.Text = "İşlemi Yap";
             this.ktpButon.UseVisualStyleBackColor = true;
-            this.ktpButon.Click += new System.EventHandler(this.ktpButon_Click);
+            this.ktpButon.Click += new System.EventHandler(this.KtpButon_Click);
             // 
             // KitapIslem
             // 

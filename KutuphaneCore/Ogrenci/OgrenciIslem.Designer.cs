@@ -50,7 +50,7 @@
             this.ogrTC.Size = new System.Drawing.Size(155, 27);
             this.ogrTC.TabIndex = 0;
             this.ogrTC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ogrTC.TextChanged += new System.EventHandler(this.ogrTC_TextChanged);
+            this.ogrTC.TextChanged += new System.EventHandler(this.OgrTC_TextChanged);
             // 
             // metroLabel1
             // 

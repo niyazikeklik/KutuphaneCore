@@ -388,7 +388,7 @@
             this.data_Kitap.ShowEditingIcon = false;
             this.data_Kitap.Size = new System.Drawing.Size(1095, 767);
             this.data_Kitap.TabIndex = 36;
-            this.data_Kitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Kitap_CellClick);
+            this.data_Kitap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Data_Kitap_CellClick);
             // 
             // panel4
             // 
@@ -451,7 +451,7 @@
             this.btn_OgrGit.Text = "Öğrenciye Git";
             this.btn_OgrGit.Theme = MetroFramework.MetroThemeStyle.Light;
             this.btn_OgrGit.UseVisualStyleBackColor = false;
-            this.btn_OgrGit.Click += new System.EventHandler(this.btn_OgrGit_Click);
+            this.btn_OgrGit.Click += new System.EventHandler(this.Btn_OgrGit_Click);
             // 
             // lblStok
             // 

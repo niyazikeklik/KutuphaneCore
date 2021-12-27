@@ -11,145 +11,124 @@ using View.Kitap;
 using static DTO.Concrete.Tablolar;
 namespace KutuphaneCore
 {
-    public partial class OgernciProfil : Form
-    {
-        Ogrenci ogr;
-        readonly string id;
-        public OgernciProfil(string ogrID)
-        {
-            //parametre olarak gelen öğrenci ıd üzerinden ilgili öğrenci tespiti yapılır.
-            this.ogr = Tables.Ogr.GetOgrenciWithIslemlerById(ogrID);
-            this.id = ogrID;
-            InitializeComponent();
-        }
-        public void GridsYenile()
-        {
-            this.ogr = Tables.Ogr.GetOgrenciWithIslemlerById(id);
-            GridBulunanKitaplar.Columns.Clear();
-            List<OgrenciIslemBilgi> list = new List<OgrenciIslemBilgi>();
-            //Öğrenciye ait işlemler döndürülür ve kullanıcıya bilgi amaçlı OgrenciIslemBilgi modeli üzerinden yeni bir listeye çevrilir.
-            foreach (var item in Tables.Ogr.GetOgrenciWithIslemlerById(ogr.OgrenciTC).kutuphaneIslems)
-            {
-                list.Add(new OgrenciIslemBilgi()
-                {
-                    IslemID = item.IslemId,
-                    KitapAdi = Tables.Kitap.GetById(item.KitapBarkodNo).KitapAd,
-                    AlimTarihi = item.AlimTarihi,
-                    SonTeslimTarihi = item.SonTeslimTarihi,
-                    TeslimTarihi = item.IadeTarihi,
-                    IsemUcreti = item.BorcHesapla(),
-                    Aciklama = item.CreateAciklama()
-                });
-            }
-            //Oluşturulan liste ekrana basılır.
-            data_Ogrenci.DataSource = list;
+	public partial class OgernciProfil : Form
+	{
+		private Ogrenci ogr;
+		private readonly string id;
+		public OgernciProfil(string ogrID)
+		{
+			//parametre olarak gelen öğrenci ıd üzerinden ilgili öğrenci tespiti yapılır.
+			ogr = Tables.Ogr.GetOgrenciWithIslemlerById(ogrID);
+			id = ogrID;
+			InitializeComponent();
+		}
+		public void GridsYenile()
+		{
+			ogr = Tables.Ogr.GetOgrenciWithIslemlerById(id);
+			GridBulunanKitaplar.Columns.Clear();
+			var list = new List<OgrenciIslemBilgi>();
+			//Öğrenciye ait işlemler döndürülür ve kullanıcıya bilgi amaçlı OgrenciIslemBilgi modeli üzerinden yeni bir listeye çevrilir.
+			foreach (KutuphaneIslem? item in Tables.Ogr.GetOgrenciWithIslemlerById(ogr.OgrenciTC).kutuphaneIslems)
+				list.Add(new OgrenciIslemBilgi()
+				{
+					IslemID = item.IslemId,
+					KitapAdi = Tables.Kitap.GetById(item.KitapBarkodNo).KitapAd,
+					AlimTarihi = item.AlimTarihi,
+					SonTeslimTarihi = item.SonTeslimTarihi,
+					TeslimTarihi = item.IadeTarihi,
+					IsemUcreti = item.BorcHesapla(),
+					Aciklama = item.CreateAciklama()
+				});
 
-            GridBulunanKitaplar.DataSource = Tables.Kitap.GetAlinabilir();
-            GridBulunanKitaplar.Columns[GridBulunanKitaplar.ColumnCount - 1].Visible = false;
+			//Oluşturulan liste ekrana basılır.
+			data_Ogrenci.DataSource = list;
 
-            //Son sütuna bir buton sütunu eklenir.
-            DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn
-            {
-                UseColumnTextForButtonValue = true,
-                Text = "Kitaba git",
-                HeaderText = "İlgili Kitap"
-            };
-            GridBulunanKitaplar.Columns.Add(btnColumn);
+			GridBulunanKitaplar.DataSource = Tables.Kitap.GetAlinabilir();
+			GridBulunanKitaplar.Columns[GridBulunanKitaplar.ColumnCount - 1].Visible = false;
 
-            data_Ogrenci.ClearSelection();
-            GridBulunanKitaplar.ClearSelection();
+			//Son sütuna bir buton sütunu eklenir.
+			var btnColumn = new DataGridViewButtonColumn
+			{
+				UseColumnTextForButtonValue = true,
+				Text = "Kitaba git",
+				HeaderText = "İlgili Kitap"
+			};
+			GridBulunanKitaplar.Columns.Add(btnColumn);
 
-            //İşlem durumuna göre grid renklendirilir
-            data_Ogrenci.Boya();
+			data_Ogrenci.ClearSelection();
+			GridBulunanKitaplar.ClearSelection();
 
-            OgrenciBilgileriIsle();
+			//İşlem durumuna göre grid renklendirilir
+			data_Ogrenci.Boya();
 
-        }
-        public void OgrenciBilgileriIsle()
-        {
+			OgrenciBilgileriIsle();
 
-            //Öğrencinin kapanmamış işlemleri üzerinden güncel borcu hesaplanır.
-            double ToplamBorc = 0;
-            foreach (var item in Tables.Ogr.GetKapanmamisIslem(ogr.OgrenciTC))
-            {
-                ToplamBorc += item.BorcHesapla();
-            }
+		}
+		public void OgrenciBilgileriIsle()
+		{
+			//Öğrencinin kapanmamış işlemleri üzerinden güncel borcu hesaplanır.
+			double ToplamBorc = 0;
+			foreach (KutuphaneIslem? item in Tables.Ogr.GetKapanmamisIslem(ogr.OgrenciTC))
+				ToplamBorc += item.BorcHesapla();
 
-            //İlgili öğrenci bilgileri ekrandaki kontrollere basılır.
-            lblTC.Text = ogr.OgrenciTC;
-            lblIsim.Text = ogr.IsimSoyisim;
-            lblBorc.Text = ToplamBorc.ToString();
-            lblTel.Text = ogr.TelefonNo.ToString();
-            //Öğrencinin yaşı hesaplanır.
-            lblYas.Text = ogr.DogumTarihi.YasHesapla().ToString();
-        }
-        private void OgrenciProfil_Load(object sender, EventArgs e)
-        {
+			//İlgili öğrenci bilgileri ekrandaki kontrollere basılır.
+			lblTC.Text = ogr.OgrenciTC;
+			lblIsim.Text = ogr.IsimSoyisim;
+			lblBorc.Text = Math.Round(ToplamBorc, 1).ToString();
+			lblTel.Text = ogr.TelefonNo.ToString();
+			//Öğrencinin yaşı hesaplanır.
+			lblYas.Text = ogr.DogumTarihi.YasHesapla().ToString();
+		}
+		private void OgrenciProfil_Load(object sender, EventArgs e) => GridsYenile();
+		private void İadeEt_Click_1(object sender, EventArgs e)
+		{
+			//Seçilen row'daki ıd'ye göre ilgili işlemin iade edilmesi.
+			if (data_Ogrenci.SelectedRows.Count >= 0)
+			{
+				DataGridViewRow? secilenrow = data_Ogrenci.SelectedRows[0];
+				int secilenBarkodNo = (int)secilenrow.Cells[0].Value;
 
-            GridsYenile();
+				KutuphaneIslem? islem = Tables.Islem.GetById(secilenBarkodNo);
+				double result = Islemler.IadeEt(islem);
+				if (result != -1)
+				{
+					MessageBox.Show($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
+					GridsYenile();
+				}
+			} else MessageBox.Show("İade etmek istediğniz işlemi seçiniz.", "İşlem seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-        }
+		}
 
-        private void iadeEt_Click_1(object sender, EventArgs e)
-        {
-            //Seçilen row'daki ıd'ye göre ilgili işlemin iade edilmesi.
-            if (data_Ogrenci.SelectedRows.Count >= 0)
-            {
-                var secilenrow = data_Ogrenci.SelectedRows[0];
-                var secilenBarkodNo = (int)secilenrow.Cells[0].Value;
+		private void TeslimAl_Click_1(object sender, EventArgs e)
+		{
+			//Seçili bir satır var ise
+			if (GridBulunanKitaplar.SelectedRows.Count >= 0)
+			{
+				//Seçilen satır üzerindeki ıd üzerinden ilgili kitabın tespiti ve zimmetlenmesi.
+				string? seciliKitapID = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
+				KutuphaneIslem? result = Islemler.TeslimAl(seciliKitapID, ogr.OgrenciTC);
+				Entitites.Kitap? kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
 
-                var islem = Tables.Islem.GetById(secilenBarkodNo);
-                double result = Islemler.IadeEt(islem);
-                if (result != -1)
-                {
-                    MessageBox.Show($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
+				MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    GridsYenile();
-                }
-            }
-            else
-            {
-                MessageBox.Show("İade etmek istediğniz işlemi seçiniz.", "İşlem seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-        }
+				GridsYenile();
+			} else MessageBox.Show("Teslim almak istediğniz kitabı seçiniz.", "Kitap seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
-        private void teslimAl_Click_1(object sender, EventArgs e)
-        {
-            //Seçili bir satır var ise
-            if (GridBulunanKitaplar.SelectedRows.Count >= 0)
-            {
-                //Seçilen satır üzerindeki ıd üzerinden ilgili kitabın tespiti ve zimmetlenmesi.
-                var seciliKitapID = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
-                var result = Islemler.TeslimAl(seciliKitapID, ogr.OgrenciTC);
-                var kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
-
-                MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                GridsYenile();
-            }
-            else
-            {
-                MessageBox.Show("Teslim almak istediğniz kitabı seçiniz.", "Kitap seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-        }
+		}
 
 
-        private void GridBulunanKitaplar_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            //Eğer header satırı dışında bir satıra tıklandı ise
-            if (e.RowIndex != -1)
-            {
-                //Tıklanılan hücre sondaki buton hücresi mi?
-                if (e.ColumnIndex == GridBulunanKitaplar.Columns.Count - 1)
-                {
-                    //Tıklanılan satırdaki barkod no üzerinden ilgili kitabın profilinin açılması.
-                    var barkrodNo = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
-                    KitapProfil form = new KitapProfil(barkrodNo);
-                    form.ShowDialog();
-                    GridsYenile();
-                }
-
-            }
-        }
-    }
+		private void GridBulunanKitaplar_CellClick_1(object sender, DataGridViewCellEventArgs e)
+		{
+			//Eğer header satırı dışında bir satıra tıklandı ve
+			//Tıklanılan hücre sondaki buton hücresi ise?
+			if (e.RowIndex != -1 && e.ColumnIndex == GridBulunanKitaplar.Columns.Count - 1)
+			{
+				//Tıklanılan satırdaki barkod no üzerinden ilgili kitabın profilinin açılması.
+				string? barkrodNo = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
+				var form = new KitapProfil(barkrodNo);
+				form.ShowDialog();
+				GridsYenile();
+			}
+		}
+	}
 }

@@ -82,7 +82,7 @@
             this.metroButton2.TabIndex = 5;
             this.metroButton2.Text = "X Eksen Başlık Gir";
             this.metroButton2.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.metroButton2.Click += new System.EventHandler(this.MetroButton2_Click);
             // 
             // metroButton1
             // 
@@ -98,7 +98,7 @@
             this.metroButton1.TabIndex = 5;
             this.metroButton1.Text = "Y Eksen Başlık Gir";
             this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton1.Click += new System.EventHandler(this.MetroButton1_Click);
             // 
             // OgrButton
             // 
