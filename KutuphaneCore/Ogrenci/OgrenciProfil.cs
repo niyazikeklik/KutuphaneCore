@@ -43,7 +43,9 @@ namespace KutuphaneCore
 			//Oluşturulan liste ekrana basılır.
 			data_Ogrenci.DataSource = list;
 
+			//Alınabilir kitaplar listesi gridviewde gösterilir.
 			GridBulunanKitaplar.DataSource = Tables.Kitap.GetAlinabilir();
+			// Son sutun olan kutuphaneıslemler gizlenir.
 			GridBulunanKitaplar.Columns[GridBulunanKitaplar.ColumnCount - 1].Visible = false;
 
 			//Son sütuna bir buton sütunu eklenir.
@@ -55,12 +57,14 @@ namespace KutuphaneCore
 			};
 			GridBulunanKitaplar.Columns.Add(btnColumn);
 
+			//Default seçili satırlar temizlenir.
 			data_Ogrenci.ClearSelection();
 			GridBulunanKitaplar.ClearSelection();
 
 			//İşlem durumuna göre grid renklendirilir
 			data_Ogrenci.Boya();
 
+			//Öğrenci bilgilerini ekrana dolduracak fonksiyon.
 			OgrenciBilgileriIsle();
 
 		}
@@ -87,8 +91,9 @@ namespace KutuphaneCore
 			{
 				DataGridViewRow? secilenrow = data_Ogrenci.SelectedRows[0];
 				int secilenBarkodNo = (int)secilenrow.Cells[0].Value;
-
+				//İlgili işlem tespiti.
 				KutuphaneIslem? islem = Tables.Islem.GetById(secilenBarkodNo);
+				//İşlemin kapatılması, iade edilmesi.
 				double result = Islemler.IadeEt(islem);
 				if (result != -1)
 				{
@@ -98,7 +103,6 @@ namespace KutuphaneCore
 			} else MessageBox.Show("İade etmek istediğniz işlemi seçiniz.", "İşlem seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
 		}
-
 		private void TeslimAl_Click_1(object sender, EventArgs e)
 		{
 			//Seçili bir satır var ise
@@ -106,17 +110,16 @@ namespace KutuphaneCore
 			{
 				//Seçilen satır üzerindeki ıd üzerinden ilgili kitabın tespiti ve zimmetlenmesi.
 				string? seciliKitapID = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
+				//Kitap, öğrenciye zimmetlenir.
 				KutuphaneIslem? result = Islemler.TeslimAl(seciliKitapID, ogr.OgrenciTC);
+				//Kullancııyı bilgilendirme amaçlı kitap detayları çekilir.
 				Entitites.Kitap? kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
-
 				MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+				//Değişikliklerin gözükmesi için grid yenilenir.
 				GridsYenile();
 			} else MessageBox.Show("Teslim almak istediğniz kitabı seçiniz.", "Kitap seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
 		}
-
-
 		private void GridBulunanKitaplar_CellClick_1(object sender, DataGridViewCellEventArgs e)
 		{
 			//Eğer header satırı dışında bir satıra tıklandı ve

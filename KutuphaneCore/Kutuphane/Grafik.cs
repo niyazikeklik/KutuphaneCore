@@ -17,6 +17,7 @@ namespace View.Kutuphane
 			int countAlinabilir = Tables.Kitap.GetAlinabilir().Count;
 			int countTum = Tables.Kitap.GetList().Count;
 			int countZimmetli = Tables.Kitap.GetZimmetli().Count;
+			//Bar değerlerini (Y ekseni) double türünde dizelere yazıyorum.
 			double[] y = { countAlinabilir };
 			double[] y1 = { countZimmetli };
 			double[] y2 = { countTum };
@@ -33,7 +34,7 @@ namespace View.Kutuphane
 			zedGraphControl1.GraphPane.XAxis.Title.Text = "Durum";
 			zedGraphControl1.GraphPane.YAxis.Title.Text = "Kitap Sayısı";
 			zedGraphControl1.GraphPane.Border.IsVisible = false;
-			// aOluşturulan ayaların grafik üzeinde güncellenmesi.
+			//Oluşturulan ayaların grafik üzeinde güncellenmesi.
 			zedGraphControl1.GraphPane.XAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
 			zedGraphControl1.GraphPane.YAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
 			zedGraphControl1.Refresh();

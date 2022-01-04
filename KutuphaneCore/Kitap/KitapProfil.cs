@@ -26,7 +26,8 @@ namespace View.Kitap
 			ktp = Tables.Kitap.GetKitapWithIslemlerById(id);
 			data_Kitap.Columns.Clear();
 			var list = new List<KitapIslemBilgi>();
-			foreach (KutuphaneIslem? item in Tables.Kitap.GetKitapWithIslemlerById(ktp.BarkodNo).kutuphaneIslems) //İlgili kitabın tüm işlemlerinin dönülmesi.
+			//İlgili kitabın tüm işlemlerinin dönülmesi.
+			foreach (KutuphaneIslem? item in Tables.Kitap.GetKitapWithIslemlerById(ktp.BarkodNo).kutuphaneIslems) 
 			{
 				//Eğer geçerrli işlemin iade tarihi null ise öğrenci ıd üzerinden (Global)zimmetliOgrenci nesnesi doldurulur.
 				if (item.IadeTarihi == null)
@@ -69,9 +70,7 @@ namespace View.Kitap
 			//Eğer kitap biri üzerine zimmetli ise o kişinin detaylarını gösterecek butonun görüntülenmesinin sağlanması.
 			btn.Visible = !ktp.Stok;
 		}
-
 		private void KitapProfil_Load(object sender, EventArgs e) => GridsYenile();
-
 		private void Btn_OgrGit_Click(object sender, EventArgs e)
 		{
 			//Kitabın zimmetli olduğu öğrencinin detaylarını gösterir.
@@ -79,18 +78,18 @@ namespace View.Kitap
 			form.ShowDialog();
 			GridsYenile();
 		}
-
-
 		private void Data_Kitap_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
 			//Eğer header satırına tıklandıysa işlem yapma.
 			if (e.RowIndex != -1)
 			{
-				//Eğer son sütuna tıklandıysa(Buton olan sütun) ilgili işlem üzerinden öğrenciyi tespit et ve öğrencinin profil sayfasını aç.
+				//Eğer son sütuna tıklandıysa(Buton olan sütun) 
 				if (e.ColumnIndex == data_Kitap.Columns.Count - 1)
 				{
+					//ilgili işlem üzerinden öğrenciyi tespit et
 					int islemID = (int)data_Kitap.SelectedRows[0].Cells[0].Value;
 					KutuphaneIslem? islem = Tables.Islem.GetById(islemID);
+					//ve öğrencinin profil sayfasını aç.
 					var form = new OgernciProfil(islem.OgrenciID);
 					form.ShowDialog();
 					GridsYenile();

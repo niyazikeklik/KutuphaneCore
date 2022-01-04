@@ -26,8 +26,6 @@ namespace KutuphaneCore
 			Size = new Size(form.Width + 35, form.Height + 80);
 			CenterToParent();
 		}
-
-
 		private void KutuphaneIslemForm_Load(object sender, EventArgs e) => FormGom(new OgrenciForm());
 		private void ÖğrenciİşlemlerToolStripMenuItem_Click(object sender, EventArgs e) => FormGom(new OgrenciForm());
 		private void KitapİşlemlerToolStripMenuItem_Click(object sender, EventArgs e) => FormGom(new KitapForm());

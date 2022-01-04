@@ -12,7 +12,6 @@ namespace View.Ogrenci
 	public partial class OgrenciForm : Form
 	{
 		public OgrenciForm() => InitializeComponent();
-
 		private void GridYenile()
 		{
 			//Öğrenciler tablosunun datagrid üzerine basılması.
@@ -28,16 +27,20 @@ namespace View.Ogrenci
 			form.ogrTC.Enabled = true;
 			form.OgrButton.Text = "Öğrenciyi Ekle";
 			form.ShowDialog();
+			//İşlem sonrası değişiklikelrin görünmesi için grid yenileme.
 			GridYenile();
 		}
 		private void Btn_OgrGuncelle_Click_1(object sender, EventArgs e)
-		{     //Seçili öğrenci var ise 
+		{     
+			//Seçili öğrenci var ise 
 			if (data_Ogrenci.SelectedRows.Count == 1)
 			{
 				//Öğrenci güncelleme formunun seçilen satırdaki bilgilere göre ayarlanması ve gösterilmesi.
 				DataGridViewRow? row = data_Ogrenci.SelectedRows[0];
 				string? secilenOgrID = (string)row.Cells[0].Value;
 				Entitites.Models.Ogrenci SecilenOgrenci = Tables.Ogr.GetById(secilenOgrID);
+
+				//İlgili bilgileri  OgrenciIslem formundaki kontrollere basılması.
 				var form = new OgrenciIslem();
 				form.ogrTC.Enabled = false;
 				form.ogrTC.Text = SecilenOgrenci.OgrenciTC;
@@ -46,19 +49,21 @@ namespace View.Ogrenci
 				form.OgrBirt.Value = SecilenOgrenci.DogumTarihi;
 				form.OgrButton.Text = "Öğrenciyi Güncelle";
 				form.ShowDialog();
+				//İşlem sonrası değişikliklerin gözükmesi için grid yenileme.
 				GridYenile();
 			} else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
 		}
-
 		private void Btn_OgrGit_Click(object sender, EventArgs e)
 		{
+			//Seçili öğrenci var ise 
 			if (data_Ogrenci.SelectedRows.Count == 1)
 			{
 				//Seçilen öğrenci ıd üzerinden OgrenciProfil formunun açılması.
 				string? ogrenciNo = (string)data_Ogrenci.SelectedRows[0].Cells[0].Value;
 				var form = new OgernciProfil(ogrenciNo);
 				form.ShowDialog();
+
 			} else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
 		}
@@ -72,6 +77,7 @@ namespace View.Ogrenci
 				if (Tables.Ogr.ZimmetliKitapVarMi(secilenOgrenciID))
 				{
 					var result = MessageBox.Show("Silinmek istenen öğrencinin üzerinde kitap bulunmaktadır yine de silmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+					//Yukarıdaki soruya kullanıcı evet cevabını verdii ise
 					if (result == DialogResult.Yes)
 					{
 						//öğrenciye zimmetli olduğu kitapların stok bilgis güncellenir ve ardından öğrenci silinir
@@ -82,10 +88,10 @@ namespace View.Ogrenci
 				}
 				//Zimmetli kitap yoksa direkt öğrenci silinir.
 				else Tables.Ogr.Remove(secilenOgrenciID);
+				//İşlem sonrası değişikliklerin gözükmesi için grid yenileme.
 				GridYenile();
 			} else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 		}
-
 		private void TxtAra_TextChanged_1(object sender, EventArgs e)
 		{
 			//txtAra textbox'ına data girildikçe seçili radiobutona göre arama işlemi.

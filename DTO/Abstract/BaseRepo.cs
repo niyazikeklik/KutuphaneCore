@@ -2,7 +2,6 @@
 
 using System.Collections.Generic;
 using System.Linq;
-
 namespace DTO.Abstract
 {
 	/*
@@ -24,11 +23,8 @@ namespace DTO.Abstract
 			_dbSet = context.Set<T>();
 		}
 		//Eğer veritabanında ilgili ID'ye ait bir kayıt var ise true yoksa false döner.
-		public bool IsExistRecord(string ID)
-		{
-			bool result = GetById(ID) != null;
-			return result;
-		}
+		public bool IsExistRecord(string ID) => GetById(ID) != null;
+		
 		//Parametre olarak gelen nesneyi ilgili tabloya ekler.
 		public void Add(T entity)
 		{
@@ -57,5 +53,8 @@ namespace DTO.Abstract
 			_dbSet.Update(obje);
 			_context.SaveChanges();
 		}
+
+		//Eğer ilgili ıd ilgili tabloda var ise günceller, yok ise ekler.
+
 	}
 }

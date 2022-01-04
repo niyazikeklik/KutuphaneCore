@@ -14,7 +14,6 @@ namespace View.Kitap
 	public partial class KitapForm : Form
 	{
 		public KitapForm() => InitializeComponent();
-
 		private void GridYenile()
 		{
 			//Kitap tablosunu olduğu gibi gridview'e basıyorum.
@@ -33,7 +32,6 @@ namespace View.Kitap
 			//Ekleme işlemi bitince eklenen kayıt görüntülenebilmesi için gridview'i yeniliyorum.
 			GridYenile();
 		}
-
 		private void Btn_KtpSil_Click(object sender, EventArgs e)
 		{
 			//Eğer seçili satır var ise
@@ -52,7 +50,7 @@ namespace View.Kitap
 		{    //Eğer seçili satır var ise
 			if (data_TumKitap.SelectedRows.Count == 1)
 			{
-				//Seçilen satırdaki bilgiler güncellenmek için ilgili kitap kaydı üzerinden KitapIslem formundaki kontrollere işleniyor.
+				//Seçilen satırdaki bilgiler güncellenmek için ilgili kitap kaydı üzerinden kitap bilgileri KitapIslem formundaki kontrollere işleniyor.
 				DataGridViewRow? row = data_TumKitap.SelectedRows[0];
 				string secilenBarkod = (string)row.Cells[0].Value;
 				Entitites.Kitap secilenKitap = Tables.Kitap.GetById(secilenBarkod);
@@ -60,10 +58,10 @@ namespace View.Kitap
 				var form = new KitapIslem();
 				form.ktpTur.DataSource = Enum.GetValues(typeof(KitapKategori));
 				form.ktpBarkod.Enabled = false;
-				form.ktpBarkod.Text = secilenKitap.BarkodNo;
-				form.ktpYazar.Text = secilenKitap.KitapYazar;
 				form.ktpAd.Text = secilenKitap.KitapAd;
+				form.ktpYazar.Text = secilenKitap.KitapYazar;
 				form.ktpSayfa.Text = secilenKitap.SayfaSayısı.ToString();
+				form.ktpBarkod.Text = secilenKitap.BarkodNo;
 				form.ktpBasım.Value = secilenKitap.BasimTarihi;
 				form.ktpTur.SelectedIndex = (int)secilenKitap.KitapTuru;
 				form.ktpButon.Text = "Kitap Güncelle";
@@ -73,7 +71,6 @@ namespace View.Kitap
 			} else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
 		}
-
 		private void Btn_KitapGit_Click(object sender, EventArgs e)
 		{//Eğer seçili satır var ise
 			if (data_TumKitap.SelectedRows.Count == 1)
@@ -86,7 +83,6 @@ namespace View.Kitap
 			} else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
 		}
-
 		private void TxtAra_TextChanged(object sender, EventArgs e)
 		{
 			//Seçilen radiobutona göre gridview'de arama işlemi yapılıyor.
