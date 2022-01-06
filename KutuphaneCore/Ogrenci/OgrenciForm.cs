@@ -1,4 +1,5 @@
 ﻿using Business;
+using Business.Business;
 
 using KutuphaneCore;
 
@@ -16,8 +17,7 @@ namespace View.Ogrenci
 		{
 			//Öğrenciler tablosunun datagrid üzerine basılması.
 			data_Ogrenci.DataSource = Tables.Ogr.GetList();
-			//Son sütun olan işlemler sütununun gizlenmesi.
-			data_Ogrenci.Columns[data_Ogrenci.Columns.Count - 1].Visible = false;
+			data_Ogrenci.HeaderTextChange();
 		}
 		private void OgrenciForm_Load(object sender, EventArgs e) => GridYenile();
 		private void OgrEkle_Click_1(object sender, EventArgs e)

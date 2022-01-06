@@ -1,5 +1,6 @@
 ﻿
 using Business;
+using Business.Business;
 
 using KutuphaneCore;
 
@@ -18,8 +19,7 @@ namespace View.Kitap
 		{
 			//Kitap tablosunu olduğu gibi gridview'e basıyorum.
 			data_TumKitap.DataSource = Tables.Kitap.GetList();
-			//Sondaki işlemler sütununu gizliyorum.
-			data_TumKitap.Columns[data_TumKitap.Columns.Count - 1].Visible = false;
+			data_TumKitap.HeaderTextChange();
 		}
 		private void KitapForm_Load(object sender, EventArgs e) => GridYenile();
 		private void Btn_KtpEkle_Click(object sender, EventArgs e)

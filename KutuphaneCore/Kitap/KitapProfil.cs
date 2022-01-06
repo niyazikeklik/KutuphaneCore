@@ -1,4 +1,7 @@
-﻿using Entitites.Models;
+﻿using Business;
+using Business.Business;
+
+using Entitites.Models;
 
 using KutuphaneCore;
 
@@ -55,6 +58,7 @@ namespace View.Kitap
 			//Datagrid'de default olarak seçili gelen satırlara unselect işlemi.
 			data_Kitap.ClearSelection();
 			BilgiIsle();
+			data_Kitap.HeaderTextChange();
 
 		}
 		private void BilgiIsle()

@@ -1,4 +1,5 @@
 ﻿using Business;
+using Business.Business;
 
 using Entitites.Models;
 
@@ -63,7 +64,8 @@ namespace KutuphaneCore
 
 			//İşlem durumuna göre grid renklendirilir
 			data_Ogrenci.Boya();
-
+			data_Ogrenci.HeaderTextChange();
+			GridBulunanKitaplar.HeaderTextChange();
 			//Öğrenci bilgilerini ekrana dolduracak fonksiyon.
 			OgrenciBilgileriIsle();
 
@@ -94,7 +96,7 @@ namespace KutuphaneCore
 				//İlgili işlem tespiti.
 				KutuphaneIslem? islem = Tables.Islem.GetById(secilenBarkodNo);
 				//İşlemin kapatılması, iade edilmesi.
-				double result = Islemler.IadeEt(islem);
+				double result = islem.IadeEt();
 				if (result != -1)
 				{
 					MessageBox.Show($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
@@ -111,7 +113,7 @@ namespace KutuphaneCore
 				//Seçilen satır üzerindeki ıd üzerinden ilgili kitabın tespiti ve zimmetlenmesi.
 				string? seciliKitapID = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
 				//Kitap, öğrenciye zimmetlenir.
-				KutuphaneIslem? result = Islemler.TeslimAl(seciliKitapID, ogr.OgrenciTC);
+				KutuphaneIslem? result = KutuphaneOlayları.TeslimAl(seciliKitapID, ogr.OgrenciTC);
 				//Kullancııyı bilgilendirme amaçlı kitap detayları çekilir.
 				Entitites.Kitap? kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
 				MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
