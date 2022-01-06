@@ -75,7 +75,7 @@ namespace KutuphaneCore
 		private void İadeEt_Click_1(object sender, EventArgs e)
 		{
 			//Seçilen row'daki ıd'ye göre ilgili işlemin iade edilmesi.
-			if (data_Ogrenci.SelectedRows.Count >= 0)
+			if (data_Ogrenci.SelectedRows.Count > 0)
 			{
 				DataGridViewRow? secilenrow = data_Ogrenci.SelectedRows[0];
 				int secilenBarkodNo = (int)secilenrow.Cells[0].Value;
@@ -94,7 +94,7 @@ namespace KutuphaneCore
 		private void TeslimAl_Click_1(object sender, EventArgs e)
 		{
 			//Seçili bir satır var ise
-			if (GridBulunanKitaplar.SelectedRows.Count >= 0)
+			if (GridBulunanKitaplar.SelectedRows.Count > 0)
 			{
 				//Seçilen satır üzerindeki ıd üzerinden ilgili kitabın tespiti ve zimmetlenmesi.
 				string? seciliKitapID = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
