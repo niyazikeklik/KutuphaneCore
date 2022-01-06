@@ -31,7 +31,7 @@ namespace View.Ogrenci
 			GridYenile();
 		}
 		private void Btn_OgrGuncelle_Click_1(object sender, EventArgs e)
-		{     
+		{
 			//Seçili öğrenci var ise 
 			if (data_Ogrenci.SelectedRows.Count == 1)
 			{
@@ -51,7 +51,7 @@ namespace View.Ogrenci
 				form.ShowDialog();
 				//İşlem sonrası değişikliklerin gözükmesi için grid yenileme.
 				GridYenile();
-			} else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("Lütfen bir öğrenci seçiniz!");
 
 		}
 		private void Btn_OgrGit_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace View.Ogrenci
 				var form = new OgernciProfil(ogrenciNo);
 				form.ShowDialog();
 
-			} else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("Lütfen bir öğrenci seçiniz!");
 
 		}
 		private void Btn_OgrSil_Click_1(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace View.Ogrenci
 				//Seçeili öğrencinin üzerinde zimmetli kitap var ise
 				if (Tables.Ogr.ZimmetliKitapVarMi(secilenOgrenciID))
 				{
-					var result = MessageBox.Show("Silinmek istenen öğrencinin üzerinde kitap bulunmaktadır yine de silmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+					var result = Msj.ShowQuest("Silinmek istenen öğrencinin üzerinde kitap bulunmaktadır yine de silmek istiyor musunuz?");
 					//Yukarıdaki soruya kullanıcı evet cevabını verdii ise
 					if (result == DialogResult.Yes)
 					{
@@ -90,7 +90,7 @@ namespace View.Ogrenci
 				else Tables.Ogr.Remove(secilenOgrenciID);
 				//İşlem sonrası değişikliklerin gözükmesi için grid yenileme.
 				GridYenile();
-			} else MessageBox.Show("Lütfen bir öğrenci seçiniz!", "Öğrenci seçmediniz", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("Lütfen bir öğrenci seçiniz!");
 		}
 		private void TxtAra_TextChanged_1(object sender, EventArgs e)
 		{

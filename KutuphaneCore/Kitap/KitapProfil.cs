@@ -7,6 +7,7 @@ using KutuphaneCore;
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 using static DTO.Concrete.Tablolar;
@@ -24,42 +25,30 @@ namespace View.Kitap
 			this.id = id;
 			InitializeComponent();
 		}
-		public void GridsYenile()
+		public void FormYenile()
 		{
-			ktp = Tables.Kitap.GetKitapWithIslemlerById(id);
+
 			data_Kitap.Columns.Clear();
-			var list = new List<KitapIslemBilgi>();
-			//İlgili kitabın tüm işlemlerinin dönülmesi.
-			foreach (KutuphaneIslem? item in Tables.Kitap.GetKitapWithIslemlerById(ktp.BarkodNo).kutuphaneIslems) 
-			{
-				//Eğer geçerrli işlemin iade tarihi null ise öğrenci ıd üzerinden (Global)zimmetliOgrenci nesnesi doldurulur.
-				if (item.IadeTarihi == null)
-					zimmetliOgrenci = Tables.Ogr.GetById(item.OgrenciID);
-				//Listeye öğrencinin tüm işlemleri KitapIslemBilgi modeli üzerinden yazılır.
-				list.Add(new KitapIslemBilgi()
-				{
-					IslemID = item.IslemId,
-					AlimTarihi = item.AlimTarihi,
-					IadeTarihi = item.IadeTarihi,
-					OgrenciAdi = Tables.Ogr.GetById(item.OgrenciID).IsimSoyisim,
-				});
-			}
-			//Oluşturulan liste datagrid'e basılır.
-			data_Kitap.DataSource = list;
+			ktp = Tables.Kitap.GetKitapWithIslemlerById(id);
+
+			string? ogrID = ktp.kutuphaneIslems.FirstOrDefault(x => x.IadeTarihi == null)?.OgrenciID;
+			if (ogrID != null)
+				zimmetliOgrenci = Tables.Ogr.GetById(ogrID);
+
+			//Kullanıcı bilgilendirmesi için yeni bir entites üzerinden liste oluşturma.
+			data_Kitap.DataSource = ktp.CreateKitapIslemBilgi();
 			//Data gride bir buton sütunu eklenir
-			var btnColumn = new DataGridViewButtonColumn
+			data_Kitap.Columns.Add(new DataGridViewButtonColumn
 			{
 				HeaderText = "İlgili Öğrenci",
 				UseColumnTextForButtonValue = true,
-				Text = "Öğrenciye Git",
-				Name = "GridBtn_ogrnciyeGit"
-			};
-			data_Kitap.Columns.Add(btnColumn);
+				Text = "Öğrenciye Git"
+			});
 			//Datagrid'de default olarak seçili gelen satırlara unselect işlemi.
 			data_Kitap.ClearSelection();
-			BilgiIsle();
+			//Grid sütun iismleri değiştirme.
 			data_Kitap.HeaderTextChange();
-
+			BilgiIsle();
 		}
 		private void BilgiIsle()
 		{
@@ -74,13 +63,13 @@ namespace View.Kitap
 			//Eğer kitap biri üzerine zimmetli ise o kişinin detaylarını gösterecek butonun görüntülenmesinin sağlanması.
 			btn.Visible = !ktp.Stok;
 		}
-		private void KitapProfil_Load(object sender, EventArgs e) => GridsYenile();
+		private void KitapProfil_Load(object sender, EventArgs e) => FormYenile();
 		private void Btn_OgrGit_Click(object sender, EventArgs e)
 		{
 			//Kitabın zimmetli olduğu öğrencinin detaylarını gösterir.
 			var form = new OgernciProfil(zimmetliOgrenci.OgrenciTC);
 			form.ShowDialog();
-			GridsYenile();
+			FormYenile();
 		}
 		private void Data_Kitap_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -96,7 +85,7 @@ namespace View.Kitap
 					//ve öğrencinin profil sayfasını aç.
 					var form = new OgernciProfil(islem.OgrenciID);
 					form.ShowDialog();
-					GridsYenile();
+					FormYenile();
 				}
 
 			}

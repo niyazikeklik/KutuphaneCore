@@ -23,26 +23,13 @@ namespace KutuphaneCore
 			id = ogrID;
 			InitializeComponent();
 		}
-		public void GridsYenile()
+		public void FormYenile()
 		{
 			ogr = Tables.Ogr.GetOgrenciWithIslemlerById(id);
 			GridBulunanKitaplar.Columns.Clear();
-			var list = new List<OgrenciIslemBilgi>();
-			//Öğrenciye ait işlemler döndürülür ve kullanıcıya bilgi amaçlı OgrenciIslemBilgi modeli üzerinden yeni bir listeye çevrilir.
-			foreach (KutuphaneIslem? item in Tables.Ogr.GetOgrenciWithIslemlerById(ogr.OgrenciTC).kutuphaneIslems)
-				list.Add(new OgrenciIslemBilgi()
-				{
-					IslemID = item.IslemId,
-					KitapAdi = Tables.Kitap.GetById(item.KitapBarkodNo).KitapAd,
-					AlimTarihi = item.AlimTarihi,
-					SonTeslimTarihi = item.SonTeslimTarihi,
-					TeslimTarihi = item.IadeTarihi,
-					IsemUcreti = item.BorcHesapla(),
-					Aciklama = item.CreateAciklama()
-				});
-
-			//Oluşturulan liste ekrana basılır.
-			data_Ogrenci.DataSource = list;
+		
+			//Kullanıcı bilgilendirmesi için oluşturulan liste ekrana basılır.
+			data_Ogrenci.DataSource = ogr.CreateOgrenciIslemBilgi();
 
 			//Alınabilir kitaplar listesi gridviewde gösterilir.
 			GridBulunanKitaplar.DataSource = Tables.Kitap.GetAlinabilir();
@@ -64,6 +51,7 @@ namespace KutuphaneCore
 
 			//İşlem durumuna göre grid renklendirilir
 			data_Ogrenci.Boya();
+			//Sütun isimleri değiştirilir.
 			data_Ogrenci.HeaderTextChange();
 			GridBulunanKitaplar.HeaderTextChange();
 			//Öğrenci bilgilerini ekrana dolduracak fonksiyon.
@@ -85,7 +73,7 @@ namespace KutuphaneCore
 			//Öğrencinin yaşı hesaplanır.
 			lblYas.Text = ogr.DogumTarihi.YasHesapla().ToString();
 		}
-		private void OgrenciProfil_Load(object sender, EventArgs e) => GridsYenile();
+		private void OgrenciProfil_Load(object sender, EventArgs e) => FormYenile();
 		private void İadeEt_Click_1(object sender, EventArgs e)
 		{
 			//Seçilen row'daki ıd'ye göre ilgili işlemin iade edilmesi.
@@ -99,10 +87,10 @@ namespace KutuphaneCore
 				double result = islem.IadeEt();
 				if (result != -1)
 				{
-					MessageBox.Show($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
-					GridsYenile();
+					Msj.ShowInfo($"İade tamamlandı. Öğrencinin işlem borcu: {result} TL'dir.");
+					FormYenile();
 				}
-			} else MessageBox.Show("İade etmek istediğniz işlemi seçiniz.", "İşlem seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("İade etmek istediğniz işlemi seçiniz.");
 
 		}
 		private void TeslimAl_Click_1(object sender, EventArgs e)
@@ -116,10 +104,12 @@ namespace KutuphaneCore
 				KutuphaneIslem? result = KutuphaneOlayları.TeslimAl(seciliKitapID, ogr.OgrenciTC);
 				//Kullancııyı bilgilendirme amaçlı kitap detayları çekilir.
 				Entitites.Kitap? kitap = Tables.Kitap.GetById(result.KitapBarkodNo);
-				MessageBox.Show($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+				Msj.ShowInfo($"{kitap.KitapAd} - {kitap.KitapYazar} İsimli kitap {ogr.IsimSoyisim} isimli kişiye zimmetlenmiştir. Son teslim tarihi: {result.AlimTarihi.AddDays(15)}'dir. Bu tarihten sonraki teslimler için her gün başına 1 TL ceza uygulanacaktır.");
+
 				//Değişikliklerin gözükmesi için grid yenilenir.
-				GridsYenile();
-			} else MessageBox.Show("Teslim almak istediğniz kitabı seçiniz.", "Kitap seçmediniz.", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+				FormYenile();
+			} else Msj.ShowStop("Teslim etmek istediğniz kitabı seçiniz.");
 
 		}
 		private void GridBulunanKitaplar_CellClick_1(object sender, DataGridViewCellEventArgs e)
@@ -132,7 +122,7 @@ namespace KutuphaneCore
 				string? barkrodNo = (string)GridBulunanKitaplar.SelectedRows[0].Cells[0].Value;
 				var form = new KitapProfil(barkrodNo);
 				form.ShowDialog();
-				GridsYenile();
+				FormYenile();
 			}
 		}
 	}

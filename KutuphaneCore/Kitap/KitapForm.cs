@@ -43,7 +43,7 @@ namespace View.Kitap
 				Tables.Kitap.Remove(secilenBarkod);
 				//Deişikliklerin görünmesi için gridview yeniliyorum.
 				GridYenile();
-			} else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
 
 		}
 		private void Btn_KtpGuncelle_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace View.Kitap
 				form.ShowDialog();
 
 				GridYenile();
-			} else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
 
 		}
 		private void Btn_KitapGit_Click(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace View.Kitap
 				var form = new KitapProfil(id);
 				form.ShowDialog();
 
-			} else MessageBox.Show("Lütfen bir kitap seçiniz!", "Kitap seçilmedi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
 
 		}
 		private void TxtAra_TextChanged(object sender, EventArgs e)

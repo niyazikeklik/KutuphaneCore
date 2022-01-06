@@ -1,4 +1,6 @@
-﻿using Entitites;
+﻿using Business.Business;
+
+using Entitites;
 
 using System;
 using System.Windows.Forms;
@@ -35,23 +37,22 @@ namespace KutuphaneCore
 			};
 			//ktpBarkod enabled ise ekleme işlemi yapılacak demektir.
 			if (ktpBarkod.Enabled)
-			{
+				// Girilen barkod numarası zaten veritabanında var ise ekleme yapılmaz.
 				if (Tables.Kitap.IsExistRecord(kitap.BarkodNo))
-				{
-					// Girilen barkod numarası zaten veritabanında var ise ekleme yapılmaz.
-					MessageBox.Show("Aynı BarkodNo ile kayıtlı başka bir kayıt bulunmakta.", "Benzer kayıt", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-				} else
+					Msj.ShowStop("Aynı BarkodNo ile kayıtlı başka bir kayıt bulunmakta.");
+				else
 				{
 					//Girilen bilgiler ile oluşturulan kitap nesnesinin veritabanına eklenme işlemi.
 					Tables.Kitap.Add(kitap);
-					MessageBox.Show("Kitap başarılı bir şekilde kaydedildi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					Msj.ShowStop("Kitap başarılı bir şekilde kaydedildi.");
 				}
-			} else
+			else
 			{
 				//Girilen barkod numarası üzerinden ilgili kitabın güncellenme işlemi.
 				Tables.Kitap.Update(kitap);
-				MessageBox.Show("Kitap başarılı bir şekilde güncellendi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Msj.ShowStop("Kitap başarılı bir şekilde güncellendi.");
 			}
+
 		}
 	}
 }

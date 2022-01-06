@@ -59,6 +59,8 @@ namespace Business.Business
 				}
 			}
 		}
+
+		//Parametre olarak verilen grid'in sütun isimlerini değiştirir.
 		public static void HeaderTextChange(this DataGridView grid)
 		{
 			//Yerel bir fonksiyon tanımlıyorum.
@@ -102,7 +104,7 @@ namespace Business.Business
 				grid.Columns["kutuphaneIslems"].Visible = false;
 
 		}
-		//Bir kitabı ilgili öğrenciye zimmetler.
+	
 
 	}
 }

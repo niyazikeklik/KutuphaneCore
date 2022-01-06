@@ -7,6 +7,7 @@ namespace Business.Business
 {
 	public static class KutuphaneOlayları
 	{
+		//Bir kitabı ilgili öğrenciye zimmetler.
 		public static KutuphaneIslem TeslimAl(string seciliKitapID, string ogrenciID)
 		{
 			//TEST İÇİN! int[] rastgele = { 2, 1, 14, -2, -1 };

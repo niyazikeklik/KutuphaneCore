@@ -1,4 +1,6 @@
 ﻿
+using Business.Business;
+
 using Entitites.Models;
 
 using System;
@@ -26,20 +28,20 @@ namespace KutuphaneCore
 			{
 				//Eğer girilen öğrencitc ile başka bir kayıt bulunuyorsa uyarı verir.
 				if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciTC))
-					MessageBox.Show("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.", "Başarısız", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+					Msj.ShowStop("Aynı öğrenci numarası ile kayıtlı başka bir kayıt bulunmakta.");
 				else
 				{
 					//Yeni öğrenci ekleme işlemi
 					Tables.Ogr.Add(ogrenci);
-					MessageBox.Show("İşlem başarılı.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					Msj.ShowInfo("İşlem başarılı!");
 				}
 			}
 			// Eğer ogrtc textboxı etkin değil ise ve girilen öğernciye ait bir kayıt var ise güncelleme işlemi yapılır.
 			else if (Tables.Ogr.IsExistRecord(ogrenci.OgrenciTC))
 			{
 				Tables.Ogr.Update(ogrenci);
-				MessageBox.Show("İşlem başarılı.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-			} else MessageBox.Show("Güncellenek öğrenci bulunamadı.", "İşlem başarısız", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				Msj.ShowInfo("İşlem başarılı!");
+			} else Msj.ShowStop("Güncellenecek Öğrenci bulunamadı!");
 		}
 
 		private void OgrenciIslem_Load(object sender, EventArgs e) => ogrTC.Focus();
@@ -51,7 +53,7 @@ namespace KutuphaneCore
 			if (sonKarakterIndis >= 0 && !char.IsNumber(ogrTC.Text[sonKarakterIndis]))
 			{
 
-				MessageBox.Show("TC No rakam olmalıdır!", "Yanlış girdi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				Msj.ShowStop("TC Numarası rakamlardan oluşmalıdır!");
 				//Son karakter rakam değilse ekrana uyarı mesajı veriyorum ve son karakteri siliyorum.
 				ogrTC.Text = ogrTC.Text.Remove(sonKarakterIndis);
 			}
