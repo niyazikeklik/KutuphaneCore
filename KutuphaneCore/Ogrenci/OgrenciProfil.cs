@@ -1,10 +1,8 @@
-﻿using Business;
-using Business.Business;
+﻿using Business.Business;
 
 using Entitites.Models;
 
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 using View.Kitap;
@@ -27,7 +25,7 @@ namespace KutuphaneCore
 		{
 			ogr = Tables.Ogr.GetOgrenciWithIslemlerById(id);
 			GridBulunanKitaplar.Columns.Clear();
-		
+
 			//Kullanıcı bilgilendirmesi için oluşturulan liste ekrana basılır.
 			data_Ogrenci.DataSource = ogr.CreateOgrenciIslemBilgi();
 

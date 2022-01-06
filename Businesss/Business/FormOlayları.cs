@@ -1,7 +1,9 @@
 ﻿using Entitites.Models;
+
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+
 using static DTO.Concrete.Tablolar;
 
 namespace Business.Business
@@ -104,7 +106,7 @@ namespace Business.Business
 				grid.Columns["kutuphaneIslems"].Visible = false;
 
 		}
-	
+
 
 	}
 }

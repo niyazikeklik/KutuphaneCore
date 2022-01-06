@@ -1,14 +1,9 @@
-﻿using Entitites.Models;
+﻿using Entitites;
+using Entitites.Models;
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-using static System.Net.WebRequestMethods;
 using static DTO.Concrete.Tablolar;
-using Entitites;
 
 namespace Business.Business
 {

@@ -37,9 +37,9 @@ namespace KutuphaneCore
 						BarkodNo = BarkodNos[i],
 						BasimTarihi = new DateTime(2000 + i, ((5 + i) % 12) + 1, ((5 + i) % 25) + 1),
 						KitapAd = Ýsims[i],
-						KitapTuru = (KitapKategori)(i%Enum.GetNames<KitapKategori>().Length),
+						KitapTuru = (KitapKategori)(i % Enum.GetNames<KitapKategori>().Length),
 						KitapYazar = "Oðuz Atay",
-						SayfaSayýsý = (int)100 * (i / 2 + 1),
+						SayfaSayýsý = 100 * (i / 2 + 1),
 						Stok = true
 					};
 					context.Kitaps.Add(kitap);
@@ -61,7 +61,7 @@ namespace KutuphaneCore
 					OgrenciTC = "37811111111",
 					TelefonNo = "5346861675",
 				};
-				var ogr3= new Ogrenci
+				var ogr3 = new Ogrenci
 				{
 					DogumTarihi = new DateTime(1999, 05, 06),
 					IsimSoyisim = "Furkan Keklik",

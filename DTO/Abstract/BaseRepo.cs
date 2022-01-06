@@ -24,7 +24,7 @@ namespace DTO.Abstract
 		}
 		//Eğer veritabanında ilgili ID'ye ait bir kayıt var ise true yoksa false döner.
 		public bool IsExistRecord(string ID) => GetById(ID) != null;
-		
+
 		//Parametre olarak gelen nesneyi ilgili tabloya ekler.
 		public void Add(T entity)
 		{

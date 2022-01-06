@@ -1,5 +1,4 @@
-﻿using Business;
-using Business.Business;
+﻿using Business.Business;
 
 using KutuphaneCore;
 
@@ -76,7 +75,7 @@ namespace View.Ogrenci
 				//Seçeili öğrencinin üzerinde zimmetli kitap var ise
 				if (Tables.Ogr.ZimmetliKitapVarMi(secilenOgrenciID))
 				{
-					var result = Msj.ShowQuest("Silinmek istenen öğrencinin üzerinde kitap bulunmaktadır yine de silmek istiyor musunuz?");
+					DialogResult result = Msj.ShowQuest("Silinmek istenen öğrencinin üzerinde kitap bulunmaktadır yine de silmek istiyor musunuz?");
 					//Yukarıdaki soruya kullanıcı evet cevabını verdii ise
 					if (result == DialogResult.Yes)
 					{

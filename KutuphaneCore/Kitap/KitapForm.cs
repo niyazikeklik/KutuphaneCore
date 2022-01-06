@@ -1,6 +1,4 @@
-﻿
-using Business;
-using Business.Business;
+﻿using Business.Business;
 
 using KutuphaneCore;
 
