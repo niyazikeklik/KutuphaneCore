@@ -8,6 +8,8 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 
+using View.CustomElement;
+
 using static DTO.Concrete.Tablolar;
 namespace View.Kitap
 {
@@ -36,7 +38,7 @@ namespace View.Kitap
 			//Kullanıcı bilgilendirmesi için yeni bir entites üzerinden liste oluşturma.
 			data_Kitap.DataSource = ktp.CreateKitapIslemBilgi();
 			//Data gride bir buton sütunu eklenir
-			data_Kitap.Columns.Add(new DataGridViewButtonColumn
+			data_Kitap.Columns.Add(new CustomGridButton
 			{
 				HeaderText = "İlgili Öğrenci",
 				UseColumnTextForButtonValue = true,

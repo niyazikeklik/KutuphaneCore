@@ -63,9 +63,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _1814089_account_user_person_profile_avatar_icon {
+        internal static System.Drawing.Bitmap ara {
             get {
-                object obj = ResourceManager.GetObject("1814089_account_user_person_profile_avatar_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ara", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _291716_github_logo_social_network_social_icon {
+        internal static System.Drawing.Bitmap buyukErkekOgrenci {
             get {
-                object obj = ResourceManager.GetObject("291716_github_logo_social network_social_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("buyukErkekOgrenci", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _3099383_student_man_icon {
+        internal static System.Drawing.Bitmap buyukKadinOgrenci {
             get {
-                object obj = ResourceManager.GetObject("3099383_student_man_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("buyukKadinOgrenci", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _3099383_student_man_icon__1_ {
+        internal static System.Drawing.Bitmap github {
             get {
-                object obj = ResourceManager.GetObject("3099383_student_man_icon (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("github", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _3099383_student_man_icon1 {
+        internal static System.Drawing.Bitmap grafik {
             get {
-                object obj = ResourceManager.GetObject("3099383_student_man_icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("grafik", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _3099385_woman_student_icon {
+        internal static System.Drawing.Bitmap info {
             get {
-                object obj = ResourceManager.GetObject("3099385_woman_student_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _3099385_woman_student_icon__1_ {
+        internal static System.Drawing.Bitmap kitapEkle {
             get {
-                object obj = ResourceManager.GetObject("3099385_woman_student_icon (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("kitapEkle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _5269101_book_education_library_notebook_read_icon {
+        internal static System.Drawing.Bitmap kitapGit {
             get {
-                object obj = ResourceManager.GetObject("5269101_book_education_library_notebook_read_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kitapGit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586115_bar_chart_diagram_graph_report_icon {
+        internal static System.Drawing.Bitmap kitapGuncelle {
             get {
-                object obj = ResourceManager.GetObject("6586115_bar_chart_diagram_graph_report_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kitapGuncelle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586125_account_avatar_person_profile_user_icon {
+        internal static System.Drawing.Bitmap kitapSil {
             get {
-                object obj = ResourceManager.GetObject("6586125_account_avatar_person_profile_user_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kitapSil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _6586131_find_glass_magnifier_search_seo_icon {
+        internal static System.Drawing.Bitmap kitapSimge {
             get {
-                object obj = ResourceManager.GetObject("6586131_find_glass_magnifier_search_seo_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kitapSimge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _728979_info_communication_data_help_information_icon {
+        internal static System.Drawing.Bitmap kucukErkekOgrenci {
             get {
-                object obj = ResourceManager.GetObject("728979_info_communication_data_help_information_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kucukErkekOgrenci", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675047_ic_fluent_person_arrow_right_icon {
+        internal static System.Drawing.Bitmap kucukKadinOgrenci {
             get {
-                object obj = ResourceManager.GetObject("8675047_ic_fluent_person_arrow_right_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("kucukKadinOgrenci", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675050_ic_fluent_notebook_question_mark_icon {
+        internal static System.Drawing.Bitmap ogrEkle {
             get {
-                object obj = ResourceManager.GetObject("8675050_ic_fluent_notebook_question_mark_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ogrEkle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +203,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675075_ic_fluent_notebook_regular_icon {
+        internal static System.Drawing.Bitmap ogrenciUser {
             get {
-                object obj = ResourceManager.GetObject("8675075_ic_fluent_notebook_regular_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ogrenciUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +213,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675099_ic_fluent_person_delete_regular_icon {
+        internal static System.Drawing.Bitmap ogrGit {
             get {
-                object obj = ResourceManager.GetObject("8675099_ic_fluent_person_delete_regular_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ogrGit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +223,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675120_ic_fluent_notebook_add_regular_icon {
+        internal static System.Drawing.Bitmap ogrGuncelle {
             get {
-                object obj = ResourceManager.GetObject("8675120_ic_fluent_notebook_add_regular_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ogrGuncelle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675208_ic_fluent_person_add_regular_icon {
+        internal static System.Drawing.Bitmap ogrSil {
             get {
-                object obj = ResourceManager.GetObject("8675208_ic_fluent_person_add_regular_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("ogrSil", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,19 +243,9 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap _8675222_ic_fluent_person_edit_regular_icon {
+        internal static System.Drawing.Bitmap user {
             get {
-                object obj = ResourceManager.GetObject("8675222_ic_fluent_person_edit_regular_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        internal static System.Drawing.Bitmap _8675228_ic_fluent_notebook_sync_regular_icon {
-            get {
-                object obj = ResourceManager.GetObject("8675228_ic_fluent_notebook_sync_regular_icon", resourceCulture);
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

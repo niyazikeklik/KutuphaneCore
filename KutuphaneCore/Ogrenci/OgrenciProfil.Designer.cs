@@ -372,7 +372,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::View.Properties.Resources._3099383_student_man_icon__1_;
+            this.pictureBox1.Image = global::View.Properties.Resources.buyukErkekOgrenci;
             this.pictureBox1.Location = new System.Drawing.Point(83, 101);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";

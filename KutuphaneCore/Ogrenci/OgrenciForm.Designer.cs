@@ -32,7 +32,6 @@ namespace View.Ogrenci
         {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			this.OgrEkle = new MetroFramework.Controls.MetroButton();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.data_Ogrenci = new System.Windows.Forms.DataGridView();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -43,15 +42,16 @@ namespace View.Ogrenci
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.txtAra = new System.Windows.Forms.TextBox();
 			this.panel6 = new System.Windows.Forms.Panel();
-			this.btn_OgrGit = new MetroFramework.Controls.MetroButton();
+			this.Btn_OgrGit = new View.CustomElement.CustomButton();
 			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.btn_OgrGuncelle = new MetroFramework.Controls.MetroButton();
+			this.Btn_OgrGuncelle = new View.CustomElement.CustomButton();
 			this.pictureBox7 = new System.Windows.Forms.PictureBox();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.btn_OgrSil = new MetroFramework.Controls.MetroButton();
+			this.Btn_OgrSil = new View.CustomElement.CustomButton();
 			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.Btn_OgrEkle = new View.CustomElement.CustomButton();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panel8 = new System.Windows.Forms.Panel();
@@ -74,28 +74,11 @@ namespace View.Ogrenci
 			this.panel8.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// OgrEkle
-			// 
-			this.OgrEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-			this.OgrEkle.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.OgrEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.OgrEkle.Highlight = true;
-			this.OgrEkle.Location = new System.Drawing.Point(48, 0);
-			this.OgrEkle.Name = "OgrEkle";
-			this.OgrEkle.Size = new System.Drawing.Size(137, 48);
-			this.OgrEkle.Style = MetroFramework.MetroColorStyle.White;
-			this.OgrEkle.StyleManager = null;
-			this.OgrEkle.TabIndex = 9;
-			this.OgrEkle.Text = "Öğrenci Ekle";
-			this.OgrEkle.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.OgrEkle.UseVisualStyleBackColor = false;
-			this.OgrEkle.Click += new System.EventHandler(this.OgrEkle_Click_1);
-			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.BackColor = System.Drawing.Color.White;
+			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
 			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox1.Image = global::View.Properties.Resources._8675208_ic_fluent_person_add_regular_icon;
+			this.pictureBox1.Image = global::View.Properties.Resources.ogrEkle;
 			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(48, 48);
@@ -146,7 +129,7 @@ namespace View.Ogrenci
 			this.data_Ogrenci.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.data_Ogrenci.ShowCellToolTips = false;
 			this.data_Ogrenci.ShowEditingIcon = false;
-			this.data_Ogrenci.Size = new System.Drawing.Size(882, 406);
+			this.data_Ogrenci.Size = new System.Drawing.Size(867, 417);
 			this.data_Ogrenci.TabIndex = 0;
 			// 
 			// panel1
@@ -161,7 +144,7 @@ namespace View.Ogrenci
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(185, 427);
+			this.panel1.Size = new System.Drawing.Size(200, 438);
 			this.panel1.TabIndex = 21;
 			// 
 			// panel7
@@ -171,7 +154,7 @@ namespace View.Ogrenci
 			this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel7.Location = new System.Drawing.Point(0, 375);
 			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(185, 52);
+			this.panel7.Size = new System.Drawing.Size(200, 63);
 			this.panel7.TabIndex = 24;
 			// 
 			// panel10
@@ -180,10 +163,10 @@ namespace View.Ogrenci
 			this.panel10.Controls.Add(this.rdBtn_TC);
 			this.panel10.Controls.Add(this.rdBtn_ismeGore);
 			this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel10.Location = new System.Drawing.Point(0, 20);
+			this.panel10.Location = new System.Drawing.Point(0, 28);
 			this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panel10.Name = "panel10";
-			this.panel10.Size = new System.Drawing.Size(185, 29);
+			this.panel10.Size = new System.Drawing.Size(200, 34);
 			this.panel10.TabIndex = 22;
 			// 
 			// rdBtn_TC
@@ -193,9 +176,9 @@ namespace View.Ogrenci
 			this.rdBtn_TC.Dock = System.Windows.Forms.DockStyle.Right;
 			this.rdBtn_TC.FontSize = MetroFramework.MetroLinkSize.Medium;
 			this.rdBtn_TC.FontWeight = MetroFramework.MetroLinkWeight.Regular;
-			this.rdBtn_TC.Location = new System.Drawing.Point(96, 0);
+			this.rdBtn_TC.Location = new System.Drawing.Point(111, 0);
 			this.rdBtn_TC.Name = "rdBtn_TC";
-			this.rdBtn_TC.Size = new System.Drawing.Size(89, 29);
+			this.rdBtn_TC.Size = new System.Drawing.Size(89, 34);
 			this.rdBtn_TC.Style = MetroFramework.MetroColorStyle.Blue;
 			this.rdBtn_TC.StyleManager = null;
 			this.rdBtn_TC.TabIndex = 24;
@@ -214,7 +197,7 @@ namespace View.Ogrenci
 			this.rdBtn_ismeGore.FontWeight = MetroFramework.MetroLinkWeight.Regular;
 			this.rdBtn_ismeGore.Location = new System.Drawing.Point(0, 0);
 			this.rdBtn_ismeGore.Name = "rdBtn_ismeGore";
-			this.rdBtn_ismeGore.Size = new System.Drawing.Size(88, 29);
+			this.rdBtn_ismeGore.Size = new System.Drawing.Size(88, 34);
 			this.rdBtn_ismeGore.Style = MetroFramework.MetroColorStyle.Blue;
 			this.rdBtn_ismeGore.StyleManager = null;
 			this.rdBtn_ismeGore.TabIndex = 25;
@@ -231,53 +214,54 @@ namespace View.Ogrenci
 			this.panel9.Location = new System.Drawing.Point(0, 0);
 			this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panel9.Name = "panel9";
-			this.panel9.Size = new System.Drawing.Size(185, 20);
+			this.panel9.Size = new System.Drawing.Size(200, 28);
 			this.panel9.TabIndex = 21;
 			// 
 			// txtAra
 			// 
+			this.txtAra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+			this.txtAra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.txtAra.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.txtAra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+			this.txtAra.ForeColor = System.Drawing.Color.White;
 			this.txtAra.Location = new System.Drawing.Point(0, 0);
 			this.txtAra.MaxLength = 11;
 			this.txtAra.Name = "txtAra";
 			this.txtAra.PlaceholderText = "Arama";
-			this.txtAra.Size = new System.Drawing.Size(185, 27);
+			this.txtAra.Size = new System.Drawing.Size(200, 27);
 			this.txtAra.TabIndex = 18;
 			this.txtAra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txtAra.TextChanged += new System.EventHandler(this.TxtAra_TextChanged_1);
 			// 
 			// panel6
 			// 
-			this.panel6.Controls.Add(this.btn_OgrGit);
+			this.panel6.Controls.Add(this.Btn_OgrGit);
 			this.panel6.Controls.Add(this.pictureBox8);
 			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel6.Location = new System.Drawing.Point(0, 327);
 			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(185, 48);
+			this.panel6.Size = new System.Drawing.Size(200, 48);
 			this.panel6.TabIndex = 4;
 			// 
-			// btn_OgrGit
+			// Btn_OgrGit
 			// 
-			this.btn_OgrGit.BackColor = System.Drawing.Color.White;
-			this.btn_OgrGit.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btn_OgrGit.Highlight = true;
-			this.btn_OgrGit.Location = new System.Drawing.Point(48, 0);
-			this.btn_OgrGit.Name = "btn_OgrGit";
-			this.btn_OgrGit.Size = new System.Drawing.Size(137, 48);
-			this.btn_OgrGit.Style = MetroFramework.MetroColorStyle.White;
-			this.btn_OgrGit.StyleManager = null;
-			this.btn_OgrGit.TabIndex = 9;
-			this.btn_OgrGit.Text = "Öğrenciye Git";
-			this.btn_OgrGit.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.btn_OgrGit.UseVisualStyleBackColor = false;
-			this.btn_OgrGit.Click += new System.EventHandler(this.Btn_OgrGit_Click);
+			this.Btn_OgrGit.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Btn_OgrGit.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Btn_OgrGit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.Btn_OgrGit.ForeColor = System.Drawing.Color.White;
+			this.Btn_OgrGit.Location = new System.Drawing.Point(48, 0);
+			this.Btn_OgrGit.Name = "Btn_OgrGit";
+			this.Btn_OgrGit.Size = new System.Drawing.Size(152, 48);
+			this.Btn_OgrGit.TabIndex = 12;
+			this.Btn_OgrGit.Text = "Öğrenciye Git";
+			this.Btn_OgrGit.UseVisualStyleBackColor = false;
+			this.Btn_OgrGit.Click += new System.EventHandler(this.Btn_OgrGit_Click);
 			// 
 			// pictureBox8
 			// 
-			this.pictureBox8.BackColor = System.Drawing.Color.White;
+			this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
 			this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox8.Image = global::View.Properties.Resources._8675047_ic_fluent_person_arrow_right_icon;
+			this.pictureBox8.Image = global::View.Properties.Resources.ogrGit;
 			this.pictureBox8.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox8.Name = "pictureBox8";
 			this.pictureBox8.Size = new System.Drawing.Size(48, 48);
@@ -287,35 +271,33 @@ namespace View.Ogrenci
 			// 
 			// panel5
 			// 
-			this.panel5.Controls.Add(this.btn_OgrGuncelle);
+			this.panel5.Controls.Add(this.Btn_OgrGuncelle);
 			this.panel5.Controls.Add(this.pictureBox7);
 			this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel5.Location = new System.Drawing.Point(0, 279);
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(185, 48);
+			this.panel5.Size = new System.Drawing.Size(200, 48);
 			this.panel5.TabIndex = 3;
 			// 
-			// btn_OgrGuncelle
+			// Btn_OgrGuncelle
 			// 
-			this.btn_OgrGuncelle.BackColor = System.Drawing.Color.White;
-			this.btn_OgrGuncelle.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btn_OgrGuncelle.Highlight = true;
-			this.btn_OgrGuncelle.Location = new System.Drawing.Point(48, 0);
-			this.btn_OgrGuncelle.Name = "btn_OgrGuncelle";
-			this.btn_OgrGuncelle.Size = new System.Drawing.Size(137, 48);
-			this.btn_OgrGuncelle.Style = MetroFramework.MetroColorStyle.White;
-			this.btn_OgrGuncelle.StyleManager = null;
-			this.btn_OgrGuncelle.TabIndex = 9;
-			this.btn_OgrGuncelle.Text = "Öğrenci Güncelle";
-			this.btn_OgrGuncelle.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.btn_OgrGuncelle.UseVisualStyleBackColor = false;
-			this.btn_OgrGuncelle.Click += new System.EventHandler(this.Btn_OgrGuncelle_Click_1);
+			this.Btn_OgrGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Btn_OgrGuncelle.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Btn_OgrGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.Btn_OgrGuncelle.ForeColor = System.Drawing.Color.White;
+			this.Btn_OgrGuncelle.Location = new System.Drawing.Point(48, 0);
+			this.Btn_OgrGuncelle.Name = "Btn_OgrGuncelle";
+			this.Btn_OgrGuncelle.Size = new System.Drawing.Size(152, 48);
+			this.Btn_OgrGuncelle.TabIndex = 12;
+			this.Btn_OgrGuncelle.Text = "Öğrenci Güncelle";
+			this.Btn_OgrGuncelle.UseVisualStyleBackColor = false;
+			this.Btn_OgrGuncelle.Click += new System.EventHandler(this.Btn_OgrGuncelle_Click);
 			// 
 			// pictureBox7
 			// 
-			this.pictureBox7.BackColor = System.Drawing.Color.White;
+			this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
 			this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox7.Image = global::View.Properties.Resources._8675222_ic_fluent_person_edit_regular_icon;
+			this.pictureBox7.Image = global::View.Properties.Resources.ogrGuncelle;
 			this.pictureBox7.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox7.Name = "pictureBox7";
 			this.pictureBox7.Size = new System.Drawing.Size(48, 48);
@@ -325,35 +307,33 @@ namespace View.Ogrenci
 			// 
 			// panel4
 			// 
-			this.panel4.Controls.Add(this.btn_OgrSil);
+			this.panel4.Controls.Add(this.Btn_OgrSil);
 			this.panel4.Controls.Add(this.pictureBox6);
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel4.Location = new System.Drawing.Point(0, 231);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(185, 48);
+			this.panel4.Size = new System.Drawing.Size(200, 48);
 			this.panel4.TabIndex = 2;
 			// 
-			// btn_OgrSil
+			// Btn_OgrSil
 			// 
-			this.btn_OgrSil.BackColor = System.Drawing.Color.White;
-			this.btn_OgrSil.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btn_OgrSil.Highlight = true;
-			this.btn_OgrSil.Location = new System.Drawing.Point(48, 0);
-			this.btn_OgrSil.Name = "btn_OgrSil";
-			this.btn_OgrSil.Size = new System.Drawing.Size(137, 48);
-			this.btn_OgrSil.Style = MetroFramework.MetroColorStyle.White;
-			this.btn_OgrSil.StyleManager = null;
-			this.btn_OgrSil.TabIndex = 9;
-			this.btn_OgrSil.Text = "Öğrenci Sil";
-			this.btn_OgrSil.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.btn_OgrSil.UseVisualStyleBackColor = false;
-			this.btn_OgrSil.Click += new System.EventHandler(this.Btn_OgrSil_Click_1);
+			this.Btn_OgrSil.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Btn_OgrSil.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Btn_OgrSil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.Btn_OgrSil.ForeColor = System.Drawing.Color.White;
+			this.Btn_OgrSil.Location = new System.Drawing.Point(48, 0);
+			this.Btn_OgrSil.Name = "Btn_OgrSil";
+			this.Btn_OgrSil.Size = new System.Drawing.Size(152, 48);
+			this.Btn_OgrSil.TabIndex = 12;
+			this.Btn_OgrSil.Text = "Öğrenci Sİl";
+			this.Btn_OgrSil.UseVisualStyleBackColor = false;
+			this.Btn_OgrSil.Click += new System.EventHandler(this.Btn_OgrSil_Click);
 			// 
 			// pictureBox6
 			// 
-			this.pictureBox6.BackColor = System.Drawing.Color.White;
+			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
 			this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pictureBox6.Image = global::View.Properties.Resources._8675099_ic_fluent_person_delete_regular_icon;
+			this.pictureBox6.Image = global::View.Properties.Resources.ogrSil;
 			this.pictureBox6.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox6.Name = "pictureBox6";
 			this.pictureBox6.Size = new System.Drawing.Size(48, 48);
@@ -363,13 +343,27 @@ namespace View.Ogrenci
 			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.OgrEkle);
+			this.panel3.Controls.Add(this.Btn_OgrEkle);
 			this.panel3.Controls.Add(this.pictureBox1);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel3.Location = new System.Drawing.Point(0, 183);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(185, 48);
+			this.panel3.Size = new System.Drawing.Size(200, 48);
 			this.panel3.TabIndex = 1;
+			// 
+			// Btn_OgrEkle
+			// 
+			this.Btn_OgrEkle.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Btn_OgrEkle.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Btn_OgrEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.Btn_OgrEkle.ForeColor = System.Drawing.Color.White;
+			this.Btn_OgrEkle.Location = new System.Drawing.Point(48, 0);
+			this.Btn_OgrEkle.Name = "Btn_OgrEkle";
+			this.Btn_OgrEkle.Size = new System.Drawing.Size(152, 48);
+			this.Btn_OgrEkle.TabIndex = 12;
+			this.Btn_OgrEkle.Text = "Öğrenci Ekle";
+			this.Btn_OgrEkle.UseVisualStyleBackColor = false;
+			this.Btn_OgrEkle.Click += new System.EventHandler(this.Btn_OgrEkle_Click);
 			// 
 			// panel2
 			// 
@@ -377,16 +371,16 @@ namespace View.Ogrenci
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(185, 183);
+			this.panel2.Size = new System.Drawing.Size(200, 183);
 			this.panel2.TabIndex = 0;
 			// 
 			// pictureBox2
 			// 
 			this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBox2.Image = global::View.Properties.Resources._3099383_student_man_icon__1_;
+			this.pictureBox2.Image = global::View.Properties.Resources.buyukErkekOgrenci;
 			this.pictureBox2.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(185, 183);
+			this.pictureBox2.Size = new System.Drawing.Size(200, 183);
 			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pictureBox2.TabIndex = 0;
 			this.pictureBox2.TabStop = false;
@@ -396,9 +390,9 @@ namespace View.Ogrenci
 			this.panel8.Controls.Add(this.data_Ogrenci);
 			this.panel8.Controls.Add(this.metroLabel1);
 			this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel8.Location = new System.Drawing.Point(185, 0);
+			this.panel8.Location = new System.Drawing.Point(200, 0);
 			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(882, 427);
+			this.panel8.Size = new System.Drawing.Size(867, 438);
 			this.panel8.TabIndex = 23;
 			// 
 			// metroLabel1
@@ -411,21 +405,21 @@ namespace View.Ogrenci
 			this.metroLabel1.LabelMode = MetroFramework.Controls.MetroLabelMode.Default;
 			this.metroLabel1.Location = new System.Drawing.Point(0, 0);
 			this.metroLabel1.Name = "metroLabel1";
-			this.metroLabel1.Size = new System.Drawing.Size(882, 21);
-			this.metroLabel1.Style = MetroFramework.MetroColorStyle.Blue;
+			this.metroLabel1.Size = new System.Drawing.Size(867, 21);
+			this.metroLabel1.Style = MetroFramework.MetroColorStyle.White;
 			this.metroLabel1.StyleManager = null;
 			this.metroLabel1.TabIndex = 18;
 			this.metroLabel1.Text = "Tüm Öğrenciler";
 			this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.metroLabel1.UseStyleColors = false;
+			this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+			this.metroLabel1.UseStyleColors = true;
 			// 
 			// OgrenciForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(1067, 427);
+			this.ClientSize = new System.Drawing.Size(1067, 438);
 			this.Controls.Add(this.panel8);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -456,18 +450,14 @@ namespace View.Ogrenci
         }
 
         #endregion
-        private MetroFramework.Controls.MetroButton OgrEkle;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView data_Ogrenci;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
-        private MetroFramework.Controls.MetroButton btn_OgrGit;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel5;
-        private MetroFramework.Controls.MetroButton btn_OgrGuncelle;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel4;
-        private MetroFramework.Controls.MetroButton btn_OgrSil;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
@@ -480,5 +470,9 @@ namespace View.Ogrenci
         private MetroFramework.Controls.MetroRadioButton rdBtn_ismeGore;
         private Panel panel9;
         public TextBox txtAra;
-    }
+		private CustomElement.CustomButton Btn_OgrGit;
+		private CustomElement.CustomButton Btn_OgrGuncelle;
+		private CustomElement.CustomButton Btn_OgrSil;
+		private CustomElement.CustomButton Btn_OgrEkle;
+	}
 }

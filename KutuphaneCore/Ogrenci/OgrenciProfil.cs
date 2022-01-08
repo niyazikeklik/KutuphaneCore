@@ -5,6 +5,7 @@ using Entitites.Models;
 using System;
 using System.Windows.Forms;
 
+using View.CustomElement;
 using View.Kitap;
 
 using static DTO.Concrete.Tablolar;
@@ -35,7 +36,7 @@ namespace KutuphaneCore
 			GridBulunanKitaplar.Columns[GridBulunanKitaplar.ColumnCount - 1].Visible = false;
 
 			//Son sütuna bir buton sütunu eklenir.
-			var btnColumn = new DataGridViewButtonColumn
+			var btnColumn = new CustomGridButton
 			{
 				UseColumnTextForButtonValue = true,
 				Text = "Kitaba git",

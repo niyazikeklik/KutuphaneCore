@@ -20,7 +20,14 @@ namespace View.Kitap
 			data_TumKitap.HeaderTextChange();
 		}
 		private void KitapForm_Load(object sender, EventArgs e) => GridYenile();
-		private void Btn_KtpEkle_Click(object sender, EventArgs e)
+		private void TxtAra_TextChanged(object sender, EventArgs e)
+		{
+			//Seçilen radiobutona göre gridview'de arama işlemi yapılıyor.
+			if (rdBtn_ismeGore.Checked) data_TumKitap.Ara(1, txtAra.Text);
+			else if (rdBtn_TC.Checked) data_TumKitap.Ara(0, txtAra.Text);
+		}
+
+		private void Btn_KitapEkle_Click(object sender, EventArgs e)
 		{
 			//Ekleme işlemi için popup form açılıyor.
 			var form = new KitapIslem();
@@ -30,7 +37,19 @@ namespace View.Kitap
 			//Ekleme işlemi bitince eklenen kayıt görüntülenebilmesi için gridview'i yeniliyorum.
 			GridYenile();
 		}
-		private void Btn_KtpSil_Click(object sender, EventArgs e)
+		private void Btn_KitapGit_Click_1(object sender, EventArgs e)
+		{
+			//Eğer seçili satır var ise
+			if (data_TumKitap.SelectedRows.Count == 1)
+			{
+				//Seçilen satır barkodno'ya göre ilgili kitabı kitapprofil formuna gönderiyorum.
+				string? id = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
+				var form = new KitapProfil(id);
+				form.ShowDialog();
+
+			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
+		}
+		private void Btn_KitapSil_Click(object sender, EventArgs e)
 		{
 			//Eğer seçili satır var ise
 			if (data_TumKitap.SelectedRows.Count == 1)
@@ -42,10 +61,10 @@ namespace View.Kitap
 				//Deişikliklerin görünmesi için gridview yeniliyorum.
 				GridYenile();
 			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
-
 		}
-		private void Btn_KtpGuncelle_Click(object sender, EventArgs e)
-		{    //Eğer seçili satır var ise
+		private void Btn_KitaGuncelle_Click(object sender, EventArgs e)
+		{
+			//Eğer seçili satır var ise
 			if (data_TumKitap.SelectedRows.Count == 1)
 			{
 				//Seçilen satırdaki bilgiler güncellenmek için ilgili kitap kaydı üzerinden kitap bilgileri KitapIslem formundaki kontrollere işleniyor.
@@ -67,25 +86,6 @@ namespace View.Kitap
 
 				GridYenile();
 			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
-
-		}
-		private void Btn_KitapGit_Click(object sender, EventArgs e)
-		{//Eğer seçili satır var ise
-			if (data_TumKitap.SelectedRows.Count == 1)
-			{
-				//Seçilen satır barkodno'ya göre ilgili kitabı kitapprofil formuna gönderiyorum.
-				string? id = (string)data_TumKitap.SelectedRows[0].Cells[0].Value;
-				var form = new KitapProfil(id);
-				form.ShowDialog();
-
-			} else Msj.ShowStop("Lütfen bir kitap seçiniz!");
-
-		}
-		private void TxtAra_TextChanged(object sender, EventArgs e)
-		{
-			//Seçilen radiobutona göre gridview'de arama işlemi yapılıyor.
-			if (rdBtn_ismeGore.Checked) data_TumKitap.Ara(1, txtAra.Text);
-			else if (rdBtn_TC.Checked) data_TumKitap.Ara(0, txtAra.Text);
 		}
 	}
 }

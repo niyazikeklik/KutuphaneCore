@@ -57,7 +57,7 @@
 			// 
 			// öğrenciİşlemlerToolStripMenuItem
 			// 
-			this.öğrenciİşlemlerToolStripMenuItem.Image = global::View.Properties.Resources._6586125_account_avatar_person_profile_user_icon;
+			this.öğrenciİşlemlerToolStripMenuItem.Image = global::View.Properties.Resources.ogrenciUser;
 			this.öğrenciİşlemlerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.öğrenciİşlemlerToolStripMenuItem.Name = "öğrenciİşlemlerToolStripMenuItem";
 			this.öğrenciİşlemlerToolStripMenuItem.Size = new System.Drawing.Size(81, 28);
@@ -74,7 +74,7 @@
 			// 
 			// grafikToolStripMenuItem
 			// 
-			this.grafikToolStripMenuItem.Image = global::View.Properties.Resources._6586115_bar_chart_diagram_graph_report_icon;
+			this.grafikToolStripMenuItem.Image = global::View.Properties.Resources.grafik;
 			this.grafikToolStripMenuItem.Name = "grafikToolStripMenuItem";
 			this.grafikToolStripMenuItem.Size = new System.Drawing.Size(70, 28);
 			this.grafikToolStripMenuItem.Text = "Grafik";
@@ -98,7 +98,7 @@
 			// 
 			// githubToolStripMenuItem
 			// 
-			this.githubToolStripMenuItem.Image = global::View.Properties.Resources._291716_github_logo_social_network_social_icon;
+			this.githubToolStripMenuItem.Image = global::View.Properties.Resources.github;
 			this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
 			this.githubToolStripMenuItem.Size = new System.Drawing.Size(75, 28);
 			this.githubToolStripMenuItem.Text = "Github";

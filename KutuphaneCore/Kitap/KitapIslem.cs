@@ -50,7 +50,7 @@ namespace KutuphaneCore
 			{
 				//Girilen barkod numarası üzerinden ilgili kitabın güncellenme işlemi.
 				Tables.Kitap.Update(kitap);
-				Msj.ShowStop("Kitap başarılı bir şekilde güncellendi.");
+				Msj.ShowInfo("Kitap başarılı bir şekilde güncellendi.");
 			}
 
 		}
