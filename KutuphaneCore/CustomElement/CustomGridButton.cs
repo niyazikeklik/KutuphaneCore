@@ -10,6 +10,7 @@ namespace View.CustomElement
 {
 	internal class CustomGridButton : DataGridViewButtonColumn
 	{
+		//Kendi kişisel tercihlerime göre kişiselleştirdiğim gridview'lere eklediğim butonların sınıfı.
 		public CustomGridButton()
 		{
 			DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();

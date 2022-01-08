@@ -44,7 +44,7 @@ namespace KutuphaneCore
 				{
 					//Girilen bilgiler ile oluşturulan kitap nesnesinin veritabanına eklenme işlemi.
 					Tables.Kitap.Add(kitap);
-					Msj.ShowStop("Kitap başarılı bir şekilde kaydedildi.");
+					Msj.ShowInfo("Kitap başarılı bir şekilde kaydedildi.");
 				}
 			else
 			{
