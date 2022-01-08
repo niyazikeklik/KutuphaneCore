@@ -73,6 +73,16 @@ namespace View.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap _291716_github_logo_social_network_social_icon {
+            get {
+                object obj = ResourceManager.GetObject("291716_github_logo_social network_social_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap _3099383_student_man_icon {
             get {
                 object obj = ResourceManager.GetObject("3099383_student_man_icon", resourceCulture);

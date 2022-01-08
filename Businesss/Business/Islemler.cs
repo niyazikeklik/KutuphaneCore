@@ -31,7 +31,7 @@ namespace Business.Business
 		{
 			var list = new List<OgrenciIslemBilgi>();
 			//Öğrenciye ait işlemler döndürülür ve kullanıcıya bilgi amaçlı OgrenciIslemBilgi modeli üzerinden yeni bir listeye çevrilir.
-			foreach (KutuphaneIslem? item in ogrenci.kutuphaneIslems)
+			foreach (KutuphaneIslem item in ogrenci.kutuphaneIslems)
 				list.Add(new OgrenciIslemBilgi()
 				{
 					IslemID = item.IslemId,

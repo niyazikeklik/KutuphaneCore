@@ -6,7 +6,6 @@ using System;
 using System.Windows.Forms;
 
 using static DTO.Concrete.Tablolar;
-
 namespace View.Ogrenci
 {
 	public partial class OgrenciForm : Form

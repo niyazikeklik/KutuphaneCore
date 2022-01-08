@@ -151,6 +151,9 @@
   <data name="8675050_ic_fluent_notebook_question_mark_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8675050_ic_fluent_notebook_question_mark_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="728979_info_communication_data_help_information_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\728979_info_communication_data_help_information_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="6586131_find_glass_magnifier_search_seo_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6586131_find_glass_magnifier_search_seo_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,7 +175,7 @@
   <data name="8675120_ic_fluent_notebook_add_regular_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8675120_ic_fluent_notebook_add_regular_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="728979_info_communication_data_help_information_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\728979_info_communication_data_help_information_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="291716_github_logo_social network_social_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\291716_github_logo_social network_social_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
