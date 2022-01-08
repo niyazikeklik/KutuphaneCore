@@ -38,7 +38,7 @@ namespace Business.Business
 
 			//KalanGun methodu ilgili işlemin SonİadeTarihi'ne kalan gün sayısını döner
 			double gecenGUnSayisi = KalanGun(item);
-			//Eğer geçen gün sayısı 0'dan küçük ise öğrenciye ceza uygulanır.
+			//Eğer kalan gün sayısı 0'dan küçük ise öğrenciye ceza uygulanır.
 			if (gecenGUnSayisi < 0)
 			{
 				//Round methodu virgülden sonra kaç basamak alacağını söyler
@@ -53,7 +53,8 @@ namespace Business.Business
 		//İade için kalan günü hesaplar.
 		public static double KalanGun(this KutuphaneIslem item)
 		{
-			//Eğer parametre olan işlemde iade tarihi var ise iade tarihi üzerindne borç hesaplar.
+			//Eğer parametre olan işlemde iade tarihi var ise iade tarihi üzerindne borç hesaplar.(Geriye dönük işlemleri için)
+			//Eğer iade tarihi yok ise iade tarihi yerine şu andan borç hesaplar.(Anlık işlemler için)
 			double result = item.IadeTarihi != null
 				? (item.SonTeslimTarihi - item.IadeTarihi.Value).TotalDays
 				: (item.SonTeslimTarihi - DateTime.Now).TotalDays;
@@ -62,7 +63,7 @@ namespace Business.Business
 			return Math.Round(result, 1);
 		}
 
-		//Bir işlei kapatmayı, iade etmeyi sağlar.
+		//Bir işlemi kapatmayı, iade etmeyi sağlar.
 		public static double IadeEt(this KutuphaneIslem islem)
 		{
 			//Eğer işlem iade edilmedi ise iade işlemi yapılır.
@@ -72,7 +73,7 @@ namespace Business.Business
 				double borc = islem.BorcHesapla();
 				//İade tarihine o an girilir.
 				islem.IadeTarihi = DateTime.Now;
-				//Hesaplanan borç işleme işlenir
+				//Hesaplanan borç, işleme işlenir
 				islem.IslemUcret = borc;
 				//İlgili işlem güncellenir.
 				Tables.Islem.Update(islem);
@@ -96,15 +97,17 @@ namespace Business.Business
 		//Öğrencinin işlemleri için açıklama oluşturur
 		public static string CreateAciklama(this KutuphaneIslem item)
 		{
+			var TeslimeKalanGunSayisi = item.KalanGun();
+			//Bir işlemin iade tarihi varsa, yani null deği ise, kitap teslim alınmıştır.
+			if (item.IadeTarihi != null)
+				return "Kitap teslim alınmıştır.";
 			//Bir işlemin iade tarihi yoksa ve son teslim tarihi geçmiş ise ceza uygulanır.
-			if (item.IadeTarihi == null && item.SonTeslimTarihi < DateTime.Now)
-				return $"Kitabın teslim süresi geçmiştir. Güncel ceza {item.BorcHesapla()}TL'dir.";
-			else
+			else if (TeslimeKalanGunSayisi < 0)
+				return $"Kitabın teslim süresi { TeslimeKalanGunSayisi * -1} gün geçmiştir. Güncel ceza {item.BorcHesapla()}TL'dir.";
+			//Bir işlem iade edilmemiş ama teslim süresine daha var ise hiçbir şey yapılmaz.
+			else 
+				return $"Kitabın teslim tarihine son {TeslimeKalanGunSayisi} gün vardır";
 
-				//Bir işlemin iade tarihi varsa, yani null deği ise, kitap teslim alınmıştır.
-				return item.IadeTarihi != null ?
-					"Kitap teslim alınmıştır." :
-					$"Kitabın teslim tarihine son {item.KalanGun()} gün vardır";
 
 		}
 	}

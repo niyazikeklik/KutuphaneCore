@@ -27,7 +27,6 @@ namespace View.CustomElement
 			this.BackColor = Color.FromArgb(60, 0, 60);
 		}
 		//Mouse üstünden çekilince renk değiştir.
-
 		protected override void OnMouseLeave(EventArgs e)
 		{
 			this.BackColor = Color.FromArgb(40, 0, 40);

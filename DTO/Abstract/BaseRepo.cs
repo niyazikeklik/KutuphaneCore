@@ -15,7 +15,7 @@ namespace DTO.Abstract
 
 		//context nesneni veritabanı örneğini tutar.
 		protected DatabaseContext _context;
-		//DBSet kalıtım alınan class'a göre ilgili tabloyu tutar.
+		//DBSet kalıtım alınan class'a (T nesnesi) göre ilgili tabloyu tutar.
 		protected DbSet<T> _dbSet;
 		public BaseRepo(DatabaseContext context)
 		{
@@ -37,7 +37,7 @@ namespace DTO.Abstract
 		public T GetById(int ID) => _dbSet.Find(ID);
 		//İlgili tabloyu olduğu gibi döner.
 		public List<T> GetList() => _dbSet.ToList();
-		//İlgili tabloyu Include, Join ederek çeker
+		//İlgili tabloyu Include ederek çeker
 		//Tablodaki kayıtların ilişkili olduğu işlemlerle beraber döner.
 		public List<T> GetListWithIslems() => _dbSet.Include("kutuphaneIslems").ToList();
 		//İlgili kaydı ID üzerinden siler.
@@ -53,8 +53,5 @@ namespace DTO.Abstract
 			_dbSet.Update(obje);
 			_context.SaveChanges();
 		}
-
-		//Eğer ilgili ıd ilgili tabloda var ise günceller, yok ise ekler.
-
 	}
 }

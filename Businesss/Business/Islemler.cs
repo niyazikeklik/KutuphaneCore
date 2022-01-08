@@ -15,7 +15,6 @@ namespace Business.Business
 			//İlgili kitabın tüm işlemlerinin dönülmesi.
 			foreach (KutuphaneIslem item in kitap.kutuphaneIslems)
 			{
-				//Eğer geçerrli işlemin iade tarihi null ise öğrenci ıd üzerinden (Global)zimmetliOgrenci nesnesi doldurulur.
 				//Listeye öğrencinin tüm işlemleri KitapIslemBilgi modeli üzerinden yazılır.
 				list.Add(new KitapIslemBilgi()
 				{
