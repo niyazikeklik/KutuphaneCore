@@ -33,7 +33,10 @@ namespace KutuphaneCore
 				KitapTuru = (KitapKategori)ktpTur.SelectedIndex,
 				BasimTarihi = ktpBasım.Value,
 				SayfaSayısı = Convert.ToInt32(ktpSayfa.Value),
-				KitapYazar = ktpYazar.Text
+				KitapYazar = ktpYazar.Text,
+				//Eğer form ekleme formu ise stok true olarak direkt yazılır, güncelleme formu ise kitap stok değeri olduğu gibi bırakılır.
+				Stok = ktpBarkod.Enabled ? true : Tables.Kitap.GetById(ktpBarkod.Text).Stok
+				
 			};
 			//ktpBarkod enabled ise ekleme işlemi yapılacak demektir.
 			if (ktpBarkod.Enabled)
