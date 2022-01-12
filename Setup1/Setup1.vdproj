@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_446BDDE7FB7747CCAAD2908AD377F5C7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6338A3B541E948D58CFDF8C8CF25E8E7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -88,6 +94,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -126,6 +140,26 @@
             "TargetName" = "8:ajp3x-7jwln-001 (1).ico"
             "Tag" = "8:"
             "Folder" = "8:_103BF8982558414EA46DFE8FFD00CC0B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_446BDDE7FB7747CCAAD2908AD377F5C7"
+            {
+            "SourcePath" = "8:..\\KutuphaneCore\\bin\\Debug\\net5.0-windows\\database.db"
+            "TargetName" = "8:database.db"
+            "Tag" = "8:"
+            "Folder" = "8:_310108576E5646CDA1C3344A332B5089"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
